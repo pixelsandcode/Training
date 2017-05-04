@@ -1,0 +1,17 @@
+{
+  "name": "lesson3",
+  "version": "1.0.0",
+  "description": "use odme to create model",
+  "main": "cb.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "naderdl",
+  "license": "ISC",
+  "dependencies": {
+    "joi": "^10.4.1",
+    "odme": "^2.0.4",
+    "puffer": "^1.1.1",
+    "yargs": "^7.0.2"
+  }
+}
