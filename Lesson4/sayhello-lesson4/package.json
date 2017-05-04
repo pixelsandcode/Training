@@ -1,0 +1,17 @@
+{
+  "name": "sayhello.lesson4",
+  "version": "1.0.1",
+  "description": "creating an npm to say Hello",
+  "main": "sayhello.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "saying",
+    "hello",
+    "p&c",
+    "npm"
+  ],
+  "author": "NaderDl <naderdaliri@gmail.com>",
+  "license": "ISC"
+}
