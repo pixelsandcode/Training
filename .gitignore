@@ -1,7 +1,7 @@
 # Dependency directories
 **/node_modules
 # index for nginx
-index.htm
+index.html
 # Logs
 logs
 *.log
