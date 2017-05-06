@@ -1,0 +1,16 @@
+{
+  "name": "say.bye.plugin",
+  "version": "1.0.0",
+  "description": "this is my plugin for the hapi server and it says to user bye.",
+  "main": "saybye.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "node",
+    "hapijs",
+    "plugin"
+  ],
+  "author": "naderdl",
+  "license": "ISC"
+}
