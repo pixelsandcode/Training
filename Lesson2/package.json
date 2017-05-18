@@ -1,7 +1,7 @@
 {
   "name": "lesson2",
   "version": "1.0.0",
-  "description": "working whit couchbase",
+  "description": "working whit couchbase.",
   "main": "cb.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
