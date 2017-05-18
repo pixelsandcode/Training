@@ -1,7 +1,7 @@
 {
-  "name": "lesson1",
+  "name": "lesson1-hapi-server",
   "version": "1.0.0",
-  "description": "",
+  "description": "lesson one hapi server.",
   "main": "lesson1.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
