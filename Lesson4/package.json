@@ -12,7 +12,7 @@
     "hapi": "^16.1.1",
     "inert": "^4.2.0",
     "lout": "^10.0.1",
-    "sayhello.lesson4": "^1.0.1",
+    "say-hello-lesson4": "^1.0.2",
     "vision": "^4.1.1"
   }
 }

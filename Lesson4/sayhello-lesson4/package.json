@@ -1,6 +1,6 @@
 {
-  "name": "sayhello.lesson4",
-  "version": "1.0.1",
+  "name": "say-hello-lesson4",
+  "version": "1.0.2",
   "description": "creating an npm to say Hello",
   "main": "sayhello.js",
   "scripts": {
