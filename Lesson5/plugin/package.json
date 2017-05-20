@@ -1,6 +1,6 @@
 {
-  "name": "say.bye.plugin",
-  "version": "1.0.0",
+  "name": "say-bye",
+  "version": "1.0.2",
   "description": "this is my plugin for the hapi server and it says to user bye.",
   "main": "saybye.js",
   "scripts": {
