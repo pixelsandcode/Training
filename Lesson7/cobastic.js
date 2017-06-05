@@ -55,15 +55,19 @@ node $0 search-user --[name]
     Client.indices.create({
       index: 'cobastic',
       body: {
-        mapping: {
-          cobastic: {
+        mappings: {
+          user: {
             properties: {
-              name: {
-                type: 'string',
-                index: 'not_analyzed'
-              },
-              dob: {
-                type: 'string'
+              doc: {
+                properties: {
+                  name: {
+                    type: 'string',
+                    index: 'not_analyzed'
+                  },
+                  dob: {
+                    type: 'string'
+                  }
+                }
               }
             }
           }
