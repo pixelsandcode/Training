@@ -6,3 +6,5 @@ logs
 npm-debug.log*
 # swp files
 *.swp
+# txt files
+*.txt
