@@ -1,0 +1,15 @@
+{
+  "name": "lesson6",
+  "version": "1.0.0",
+  "description": "working with elasticsearch",
+  "main": "elastic.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "naderdl",
+  "license": "ISC",
+  "dependencies": {
+    "elasticsearch": "^13.0.1",
+    "yargs": "^8.0.1"
+  }
+}

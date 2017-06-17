@@ -1,0 +1,22 @@
+{
+  "name": "lesson7",
+  "version": "1.0.0",
+  "description": "matching couchbase and elasric.",
+  "main": "cobastic.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "couchbase",
+    "elastic",
+    "tranport plugin"
+  ],
+  "author": "naderdl",
+  "license": "ISC",
+  "dependencies": {
+    "joi": "^10.5.2",
+    "odme": "^2.0.4",
+    "puffer": "^1.1.1",
+    "yargs": "^8.0.1"
+  }
+}
