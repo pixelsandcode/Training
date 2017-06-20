@@ -1,0 +1,7 @@
+{
+    "name": "Training",
+    "dependencies": {
+        "bootstrap": "3.3.7",
+        "angularjs": "1.6.4"
+    }
+}
