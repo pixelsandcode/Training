@@ -1,0 +1,29 @@
+{
+  "name": "lesson11",
+  "version": "1.0.0",
+  "description": "learn jwt based authentication",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
+  "keywords": [
+    "hapi",
+    "jwt",
+    "authentication"
+  ],
+  "author": "naderdl",
+  "license": "ISC",
+  "dependencies": {
+    "bluebird": "^3.5.0",
+    "hapi": "^16.4.3",
+    "hapi-auth-jwt2": "^7.2.4",
+    "inert": "^4.2.0",
+    "joi": "^10.6.0",
+    "jsonwebtoken": "^7.4.1",
+    "lout": "^10.0.1",
+    "odme": "^2.0.4",
+    "puffer": "^1.1.1",
+    "vision": "^4.1.1"
+  }
+}
