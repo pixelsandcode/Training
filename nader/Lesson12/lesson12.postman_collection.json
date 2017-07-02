@@ -1,0 +1,505 @@
+{
+	"id": "4d5d2b4d-1275-cdf7-aa3f-95c21ca994d6",
+	"name": "lesson12",
+	"description": "lesson12 route checking.",
+	"order": [
+		"b050aca3-cfd2-06c3-1e66-17fb067f2daa",
+		"f44c6a48-76f8-db98-4791-7ffbdaf23ce3",
+		"0d177cf6-bee0-8b36-74ec-3e794093a046",
+		"108253ad-6ee3-1a0a-1075-1da1aaff6a39",
+		"fe0d09cf-513b-5b99-ecd5-b84cac62aa78",
+		"24797d6d-ae4d-2157-b088-8ae5bf5bb570",
+		"d31e2c1a-2183-72b4-c259-66661bb53125",
+		"ec64c3ab-f431-98d9-18d9-50a74d5ccaea",
+		"f14ec8bc-48f2-1c76-3be6-237a2974a87e",
+		"0bdd8fa2-8a18-95ec-206a-4b6a0dbdffda",
+		"75b4d29e-0573-640c-0aeb-07a5dd405ef0"
+	],
+	"folders": [],
+	"timestamp": 1498891497347,
+	"owner": "1918993",
+	"public": false,
+	"requests": [
+		{
+			"id": "0bdd8fa2-8a18-95ec-206a-4b6a0dbdffda",
+			"headers": "Authorization: \n",
+			"headerData": [
+				{
+					"key": "Authorization",
+					"value": "",
+					"description": "enter the created jwt in login step.",
+					"enabled": true
+				}
+			],
+			"url": "http://localhost:8080/posts/{post_key}",
+			"queryParams": [],
+			"pathVariables": {},
+			"pathVariableData": [],
+			"preRequestScript": null,
+			"method": "DELETE",
+			"collectionId": "4d5d2b4d-1275-cdf7-aa3f-95c21ca994d6",
+			"data": null,
+			"dataMode": "params",
+			"name": "http://localhost:8080/posts/{post_key}",
+			"description": "will delete a post only if user with current login has created the post.",
+			"descriptionFormat": "html",
+			"time": 1498897031534,
+			"version": 2,
+			"responses": [],
+			"tests": null,
+			"currentHelper": "normal",
+			"helperAttributes": {}
+		},
+		{
+			"id": "0d177cf6-bee0-8b36-74ec-3e794093a046",
+			"headers": "Authorization: \n",
+			"headerData": [
+				{
+					"key": "Authorization",
+					"value": "",
+					"description": "enter the created jwt here.",
+					"enabled": true
+				}
+			],
+			"url": "http://localhost:8080/login",
+			"queryParams": [],
+			"preRequestScript": null,
+			"pathVariables": {},
+			"pathVariableData": [],
+			"method": "POST",
+			"data": [
+				{
+					"key": "email",
+					"value": "",
+					"type": "text",
+					"enabled": true,
+					"description": "your email"
+				},
+				{
+					"key": "password",
+					"value": "",
+					"type": "text",
+					"enabled": true,
+					"description": "your password"
+				}
+			],
+			"dataMode": "params",
+			"version": 2,
+			"tests": null,
+			"currentHelper": "normal",
+			"helperAttributes": {},
+			"time": 1498558063011,
+			"name": "http://localhost:8080/login",
+			"description": "user can log in from here",
+			"collectionId": "4d5d2b4d-1275-cdf7-aa3f-95c21ca994d6",
+			"responses": []
+		},
+		{
+			"id": "108253ad-6ee3-1a0a-1075-1da1aaff6a39",
+			"headers": "Authorization: \n",
+			"headerData": [
+				{
+					"key": "Authorization",
+					"value": "",
+					"description": "enter the created jwt in login step.",
+					"enabled": true
+				}
+			],
+			"url": "http://localhost:8080/logout",
+			"queryParams": [],
+			"preRequestScript": null,
+			"pathVariables": {},
+			"pathVariableData": [],
+			"method": "POST",
+			"data": [
+				{
+					"key": "email",
+					"value": "",
+					"type": "text",
+					"enabled": true,
+					"description": "your email"
+				},
+				{
+					"key": "password",
+					"value": "",
+					"type": "text",
+					"enabled": true,
+					"description": "your password"
+				}
+			],
+			"dataMode": "params",
+			"version": 2,
+			"tests": null,
+			"currentHelper": "normal",
+			"helperAttributes": {},
+			"time": 1498557966444,
+			"name": "http://localhost:8080/logout",
+			"description": "user can logout from here.",
+			"collectionId": "4d5d2b4d-1275-cdf7-aa3f-95c21ca994d6",
+			"responses": []
+		},
+		{
+			"id": "24797d6d-ae4d-2157-b088-8ae5bf5bb570",
+			"headers": "Authorization: \n",
+			"headerData": [
+				{
+					"key": "Authorization",
+					"value": "",
+					"description": "enter the created jwt in login step.",
+					"enabled": true
+				}
+			],
+			"url": "http://localhost:8080/post/{postkey}",
+			"queryParams": [],
+			"preRequestScript": null,
+			"pathVariables": {},
+			"pathVariableData": [],
+			"method": "GET",
+			"data": [
+				{
+					"key": "email",
+					"value": "naderdaliri@gmail.com",
+					"type": "text",
+					"enabled": true,
+					"description": ""
+				},
+				{
+					"key": "password",
+					"value": "password",
+					"type": "text",
+					"enabled": true,
+					"description": ""
+				}
+			],
+			"dataMode": "params",
+			"version": 2,
+			"tests": null,
+			"currentHelper": "normal",
+			"helperAttributes": {},
+			"time": 1498891941580,
+			"name": "http://localhost:8080/post/{postkey}",
+			"description": "will get a doc by ID.",
+			"collectionId": "4d5d2b4d-1275-cdf7-aa3f-95c21ca994d6",
+			"responses": []
+		},
+		{
+			"id": "75b4d29e-0573-640c-0aeb-07a5dd405ef0",
+			"headers": "Authorization: \n",
+			"headerData": [
+				{
+					"key": "Authorization",
+					"value": "",
+					"description": "enter the created jwt in login step.",
+					"enabled": true
+				}
+			],
+			"url": "http://localhost:8080/posts/{post_key}",
+			"queryParams": [],
+			"pathVariables": {},
+			"pathVariableData": [],
+			"preRequestScript": null,
+			"method": "PUT",
+			"collectionId": "4d5d2b4d-1275-cdf7-aa3f-95c21ca994d6",
+			"data": [
+				{
+					"key": "title",
+					"value": "",
+					"type": "text",
+					"enabled": true,
+					"description": "enter title for your post"
+				},
+				{
+					"key": "body",
+					"value": "",
+					"type": "text",
+					"enabled": true,
+					"description": "enter body for your post"
+				},
+				{
+					"key": "author",
+					"value": "",
+					"type": "text",
+					"enabled": true,
+					"description": "enter author name for your post"
+				}
+			],
+			"dataMode": "params",
+			"name": "http://localhost:8080/posts/{post_key}",
+			"description": "will update a post only if user with current login has created the post.",
+			"descriptionFormat": "html",
+			"time": 1498897180774,
+			"version": 2,
+			"responses": [],
+			"tests": null,
+			"currentHelper": "normal",
+			"helperAttributes": {}
+		},
+		{
+			"id": "b050aca3-cfd2-06c3-1e66-17fb067f2daa",
+			"headers": "",
+			"headerData": [],
+			"url": "http://localhost:8080/docs",
+			"queryParams": [],
+			"pathVariables": {},
+			"pathVariableData": [],
+			"preRequestScript": null,
+			"method": "GET",
+			"collectionId": "4d5d2b4d-1275-cdf7-aa3f-95c21ca994d6",
+			"data": null,
+			"dataMode": "params",
+			"name": "http://localhost:8080/docs",
+			"description": "server route documentations.",
+			"descriptionFormat": "html",
+			"time": 1498976287106,
+			"version": 2,
+			"responses": [],
+			"tests": null,
+			"currentHelper": "normal",
+			"helperAttributes": {}
+		},
+		{
+			"id": "d31e2c1a-2183-72b4-c259-66661bb53125",
+			"headers": "Authorization: \n",
+			"headerData": [
+				{
+					"key": "Authorization",
+					"value": "",
+					"description": "enter the created jwt in login step.",
+					"enabled": true
+				}
+			],
+			"url": "http://localhost:8080/posts",
+			"queryParams": [],
+			"pathVariables": {},
+			"pathVariableData": [],
+			"preRequestScript": null,
+			"method": "POST",
+			"collectionId": "4d5d2b4d-1275-cdf7-aa3f-95c21ca994d6",
+			"data": [
+				{
+					"key": "title",
+					"value": "",
+					"type": "text",
+					"enabled": true,
+					"description": "enter title for your post"
+				},
+				{
+					"key": "body",
+					"value": "",
+					"type": "text",
+					"enabled": true,
+					"description": "enter body for your post"
+				},
+				{
+					"key": "author",
+					"value": "",
+					"type": "text",
+					"enabled": true,
+					"description": "enter author name for your post"
+				}
+			],
+			"dataMode": "params",
+			"name": "http://localhost:8080/posts",
+			"description": "will create a post for a user.",
+			"descriptionFormat": "html",
+			"time": 1498892939425,
+			"version": 2,
+			"responses": [],
+			"tests": null,
+			"currentHelper": "normal",
+			"helperAttributes": {}
+		},
+		{
+			"id": "ec64c3ab-f431-98d9-18d9-50a74d5ccaea",
+			"headers": "Authorization: \n",
+			"headerData": [
+				{
+					"key": "Authorization",
+					"value": "",
+					"description": "enter the created jwt in login step.",
+					"enabled": true
+				}
+			],
+			"url": "http://localhost:8080/posts",
+			"queryParams": [],
+			"pathVariables": {},
+			"pathVariableData": [],
+			"preRequestScript": null,
+			"method": "GET",
+			"collectionId": "4d5d2b4d-1275-cdf7-aa3f-95c21ca994d6",
+			"data": [
+				{
+					"key": "title",
+					"value": "",
+					"type": "text",
+					"enabled": true,
+					"description": "enter title for your post"
+				},
+				{
+					"key": "body",
+					"value": "",
+					"type": "text",
+					"enabled": true,
+					"description": "enter body for your post"
+				},
+				{
+					"key": "author",
+					"value": "",
+					"type": "text",
+					"enabled": true,
+					"description": "enter author name for your post"
+				}
+			],
+			"dataMode": "params",
+			"name": "http://localhost:8080/posts",
+			"description": "will bring all posts within the post object there should be the author.",
+			"descriptionFormat": "html",
+			"time": 1498896225401,
+			"version": 2,
+			"responses": [],
+			"tests": null,
+			"currentHelper": "normal",
+			"helperAttributes": {}
+		},
+		{
+			"id": "f14ec8bc-48f2-1c76-3be6-237a2974a87e",
+			"headers": "Authorization: \n",
+			"headerData": [
+				{
+					"key": "Authorization",
+					"value": "",
+					"description": "enter the created jwt in login step.",
+					"enabled": true
+				}
+			],
+			"url": "http://localhost:8080/me/posts",
+			"queryParams": [],
+			"pathVariables": {},
+			"pathVariableData": [],
+			"preRequestScript": null,
+			"method": "GET",
+			"collectionId": "4d5d2b4d-1275-cdf7-aa3f-95c21ca994d6",
+			"data": [
+				{
+					"key": "title",
+					"value": "",
+					"type": "text",
+					"enabled": true,
+					"description": "enter title for your post"
+				},
+				{
+					"key": "body",
+					"value": "",
+					"type": "text",
+					"enabled": true,
+					"description": "enter body for your post"
+				},
+				{
+					"key": "author",
+					"value": "",
+					"type": "text",
+					"enabled": true,
+					"description": "enter author name for your post"
+				}
+			],
+			"dataMode": "params",
+			"name": "http://localhost:8080/me/posts",
+			"description": "will list all of current user’s posts with pagination",
+			"descriptionFormat": "html",
+			"time": 1498896394154,
+			"version": 2,
+			"responses": [],
+			"tests": null,
+			"currentHelper": "normal",
+			"helperAttributes": {}
+		},
+		{
+			"id": "f44c6a48-76f8-db98-4791-7ffbdaf23ce3",
+			"headers": "",
+			"headerData": [],
+			"url": "http://localhost:8080/register",
+			"queryParams": [],
+			"preRequestScript": null,
+			"pathVariables": {},
+			"pathVariableData": [],
+			"method": "POST",
+			"data": [
+				{
+					"key": "email",
+					"value": "",
+					"type": "text",
+					"enabled": true,
+					"description": "your email"
+				},
+				{
+					"key": "password",
+					"value": "",
+					"type": "text",
+					"enabled": true,
+					"description": "your password"
+				},
+				{
+					"key": "name",
+					"value": "",
+					"type": "text",
+					"enabled": true,
+					"description": "your fullname"
+				}
+			],
+			"dataMode": "params",
+			"version": 2,
+			"tests": null,
+			"currentHelper": "normal",
+			"helperAttributes": {},
+			"time": 1498891629977,
+			"name": "http://localhost:8080/register",
+			"description": "this is sign up form for server",
+			"collectionId": "4d5d2b4d-1275-cdf7-aa3f-95c21ca994d6",
+			"responses": []
+		},
+		{
+			"id": "fe0d09cf-513b-5b99-ecd5-b84cac62aa78",
+			"headers": "Authorization: \n",
+			"headerData": [
+				{
+					"key": "Authorization",
+					"value": "",
+					"description": "enter the created jwt in login step.",
+					"enabled": true
+				}
+			],
+			"url": "http://localhost:8080/me",
+			"queryParams": [],
+			"preRequestScript": null,
+			"pathVariables": {},
+			"pathVariableData": [],
+			"method": "GET",
+			"data": [
+				{
+					"key": "email",
+					"value": "naderdaliri@gmail.com",
+					"type": "text",
+					"enabled": true,
+					"description": ""
+				},
+				{
+					"key": "password",
+					"value": "password",
+					"type": "text",
+					"enabled": true,
+					"description": ""
+				}
+			],
+			"dataMode": "params",
+			"version": 2,
+			"tests": null,
+			"currentHelper": "normal",
+			"helperAttributes": {},
+			"time": 1498558073762,
+			"name": "http://localhost:8080/me",
+			"description": "show the user profile if he/she is loged in",
+			"collectionId": "4d5d2b4d-1275-cdf7-aa3f-95c21ca994d6",
+			"responses": []
+		}
+	]
+}
