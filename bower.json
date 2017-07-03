@@ -2,6 +2,8 @@
     "name": "Training",
     "dependencies": {
         "bootstrap": "3.3.7",
-        "angularjs": "1.6.4"
+        "angularjs": "1.6.4",
+        "tether": "1.3.3",
+        "jquery": "3.2.1"
     }
 }

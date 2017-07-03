@@ -1,0 +1,225 @@
+body {
+    min-width: 360px;
+}
+
+.typo .col-xs-4.col-md-4 {
+    background-color: #fff;
+    border: 1px solid black;
+    height: 300px;
+    text-align: left;
+    overflow-y: auto;
+}
+
+.list .col-xs-4.col-md-4 {
+    height: 200px;
+    border: 1px solid black;
+}
+
+.col-xs-12.col-sm-6.col-md-8 {
+    text-align: center;
+    background-color: azure;
+    border: 1px solid;
+}
+
+.col-xs-6.col-md-4 {
+    text-align: center;
+    background-color: blanchedalmond;
+    border: 1px solid;
+}
+
+.col-xs-12.col-md-8 {
+    text-align: center;
+    background-color: aqua;
+    border: 1px solid;
+}
+
+.col-xs-6.col-md-4 {
+    text-align: center;
+    background-color: bisque;
+    border: 1px solid;
+}
+
+.col-xs-6 {
+    text-align: center;
+    background-color: cadetblue;
+    border: 1px solid;
+}
+
+.grid12 {
+    text-align: center;
+    background-color: aqua;
+    border: 1px solid;
+}
+
+.col-xs-1.col-md-1 {
+    background-color: blueviolet;
+    text-align: center;
+    border: 1px solid;
+}
+
+.col-xs-2.col-md-2 {
+    background-color: burlywood;
+    text-align: center;
+    border: 1px solid;
+}
+
+.col-xs-3.col-md-3 {
+    background-color: deeppink;
+    text-align: center;
+    border: 1px solid;
+}
+
+.col-xs-4.col-md-4.grid4 {
+    background-color: chartreuse;
+    text-align: center;
+    border: 1px solid;
+}
+
+.col-xs-6.col-md-6 {
+    background-color: darkorange;
+    text-align: center;
+    border: 1px solid;
+}
+
+.col-xs-8.col-md-8 {
+    background-color: firebrick;
+    text-align: center;
+    border: 1px solid;
+}
+
+.unorderedlist {
+    overflow: auto;
+}
+
+.col-xs-12.col-md-12 {
+    border: 1px solid black;
+}
+
+.table .col-xs-4.col-md-4 {
+    height: 250px;
+    border: 1px solid black;
+}
+
+.col-xs-6.col-xs-offset-3 {
+    border: 1px solid black;
+    background-color: beige;
+    margin-bottom: 5px;
+}
+
+.divform {
+    width: 100%;
+}
+
+.col-xs-4.col-md-4 {
+    border: 1px solid black;
+}
+
+.btn {
+    margin: 1px;
+}
+
+.img img {
+    margin: 10px 0 10px 0;
+}
+
+.navbar-brand .img-circle {
+    float: left;
+    height: 50px;
+    margin: -15px 0 0 -15px;
+}
+
+@media (max-width: @screen-xs-max) {
+    .col-xs-4.col-md-4 {
+        overflow: hidden;
+    }
+}
+
+@media (min-width: @screen-sm-min) and (max-width: @screen-sm-max) {
+    div {
+        overflow: hidden;
+    }
+}
+
+@media (min-width: @screen-md-min) and (max-width: @screen-md-max) {}
+
+@media (min-width: @screen-lg-min) {}
+
+.glyph {
+    border: 1px solid black;
+}
+
+.btn-group-vertical .btn {
+    margin-left: -1px;
+    margin-top: -1px;
+}
+
+.col-md-4 {}
+
+.col-xs-6.col-md-4.col-sm-4 {
+    border: none;
+    background-color: #fff;
+    text-align: left;
+}
+
+.media-left img {
+    width: 50px;
+}
+
+.media-right img {
+    width: 50px;
+}
+
+.scrollspy-example {
+    height: 200px;
+    overflow: auto;
+}
+
+.bs-example {
+    padding: 15px 15px;
+}
+
+.tab-pane {
+    padding: 15px 15px;
+}
+
+.bootstrapJsEx {
+    text-align: center;
+    position: relative;
+}
+
+.pad {
+    padding: 80px
+}
+
+.cen {
+    text-align: center
+}
+
+.myColor {
+    color: red;
+}
+
+#carousel-example h4,
+#carousel-example p {}
+
+#carousel-example li {
+    background-color: darkred;
+}
+
+#carousel-example img {
+    margin: 15px auto 15px auto;
+    padding: 15px auto 15px auto;
+}
+
+#carousel-example {
+    margin: auto;
+}
+
+#carousel-example .carousel-caption {
+    position: relative;
+    left: auto;
+    right: auto;
+    color: darkmagenta;
+}
+
+#carousel-example-geek .glyphicon-chevron-right {}

@@ -1,0 +1,672 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Lesson 1 - Bootstrap</title>
+    <link href="../components/bootstrap/dist/css/bootstrap.css" rel="stylesheet">
+    <link href="style.css" rel="stylesheet">
+
+</head>
+
+<body>
+    <nav class="navbar navbar-default">
+        <div class="container-fluid">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar-collapse-1" aria-expanded="false">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand" href="index.html"><img src="image/6.jpg" class="img-circle">Lesson 1</a>
+            </div>
+            <div class="collapse navbar-collapse" id="navbar-collapse-1">
+                <ul class="nav navbar-nav">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="bs-css.html">Css</a></li>
+                    <li><a href="bs-cmp.html">Components</a></li>
+                    <li class="active"><a href="bs-js.html">Java Scipt</a><span class="sr-only">(current)</span></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    <div class="container">
+        <div class="row ">
+            <div class="col-xs-8 col-xs-offset-2">
+                <button type="button" class="btn btn-primary btn-lg" data-toggle="modal" data-target="#myModal">First Modal</button>
+                <div class="modal fade" role="dialog" id="myModal" aria-labelledby="label1">
+                    <div class="modal-dialog" role="document">
+                        <div class="modal-content">
+                            <div class="modal-header">
+                                <button type="button" class="close" data-dismiss="modal" aria-label="Closa"><span aria-hidden="true">&times;</span></button>
+                                <h4 class="modal-title">Modal Title</h4>
+                            </div>
+                            <div class="modal-body">
+                                <p>this is modal body!</p>
+                            </div>
+                            <div class="modal-footer">
+                                <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                                <button type="button" class="btn btn-primary">Some Changes</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <button type="button" class="btn btn-primary" data-toggle="modal" data-target=".bs-example-modal-lg">Large Modal</button>
+                <div class="modal fade bs-example-modal-lg" role="dialog" id="modal1" aria-labelledby="modal1">
+                    <div class="modal-dialog modal-lg" role="document">
+                        <div class="modal-content">
+                            <div class="modal-header">
+                                <button type="button" class="close" data-dismiss="modal" aria-label="Closa"><span aria-hidden="true">&times;</span></button>
+                                <h4 class="modal-title">Modal Title</h4>
+                            </div>
+                            <div class="modal-body">
+                                <p>this is modal body!</p>
+                            </div>
+                            <div class="modal-footer">
+                                <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                                <button type="button" class="btn btn-primary">Some Changes</button>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+
+                <button type="button" class="btn btn-primary" data-toggle="modal" data-target=".bs-example-modal-sm">Small Modal</button>
+                <div class="modal fade bs-example-modal-sm" role="dialog" id="modal1" aria-labelledby="modal1">
+                    <div class="modal-dialog modal-sm" role="document">
+                        <div class="modal-content">
+                            <div class="modal-header">
+                                <button type="button" class="close" data-dismiss="modal" aria-label="Closa"><span aria-hidden="true">&times;</span></button>
+                                <h4 class="modal-title">Modal Title</h4>
+                            </div>
+                            <div class="modal-body">
+                                <p>this is modal body!</p>
+                            </div>
+                            <div class="modal-footer">
+                                <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                                <button type="button" class="btn btn-primary">Some Changes</button>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+                <button type="button" class="btn btn-primary" data-toggle="modal" data-target=".grid-example-modal">Modal Grid System</button>
+                <div class="modal fade grid-example-modal" role="dialog" id="modal1" aria-labelledby="modal1">
+                    <div class="modal-dialog modal-lg" role="document">
+                        <div class="modal-content">
+                            <div class="modal-header">
+                                <button type="button" class="close" data-dismiss="modal" aria-label="Closa"><span aria-hidden="true">&times;</span></button>
+                                <h4 class="modal-title">Modal Title</h4>
+                            </div>
+                            <div class="modal-body">
+                                <div class="row">
+                                    <div class="col-md-12">
+                                        <h3 class="text-center">Grid View Typical</h3>
+                                    </div>
+                                    <div class="col-xs-1 col-md-1">Grid 1</div>
+                                    <div class="col-xs-1 col-md-1">Grid 1</div>
+                                    <div class="col-xs-1 col-md-1">Grid 1</div>
+                                    <div class="col-xs-1 col-md-1">Grid 1</div>
+                                    <div class="col-xs-1 col-md-1">Grid 1</div>
+                                    <div class="col-xs-1 col-md-1">Grid 1</div>
+                                    <div class="col-xs-1 col-md-1">Grid 1</div>
+                                    <div class="col-xs-1 col-md-1">Grid 1</div>
+                                    <div class="col-xs-1 col-md-1">Grid 1</div>
+                                    <div class="col-xs-1 col-md-1">Grid 1</div>
+                                    <div class="col-xs-1 col-md-1">Grid 1</div>
+                                    <div class="col-xs-1 col-md-1">Grid 1</div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-xs-2 col-md-2">Grid 2</div>
+                                    <div class="col-xs-2 col-md-2">Grid 2</div>
+                                    <div class="col-xs-2 col-md-2">Grid 2</div>
+                                    <div class="col-xs-2 col-md-2">Grid 2</div>
+                                    <div class="col-xs-2 col-md-2">Grid 2</div>
+                                    <div class="col-xs-2 col-md-2">Grid 2</div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-xs-3 col-md-3">Grid 3</div>
+                                    <div class="col-xs-6 col-md-6">Grid 6</div>
+                                    <div class="col-xs-3 col-md-3">Grid 3</div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-xs-4 col-md-4 grid4">Grid 4</div>
+                                    <div class="col-xs-4 col-md-4 grid4">Grid 4</div>
+                                    <div class="col-xs-4 col-md-4 grid4">Grid 4</div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-xs-6 col-md-6">Grid 6</div>
+                                    <div class="col-xs-6 col-md-6">Grid 6</div>
+                                </div>
+
+                                <div class="row">
+                                    <div class="col-xs-8 col-md-8">Grid 8</div>
+                                    <div class="col-xs-4 col-md-4 grid4">Grid 4</div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-xs-4 col-md-4 grid4">Grid 4</div>
+                                    <div class="col-xs-8 col-md-8">Grid 8</div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-xs-12 col-md-12 grid12">Grid 12</div>
+                                </div>
+                            </div>
+                            <div class="modal-footer">
+                                <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                                <button type="button" class="btn btn-primary">Some Changes</button>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+        <div class="row">
+            <div class="col-xs-8 col-xs-offset-2">
+                <div class="btn-group" role="group" aria-label="...">
+                    <button type="button" class="btn btn-default">1</button>
+                    <button type="button" class="btn btn-default">2</button>
+                    <div class="btn-group" role="group">
+                        <button type="button" class="btn btn-default dropdown-toggle" id="dropdowngroup1" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                           DropDown
+                           <span class="caret"></span>
+                       </button>
+                        <ul class="dropdown-menu" aria-labelledby="dropdowngroup1">
+                            <li class="dropdown-header">dropdown header</li>
+                            <li><a href="#">Action</a></li>
+                            <li><a href="#">Another action</a></li>
+                            <li class="disabled"><a href="#">Disabled link</a></li>
+                            <li><a href="#">Something else here</a></li>
+                            <li role="separator" class="divider"></li>
+                            <li><a href="#">Separated link</a></li>
+                        </ul>
+                    </div>
+                </div><br/>
+
+                <div class="btn-group-vertical" role="group" aria-label="...">
+
+                    <button type="button" class="btn btn-default">1</button>
+                    <button type="button" class="btn btn-default">2</button>
+
+                    <div class="btn-group" role="group">
+                        <button type="button" class="btn btn-default dropdown-toggle" id="dropdowngroup1" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                           DropDown
+                           <span class="caret"></span>
+                       </button>
+                        <ul class="dropdown-menu" aria-labelledby="dropdowngroup1">
+                            <li class="dropdown-header">dropdown header</li>
+                            <li><a href="#">Action</a></li>
+                            <li><a href="#">Another action</a></li>
+                            <li class="disabled"><a href="#">Disabled link</a></li>
+                            <li><a href="#">Something else here</a></li>
+                            <li role="separator" class="divider"></li>
+                            <li><a href="#">Separated link</a></li>
+                        </ul>
+                    </div>
+
+                    <button type="button" class="btn btn-default">3</button>
+                    <button type="button" class="btn btn-default">4</button>
+
+                    <div class="btn-group dropup" role="group">
+                        <button type="button" class="btn btn-default dropdown-toggle" id="dropdowngroup1" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                           DropUp
+                           <span class="caret"></span>
+                       </button>
+                        <ul class="dropdown-menu" aria-labelledby="dropdowngroup1">
+                            <li class="dropdown-header">dropdown header</li>
+                            <li><a href="#">Action</a></li>
+                            <li><a href="#">Another action</a></li>
+                            <li class="disabled"><a href="#">Disabled link</a></li>
+                            <li><a href="#">Something else here</a></li>
+                            <li role="separator" class="divider"></li>
+                            <li><a href="#">Separated link</a></li>
+                        </ul>
+                    </div>
+
+                    <button type="button" class="btn btn-default">5</button>
+                </div>
+            </div>
+        </div>
+
+
+        <div class="row">
+            <div class="col-xs-8 col-xs-offset-2">
+                <div class="panel panel-primary">
+                    <div class="bs-example" data-example-id="embedded-scrollspy">
+                        <nav class="navbar navbar-default navbar-static" id="navbar-example2">
+                            <div class="container-fluid">
+                                <div class="navbar-header"> <button class="collapsed navbar-toggle" type="button" data-toggle="collapse" data-target=".bs-example-js-navbar-scrollspy"> <span class="sr-only">Toggle navigation</span> <span class="icon-bar"></span> <span class="icon-bar"></span> <span class="icon-bar"></span> </button> <a href="#" class="navbar-brand">Project Name</a> </div>
+                                <div class="collapse navbar-collapse bs-example-js-navbar-scrollspy">
+                                    <ul class="nav navbar-nav">
+                                        <li class=""><a href="#fat">@fat</a></li>
+                                        <li class=""><a href="#mdo">@mdo</a></li>
+                                        <li class="dropdown active"> <a href="#" class="dropdown-toggle" id="navbarDrop1" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Dropdown <span class="caret"></span></a>
+                                            <ul class="dropdown-menu" aria-labelledby="navbarDrop1">
+                                                <li class=""><a href="#one">one</a></li>
+                                                <li class=""><a href="#two">two</a></li>
+                                                <li role="separator" class="divider"></li>
+                                                <li class="active"><a href="#three">three</a></li>
+                                            </ul>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </nav>
+                        <div class="scrollspy-example" data-spy="scroll" data-target="#navbar-example2" data-offset="0">
+                            <h4 id="fat">@fat</h4>
+                            <p>Ad leggings keytar, brunch id art party dolor labore. Pitchfork yr enim lo-fi before they sold out qui. Tumblr farm-to-table bicycle rights whatever. Anim keffiyeh carles cardigan. Velit seitan mcsweeney's photo booth 3 wolf moon irure. Cosby sweater lomo jean shorts, williamsburg hoodie minim qui you probably haven't heard of them et cardigan trust fund culpa biodiesel wes anderson aesthetic. Nihil tattooed accusamus, cred irony biodiesel keffiyeh artisan ullamco consequat.</p>
+                            <h4 id="mdo">@mdo</h4>
+                            <p>Veniam marfa mustache skateboard, adipisicing fugiat velit pitchfork beard. Freegan beard aliqua cupidatat mcsweeney's vero. Cupidatat four loko nisi, ea helvetica nulla carles. Tattooed cosby sweater food truck, mcsweeney's quis non freegan vinyl. Lo-fi wes anderson +1 sartorial. Carles non aesthetic exercitation quis gentrify. Brooklyn adipisicing craft beer vice keytar deserunt.</p>
+                            <h4 id="one">one</h4>
+                            <p>Occaecat commodo aliqua delectus. Fap craft beer deserunt skateboard ea. Lomo bicycle rights adipisicing banh mi, velit ea sunt next level locavore single-origin coffee in magna veniam. High life id vinyl, echo park consequat quis aliquip banh mi pitchfork. Vero VHS est adipisicing. Consectetur nisi DIY minim messenger bag. Cred ex in, sustainable delectus consectetur fanny pack iphone.</p>
+                            <h4 id="two">two</h4>
+                            <p>In incididunt echo park, officia deserunt mcsweeney's proident master cleanse thundercats sapiente veniam. Excepteur VHS elit, proident shoreditch +1 biodiesel laborum craft beer. Single-origin coffee wayfarers irure four loko, cupidatat terry richardson master cleanse. Assumenda you probably haven't heard of them art party fanny pack, tattooed nulla cardigan tempor ad. Proident wolf nesciunt sartorial keffiyeh eu banh mi sustainable. Elit wolf voluptate, lo-fi ea portland before they sold out four loko. Locavore enim nostrud mlkshk brooklyn nesciunt.</p>
+                            <h4 id="three">three</h4>
+                            <p>Ad leggings keytar, brunch id art party dolor labore. Pitchfork yr enim lo-fi before they sold out qui. Tumblr farm-to-table bicycle rights whatever. Anim keffiyeh carles cardigan. Velit seitan mcsweeney's photo booth 3 wolf moon irure. Cosby sweater lomo jean shorts, williamsburg hoodie minim qui you probably haven't heard of them et cardigan trust fund culpa biodiesel wes anderson aesthetic. Nihil tattooed accusamus, cred irony biodiesel keffiyeh artisan ullamco consequat.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-xs-8 col-xs-offset-2">
+                <div class="panel panel-primary">
+                    <ul class="nav nav-tabs">
+                        <li role="presentation" class="active">
+                            <a href="#home" aria-controls="home" data-toggle="tab" role="tab">Home</a>
+                        </li>
+                        <li role="presentation">
+                            <a href="#cmp" aria-controls="Components" data-toggle="tab" role="tab">CMP</a>
+                        </li>
+                        <li role="presentation">
+                            <a href="#css" aria-controls="CSS" data-toggle="tab" role="tab">CSS</a>
+                        </li>
+                        <li role="presentation">
+                            <a href="#js" aria-controls="JavaScript" data-toggle="tab" role="tab">JS</a>
+                        </li>
+                    </ul>
+                    <div class="tab-content">
+                        <div class="tab-pane fade in active" role="tabpanel" id="home" aria-labelledby="home-tab">
+                            <p>leggings keytar, brunch id art party dolor labore. Pitchfork yr enim lo-fi before they sold out qui. Tumblr farm-to-table bicycle rights whatever. Anim keffiyeh carles cardigan. Velit seitan mcsweeney's photo booth 3 wolf moon irure. Cosby sweater lomo jean shorts, williamsburg hoodie minim qui you probably haven't heard of them et cardigan trust </p>
+                        </div>
+                        <div class="tab-pane fade" role="tabpanel" id="cmp" aria-labelledby="cmp-tab">
+                            <p>shorts, williamsburg hoodie minim qui you probably haven't heard of them et cardigan trust fund culpa biodiesel wes anderson aesthetic. Nihil tattooed accusamus, cred irony biodiesel keffiyeh artisan ullamco consequat.</p>
+                        </div>
+                        <div class="tab-pane fade" role="tabpanel" id="css" aria-labelledby="css-tab">
+                            <p>leggings keytar, brunch id art party dolor labore. Pitchfork yr enim lo-fi before they sold out qui. Tumblr farm-to-table bicycle rights whatever. Anim keffiyeh carles cardigan. Velit seitan mcsweeney's photo booth 3 wolf moon irure. Cosby sweater lomo jean shorts, williamsburg hoodie minim qui you probably haven't heard of them et cardigan trust </p>
+                        </div>
+                        <div class="tab-pane fade" role="tabpanel" id="js" aria-labelledby="js-tab">
+                            <p>shorts, williamsburg hoodie minim qui you probably haven't heard of them et cardigan trust fund culpa biodiesel wes anderson aesthetic. Nihil tattooed accusamus, cred irony biodiesel keffiyeh artisan ullamco consequat.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-xs-8 col-xs-offset-2">
+                <div class="panel panel-primary">
+                    <ul class="nav nav-tabs">
+                        <li role="presentation" class="active">
+                            <a href="#homedrop" aria-controls="home" data-toggle="tab" role="tab">Home</a>
+                        </li>
+                        <li role="presentation">
+                            <a href="#cmpdrop" aria-controls="Components" data-toggle="tab" role="tab">CMP</a>
+                        </li>
+                        <li role="presentation" class="dropdown active">
+                            <a href="#" class="dropdown-toggle" id="myTabDrop1" data-toggle="dropdown" aria-expanded="false" aria-controls="myTabDrop1-content">Dropdown<span class="caret"></span></a>
+                            <ul class="dropdown-menu" aria-labelledby="myTabDrop1" id="myTabDrop1-content">
+                                <li class="active">
+                                    <a href="#cssdrop" role="tab" id="dropdown-tab1" data-toggle="tab" aria-controls="css" aria-expanded="true">css</a>
+                                </li>
+                                <li>
+                                    <a href="#jsdrop" role="tab" id="dropdown-tab2" data-toggle="tab" aria-controls="js " aria-expanded="true">js</a>
+                                </li>
+                            </ul>
+                        </li>
+                    </ul>
+                    <div class="tab-content">
+                        <div class="tab-pane fade in active" role="tabpanel" id="homedrop" aria-labelledby="home-tab">
+                            <p>leggings keytar, brunch id art party dolor labore. Pitchfork yr enim lo-fi before they sold out qui. Tumblr farm-to-table bicycle rights whatever. Anim keffiyeh carles cardigan. Velit seitan mcsweeney's photo booth 3 wolf moon irure. Cosby sweater lomo jean shorts, williamsburg hoodie minim qui you probably haven't heard of them et cardigan trust </p>
+                        </div>
+                        <div class="tab-pane fade" role="tabpanel" id="cmpdrop" aria-labelledby="cmp-tab">
+                            <p>shorts, williamsburg hoodie minim qui you probably haven't heard of them et cardigan trust fund culpa biodiesel wes anderson aesthetic. Nihil tattooed accusamus, cred irony biodiesel keffiyeh artisan ullamco consequat.</p>
+                        </div>
+                        <div class="tab-pane fade" role="tabpanel" id="cssdrop" aria-labelledby="css-tab">
+                            <p>leggings keytar, brunch id art party dolor labore. Pitchfork yr enim lo-fi before they sold out qui. Tumblr farm-to-table bicycle rights whatever. Anim keffiyeh carles cardigan. Velit seitan mcsweeney's photo booth 3 wolf moon irure. Cosby sweater lomo jean shorts, williamsburg hoodie minim qui you probably haven't heard of them et cardigan trust </p>
+                        </div>
+                        <div class="tab-pane fade" role="tabpanel" id="jsdrop" aria-labelledby="js-tab">
+                            <p>shorts, williamsburg hoodie minim qui you probably haven't heard of them et cardigan trust fund culpa biodiesel wes anderson aesthetic. Nihil tattooed accusamus, cred irony biodiesel keffiyeh artisan ullamco consequat.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-xs-8 col-xs-offset-2">
+                <div class="panel panel-primary">
+                    <h2 class="cen">Bootstrap : Tooltip </h2>
+                    <br/>
+                    <div class="pad cen">
+                        <button type="button" class="btn btn-default" data-toggle="tooltip" data-placement="left" title="Tooltip : left">Tooltip : Left</button>
+                        <button type="button" class="btn" data-toggle="tooltip" data-placement="top" title="Tooltip on top">Tooltip : Top</button>
+                        <button type="button" class="btn btn-default" data-toggle="tooltip" data-placement="bottom" title="Tooltip : bottom">Tooltip : Bottom</button>
+                        <button type="button" class="btn btn-sm" data-toggle="tooltip" data-placement="right" title="Tooltip : right">Tooltip : Right</button>
+                        <br/>
+                        <a href="#" data-toggle="tooltip" title="Some tooltip text!">Hover over me</a><br/>
+                        <button type="button" class="btn btn-success tooltipOnClick" data-toggle="btntooltip" data-trigger="click" data-placement="right" title="ToolTip on Click">Click to see ToolTip</button><br/>
+                        <button type="button" class="btn btn-primary tooltipOnClick" data-toggle="btntooltip" data-trigger="focus" data-placement="right" title="Dismissible ToolTip">Dismissible ToolTip</button>
+
+                    </div>
+
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-xs-8 col-xs-offset-2">
+                <div class="panel panel-primary bootstrapJsEx">
+                    <button type="button" class="btn btn-warning btn-lg" data-toggle="popover" title="popover title" data-content="And here's some amazing content. It's very engaging. Right?">Click to show popover</button>
+                    <button type="button" class="btn btn-lg btn-danger" data-toggle="popover" title="Popover title" data-content="And here's some amazing content. It's very engaging. Right?">Click to toggle popover</button>
+                    <a tabindex="0" class="btn btn-lg btn-primary" role="button" data-toggle="popover" data-trigger="focus" title="Dismissible popover" data-content="And here's some amazing content. It's very engaging. Right?">Dismissible popover</a>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-xs-8 col-xs-offset-2">
+                <div class="panel panel-primary bootstrapJsEx">
+
+                    <div class="bs-example bs-example-standalone" data-example-id="dismissible-alert-js">
+                        <div class="alert alert-warning alert-dismissible fade in" role="alert">
+                            <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                         <span aria-hidden="true">×</span>
+                         </button>
+                            <strong>Holy guacamole!</strong> Best check yo self, you're not looking too good.
+                        </div>
+                        <div class="alert alert-danger alert-dismissible fade in" role="alert">
+                            <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                            <span aria-hidden="true">×</span>
+                            </button>
+                            <h4>Oh snap! You got an error!</h4>
+                            <p>Change this and that and try again. Duis mollis, est non commodo luctus, nisi erat porttitor ligula, eget lacinia odio sem nec elit. Cras mattis consectetur purus sit amet fermentum.</p>
+                            <p> <button type="button" class="btn btn-danger">Take this action</button> <button type="button" class="btn btn-default">Or do this</button> </p>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-xs-8 col-xs-offset-2">
+                <div class="panel panel-primary bootstrapJsEx">
+                    <!--                    <button type="button" id="myButton1" data-loading-text="Loading..." class="btn btn-primary" autocomplete="off">Loading State</button>-->
+                    <button type="button" class="btn btn-primary" id="singleToggle" data-toggle="button" aria-pressed="false" autocomplete="off"> Single toggle</button><br/>
+                    <div class="btn-group" data-toggle="buttons">
+                        <label class="btn btn-primary" id="myStateButton"><input type="checkbox" autocomplete="off" checked> Checkbox 1 (pre-checked)</label>
+                        <label class="btn btn-primary" id="myStateButton1"><input type="checkbox" autocomplete="off"> Checkbox 2</label>
+                        <label class="btn btn-primary" id="myStateButton2"><input type="checkbox" autocomplete="off"> Checkbox 3</label>
+                    </div>
+                    <div class="btn-group" data-toggle=buttons>
+                        <label class="btn btn-warning"><input type="radio" autocomplete="off" checked> Radio 1</label>
+                        <label class="btn btn-warning"><input type="radio" autocomplete="off">Radio 2</label>
+                        <label class="btn btn-warning"><input type="radio" autocomplete="off">Radio 3</label>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-xs-8 col-xs-offset-2">
+                <div class="panel panel-primary bootstrapJsEx">
+                    <a class="btn btn-primary" role="button" data-toggle="collapse" data-target="#colex" aria-expanded="false" aria-controls="collapseexample">Link Collapse</a>
+                    <button class="btn btn-success" data-toggle="collapse" data-target="#colex" aria-expanded="false" aria-controls="collapseexample">Button Collapse</button>
+                    <div class="collapse" id="colex">
+                        <div class="well">
+                            Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident.
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-xs-8 col-xs-offset-2">
+                <div class="panel panel-primary bootstrapJsEx">
+
+                    <div class="panel-group" id="accordion1" role="tablist" aria-multiselectable="true">
+                        <div class="panel panel-default">
+                            <div class="panel-heading" role="tab" id="heading1">
+                                <h4 class="panel-title">
+                                    <a role="button" data-toggle="collapse" data-parent="#accordion1" href="#collapse1" aria-expanded="true" aria-controls="collapse1">
+                                    Collpase Group Item 1
+                                </a>
+                                </h4>
+                            </div>
+                            <div id="collapse1" class="panel-collapse collapse in" role="tabpanel" aria-labelledby="heading1">
+                                <div class="panel-body">
+                                    Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid single-origin coffee nulla assumenda shoreditch et. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident. Ad vegan excepteur butcher vice lomo. Leggings occaecat craft beer farm-to-table, raw denim aesthetic synth nesciunt you probably haven't heard of them accusamus labore sustainable VHS.
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="panel panel-default">
+                        <div class="panel-heading" role="tab" id="heading2">
+                            <h4 class="panel-title">
+                                <a cla role="button" data-toggle="collapse" data-parent="#accordion" href="#collapse2" aria-expanded="false" aria-controls="collpase2">
+                                        Collpase Group Item 2
+                                    </a>
+                            </h4>
+                        </div>
+                        <div class="panel-collapse collapse in" id="collapse2" role="tabpanel" aria-labelledby="heading2">
+                            <div class="panel-body">
+                                Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid single-origin coffee nulla assumenda shoreditch et. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident. Ad vegan excepteur butcher vice lomo. Leggings occaecat craft beer farm-to-table, raw denim aesthetic synth nesciunt you probably haven't heard of them accusamus labore sustainable VHS.
+                            </div>
+                        </div>
+                    </div>
+                    <div class="panel panel-default">
+                        <div class="panel-heading" role="tab" id="heading3">
+                            <h4 class="panel-title">
+                                <a role="button" data-toggle="collapse" data-parent="#accordion" href="#collapse3" aria-expanded="false" aria-controls="collpase3">
+                                        Collpase Group Item 3
+                                    </a>
+                            </h4>
+                        </div>
+                        <div class="panel-collapse collapse in" id="collapse3" role="tabpanel" aria-labelledby="heading3">
+                            <div class="panel-body">
+                                Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid single-origin coffee nulla assumenda shoreditch et. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident. Ad vegan excepteur butcher vice lomo. Leggings occaecat craft beer farm-to-table, raw denim aesthetic synth nesciunt you probably haven't heard of them accusamus labore sustainable VHS.
+                            </div>
+                        </div>
+                    </div>
+                    <div class="panel panel-default">
+                        <div class="panel-heading" role="tab" id="heading4">
+                            <h4 class="panel-title">
+                                <a role="button" data-toggle="collapse" data-parent="#accordion" href="#collapse4" aria-expanded="false" aria-controls="collpase4">
+                                        Collpase Group Item 4
+                                    </a>
+                            </h4>
+                        </div>
+                        <div class="panel-collapse collapse in" id="collapse4" role="tabpanel" aria-labelledby="heading4">
+                            <div class="panel-body">
+                                Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid single-origin coffee nulla assumenda shoreditch et. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident. Ad vegan excepteur butcher vice lomo. Leggings occaecat craft beer farm-to-table, raw denim aesthetic synth nesciunt you probably haven't heard of them accusamus labore sustainable VHS.
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-xs-4 col-xs-offset-4">
+                <div class="panel panel-primary bootstrapJsEx">
+
+                    <div class="carousel slide" id="carousel-example" data-ride="carousel">
+                        <ol class="carousel-indicators">
+                            <li data-target="#carousel-example" data-slide-to="0"></li>
+                            <li data-target="#carousel-example" data-slide-to="1"></li>
+                            <li data-target="#carousel-example" data-slide-to="2"></li>
+                            <li data-target="#carousel-example" data-slide-to="3"></li>
+                        </ol>
+                        <div class="carousel-inner" role="listbox">
+                            <div class="item active">
+                                <img src="image/1.jpg" alt="img1">
+                                <div class="carousel-caption">
+                                    <h4>image 1</h4>
+                                    <p>some information about image</p>
+                                </div>
+                            </div>
+                            <div class="item">
+                                <img src="image/2.png" alt="img2">
+                                <div class="carousel-caption">
+                                    <h4>image 2</h4>
+                                    <p>some information about image</p>
+                                </div>
+                            </div>
+                            <div class="item">
+                                <img src="image/6.jpg" alt="img6">
+                                <div class="carousel-caption">
+                                    <h4>image 2</h4>
+                                    <p>some information about image</p>
+                                </div>
+                            </div>
+                            <div class="item">
+                                <img src="image/4.jpg" alt="img4">
+                                <div class="carousel-caption">
+                                    <h4>image 2</h4>
+                                    <p>some information about image</p>
+                                </div>
+                            </div>
+                        </div>
+                        <a class="left carousel-control" href="#carousel-example" role="button" data-slide="prev">
+                            <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
+                            <span class="sr-only">Previous</span>
+                        </a>
+                        <a class="right carousel-control" href="#carousel-example" role="button" data-slide="next">
+                            <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
+                            <span class="sr-only">Next</span>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-xs-8 col-xs-offset-2">
+                <div class="panel panel-primary bootstrapJsEx">
+                    <div class="carousel slide" id="carousel-example-geek" data-ride="carousel">
+                        <ol class="carousel-indicators">
+                            <li data-target="#carousel-example-geek" data-slide-to="0" class="active"></li>
+                            <li data-target="#carousel-example-geek" data-slide-to="1"></li>
+                            <li data-target="#carousel-example-geek" data-slide-to="2"></li>
+                        </ol>
+                        <div class="carousel-inner" role="listbox">
+                            <div class="item active">
+                                <img src="image/geek.jpeg" alt="img1">
+                                <div class="carousel-caption">
+                                    <h4>Geek </h4>
+                                    <p>Geek is a Gender!!</p>
+                                </div>
+                            </div>
+                            <div class="item">
+                                <img src="image/geek3.png" alt="img6">
+                                <div class="carousel-caption">
+                                    <h4>Geek</h4>
+                                    <p>A Binary LifeStyle?Maybe!</p>
+                                </div>
+                            </div>
+                            <div class="item">
+                                <img src="image/geek4.png" alt="img4">
+                                <div class="carousel-caption">
+                                    <h4>Geek</h4>
+                                    <p>127.0.01 sweet 127.0.01</p>
+                                </div>
+                            </div>
+                        </div>
+                        <a class="left carousel-control" href="#carousel-example-geek" role="button" data-slide="prev">
+                            <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
+                            <span class="sr-only">Previous</span>
+                        </a>
+                        <a class="right carousel-control" href="#carousel-example-geek" role="button" data-slide="next">
+                            <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
+                            <span class="sr-only">Next</span>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-xs-8 col-xs-offset-2">
+                <div class="panel panel-primary bootstrapJsEx">
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-xs-8 col-xs-offset-2">
+                <div class="panel panel-primary bootstrapJsEx">
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-xs-8 col-xs-offset-2">
+                <div class="panel panel-primary bootstrapJsEx">
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-xs-8 col-xs-offset-2">
+                <div class="panel panel-primary bootstrapJsEx">
+                </div>
+            </div>
+        </div>
+    </div>
+
+</body>
+<footer>
+    <script src="../components/jquery/dist/jquery.js"></script>
+    <script src="../components/bootstrap/dist/js/bootstrap.js"></script>
+    <script src="../components/bootstrap/js/modal.js"></script>
+    <script src="../components/bootstrap/js/transition.js"></script>
+    <script src="../components/bootstrap/js/dropdown.js"></script>
+    <script src="../components/bootstrap/js/scrollspy.js"></script>
+    <script src="../components/bootstrap/js/tab.js"></script>
+    <script src="../components/bootstrap/js/tooltip.js"></script>
+    <script src="../components/bootstrap/js/popover.js"></script>
+    <script src="../components/bootstrap/js/button.js"></script>
+    <script src="../components/bootstrap/js/carousel.js"></script>
+    <script src="../components/bootstrap/js/collapse.js"></script>
+    <script>
+        $("[data-toggle=tooltip]").tooltip();
+        $('.tooltipOnClick').tooltip();
+        $('[data-toggle="popover"]').popover();
+
+        $('#myStateButton').on('click', function() {
+            $(this).button('toggle')
+        })
+        $('#myStateButton1').on('click', function() {
+            $(this).button('toggle')
+        })
+
+        $('#myStateButton2').on('click', function() {
+            $(this).button('toggle')
+        })
+
+        $('#singleToggle').on('click', function() {
+            $(this).button('toggle')
+        })
+        $("[data-toggle=dropdown]").dropdown();
+
+        $('.collapse').collapse('hide')
+
+        /*$("#myButton1").on("click", function() {
+            var $btn = (this);
+            $btn.button("loading"), setTimeout(function() {
+                $btn.button("reset")
+            }, 3e3)
+        })*/
+
+    </script>
+
+</footer>
+
+</html>

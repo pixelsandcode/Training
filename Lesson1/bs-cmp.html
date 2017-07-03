@@ -1,0 +1,1326 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Lesson 1 - Bootstrap</title>
+    <link href="../components/bootstrap/dist/css/bootstrap.css" rel="stylesheet">
+    <link href="style.css" rel="stylesheet">
+    <script src="../components/bootstrap/dist/js/bootstrap.js"></script>
+    <script src="../components/jquery/dist/jquery.js"></script>
+    <script src="../components/bootstrap/js/collapse.js"></script>
+    <script src="../components/bootstrap/js/transition.js"></script>
+    <script src="../components/bootstrap/js/dropdown.js"></script>
+    <script src="../components/bootstrap/js/alert.js"></script>
+
+</head>
+
+<body>
+    <nav class="navbar navbar-default">
+        <div class="container-fluid">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar-collapse-1" aria-expanded="false">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand" href="index.html"><img src="image/6.jpg" class="img-circle">Lesson 1</a>
+            </div>
+            <div class="collapse navbar-collapse" id="navbar-collapse-1">
+                <ul class="nav navbar-nav">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="bs-css.html">Css</a></li>
+                    <li class="active"><a href="bs-cmp.html">Components<span class="sr-only" >(current)</span></a></li>
+                    <li><a href="bs-js.html">Java Scipt</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    <div class="container">
+        <div class="row">
+            <ul class="list-inline glyph">
+                <li> <span class="glyphicon glyphicon-asterisk" data-toggel="tooltip" title="glyphicon glyphicon-asterisk" aria-hidden="true"></span> </li>
+                <li> <span class="glyphicon glyphicon-plus" data-toggel="tooltip" title="glyphicon glyphicon-plus" aria-hidden="true"></span> </li>
+                <li> <span class="glyphicon glyphicon-euro" data-toggel="tooltip" title="glyphicon glyphicon-euro" aria-hidden="true"></span> </li>
+                <li> <span class="glyphicon glyphicon-eur" data-toggel="tooltip" title="glyphicon glyphicon-eur" aria-hidden="true"></span> </li>
+                <li> <span class="glyphicon glyphicon-minus" data-toggel="tooltip" title="glyphicon glyphicon-minus" aria-hidden="true"></span> </li>
+                <li> <span class="glyphicon glyphicon-cloud" data-toggel="tooltip" title="glyphicon glyphicon-cloud" aria-hidden="true"></span> </li>
+                <li> <span class="glyphicon glyphicon-envelope" data-toggel="tooltip" title="glyphicon glyphicon-envelope" aria-hidden="true"></span> </li>
+                <li> <span class="glyphicon glyphicon-pencil" data-toggel="tooltip" title="glyphicon glyphicon-pencil" aria-hidden="true"></span> </li>
+                <li> <span class="glyphicon glyphicon-glass" data-toggel="tooltip" title="glyphicon glyphicon-glass" aria-hidden="true"></span> </li>
+                <li> <span class="glyphicon glyphicon-music" data-toggel="tooltip" title="glyphicon glyphicon-music" aria-hidden="true"></span> </li>
+                <li> <span class="glyphicon glyphicon-search" data-toggel="tooltip" title="glyphicon glyphicon-search" aria-hidden="true"></span> </li>
+                <li> <span class="glyphicon glyphicon-heart" data-toggel="tooltip" title="glyphicon glyphicon-heart" aria-hidden="true"></span> </li>
+                <li> <span class="glyphicon glyphicon-star" data-toggel="tooltip" title="glyphicon glyphicon-star" aria-hidden="true"></span> </li>
+                <li> <span class="glyphicon glyphicon-star-empty" data-toggel="tooltip" title="glyphicon glyphicon-star-empty" aria-hidden="true"></span> </li>
+                <li> <span class="glyphicon glyphicon-user" data-toggel="tooltip" title="glyphicon glyphicon-user" aria-hidden="true"></span> </li>
+                <li> <span class="glyphicon glyphicon-film" data-toggel="tooltip" title="glyphicon glyphicon-film" aria-hidden="true"></span> </li>
+                <li> <span class="glyphicon glyphicon-th-large" data-toggel="tooltip" title="glyphicon glyphicon-th-large" aria-hidden="true"></span> </li>
+                <li> <span class="glyphicon glyphicon-th" data-toggel="tooltip" title="glyphicon glyphicon-th" aria-hidden="true"></span> </li>
+                <li> <span class="glyphicon glyphicon-th-list" data-toggel="tooltip" title="glyphicon glyphicon-th-list" aria-hidden="true"></span> </li>
+                <li> <span class="glyphicon glyphicon-ok" data-toggel="tooltip" title="glyphicon glyphicon-ok" aria-hidden="true"></span> </li>
+                <li> <span class="glyphicon glyphicon-remove" data-toggel="tooltip" title="glyphicon glyphicon-remove" aria-hidden="true"></span> </li>
+                <li> <span class="glyphicon glyphicon-zoom-in" data-toggel="tooltip" title="glyphicon glyphicon-zoom-in" aria-hidden="true"></span> </li>
+                <li> <span class="glyphicon glyphicon-zoom-out" data-toggel="tooltip" title="glyphicon glyphicon-zoom-out" aria-hidden="true"></span> </li>
+                <li> <span class="glyphicon glyphicon-off" data-toggel="tooltip" title="glyphicon glyphicon-off" aria-hidden="true"></span> </li>
+                <li> <span class="glyphicon glyphicon-signal" data-toggel="tooltip" title="glyphicon glyphicon-signal" aria-hidden="true"></span> </li>
+                <li> <span class="glyphicon glyphicon-cog" data-toggel="tooltip" title="glyphicon glyphicon-cog" aria-hidden="true"></span> </li>
+                <li> <span class="glyphicon glyphicon-trash" data-toggel="tooltip" title="glyphicon glyphicon-trash" aria-hidden="true"></span> </li>
+                <li> <span class="glyphicon glyphicon-home" data-toggel="tooltip" title="glyphicon glyphicon-home" aria-hidden="true"></span> </li>
+                <li> <span class="glyphicon glyphicon-file" data-toggel="tooltip" title="glyphicon glyphicon-file" aria-hidden="true"></span> </li>
+                <li> <span class="glyphicon glyphicon-time" data-toggel="tooltip" title="glyphicon glyphicon-time" aria-hidden="true"></span> </li>
+                <li> <span class="glyphicon glyphicon-road" data-toggel="tooltip" title="glyphicon glyphicon-road" aria-hidden="true"></span> </li>
+                <li> <span class="glyphicon glyphicon-download-alt" data-toggel="tooltip" title="glyphicon glyphicon-download-alt" aria-hidden="true"></span> </li>
+                <li> <span class="glyphicon glyphicon-download" data-toggel="tooltip" title="glyphicon glyphicon-download" aria-hidden="true"></span> </li>
+                <li> <span class="glyphicon glyphicon-upload" data-toggel="tooltip" title="glyphicon glyphicon-upload" aria-hidden="true"></span> </li>
+                <li> <span class="glyphicon glyphicon-inbox" data-toggel="tooltip" title="glyphicon glyphicon-inbox" aria-hidden="true"></span> </li>
+                <li> <span class="glyphicon glyphicon-play-circle" data-toggel="tooltip" title="glyphicon glyphicon-play-circle" aria-hidden="true"></span> </li>
+                <li> <span class="glyphicon glyphicon-repeat" data-toggel="tooltip" title="glyphicon glyphicon-repeat" aria-hidden="true"></span> </li>
+                <li> <span class="glyphicon glyphicon-refresh" data-toggel="tooltip" title="glyphicon glyphicon-refresh" aria-hidden="true"></span> </li>
+                <li> <span class="glyphicon glyphicon-list-alt" data-toggel="tooltip" title="glyphicon glyphicon-list-alt" aria-hidden="true"></span> </li>
+                <li> <span class="glyphicon glyphicon-lock" data-toggel="tooltip" title="glyphicon glyphicon-lock" aria-hidden="true"></span> </li>
+                <li> <span class="glyphicon glyphicon-flag" data-toggel="tooltip" title="glyphicon glyphicon-flag" aria-hidden="true"></span> </li>
+                <li> <span class="glyphicon glyphicon-headphones" data-toggel="tooltip" title="glyphicon glyphicon-headphones" aria-hidden="true"></span> </li>
+                <li> <span class="glyphicon glyphicon-volume-off" data-toggel="tooltip" title="glyphicon glyphicon-volume-off" aria-hidden="true"></span> </li>
+                <li> <span class="glyphicon glyphicon-volume-down" data-toggel="tooltip" title="glyphicon glyphicon-volume-down" aria-hidden="true"></span> </li>
+                <li> <span class="glyphicon glyphicon-volume-up" data-toggel="tooltip" title="glyphicon glyphicon-volume-up" aria-hidden="true"></span> </li>
+                <li> <span class="glyphicon glyphicon-qrcode" data-toggel="tooltip" title="glyphicon glyphicon-qrcode" aria-hidden="true"></span> </li>
+                <li> <span class="glyphicon glyphicon-barcode" data-toggel="tooltip" title="glyphicon glyphicon-barcode" aria-hidden="true"></span> </li>
+                <li> <span class="glyphicon glyphicon-tag" data-toggel="tooltip" title="glyphicon glyphicon-tag" aria-hidden="true"></span> </li>
+                <li> <span class="glyphicon glyphicon-tags" data-toggel="tooltip" title="glyphicon glyphicon-tags" aria-hidden="true"></span> </li>
+                <li> <span class="glyphicon glyphicon-book" data-toggel="tooltip" title="glyphicon glyphicon-book" aria-hidden="true"></span> </li>
+                <li> <span class="glyphicon glyphicon-bookmark" data-toggel="tooltip" title="glyphicon glyphicon-bookmark" aria-hidden="true"></span> </li>
+                <li> <span class="glyphicon glyphicon-print" data-toggel="tooltip" title="glyphicon glyphicon-print" aria-hidden="true"></span> </li>
+                <li> <span class="glyphicon glyphicon-camera" data-toggel="tooltip" title="glyphicon glyphicon-camera" aria-hidden="true"></span> </li>
+                <li> <span class="glyphicon glyphicon-font" data-toggel="tooltip" title="glyphicon glyphicon-font" aria-hidden="true"></span> </li>
+                <li> <span class="glyphicon glyphicon-bold" data-toggel="tooltip" title="glyphicon glyphicon-bold" aria-hidden="true"></span> </li>
+                <li> <span class="glyphicon glyphicon-italic" data-toggel="tooltip" title="glyphicon glyphicon-italic" aria-hidden="true"></span> </li>
+                <li> <span class="glyphicon glyphicon-text-height" data-toggel="tooltip" title="glyphicon glyphicon-text-height" aria-hidden="true"></span> </li>
+                <li> <span class="glyphicon glyphicon-text-width" data-toggel="tooltip" title="glyphicon glyphicon-text-width" aria-hidden="true"></span> </li>
+                <li> <span class="glyphicon glyphicon-align-left" data-toggel="tooltip" title="glyphicon glyphicon-align-left" aria-hidden="true"></span> </li>
+                <li> <span class="glyphicon glyphicon-align-center" data-toggel="tooltip" title="glyphicon glyphicon-align-center" aria-hidden="true"></span> </li>
+                <li> <span class="glyphicon glyphicon-align-right" data-toggel="tooltip" title="glyphicon glyphicon-align-right" aria-hidden="true"></span> </li>
+                <li> <span class="glyphicon glyphicon-align-justify" data-toggel="tooltip" title="glyphicon glyphicon-align-justify" aria-hidden="true"></span> </li>
+                <li> <span class="glyphicon glyphicon-list" data-toggel="tooltip" title="glyphicon glyphicon-list" aria-hidden="true"></span> </li>
+                <li> <span class="glyphicon glyphicon-indent-left" data-toggel="tooltip" title="glyphicon glyphicon-indent-left" aria-hidden="true"></span> </li>
+                <li> <span class="glyphicon glyphicon-indent-right" data-toggel="tooltip" title="glyphicon glyphicon-indent-right" aria-hidden="true"></span> </li>
+                <li> <span class="glyphicon glyphicon-facetime-video" data-toggel="tooltip" title="glyphicon glyphicon-facetime-video" aria-hidden="true"></span> </li>
+                <li> <span class="glyphicon glyphicon-picture" data-toggel="tooltip" title="glyphicon glyphicon-picture" aria-hidden="true"></span> </li>
+                <li> <span class="glyphicon glyphicon-map-marker" data-toggel="tooltip" title="glyphicon glyphicon-map-marker" aria-hidden="true"></span> </li>
+                <li> <span class="glyphicon glyphicon-adjust" data-toggel="tooltip" title="glyphicon glyphicon-adjust" aria-hidden="true"></span> </li>
+                <li> <span class="glyphicon glyphicon-tint" data-toggel="tooltip" title="glyphicon glyphicon-tint" aria-hidden="true"></span> </li>
+                <li> <span class="glyphicon glyphicon-edit" data-toggel="tooltip" title="glyphicon glyphicon-edit" aria-hidden="true"></span> </li>
+                <li> <span class="glyphicon glyphicon-share" data-toggel="tooltip" title="glyphicon glyphicon-share" aria-hidden="true"></span> </li>
+                <li> <span class="glyphicon glyphicon-check" data-toggel="tooltip" title="glyphicon glyphicon-check" aria-hidden="true"></span> </li>
+                <li> <span class="glyphicon glyphicon-move" data-toggel="tooltip" title="glyphicon glyphicon-move" aria-hidden="true"></span> </li>
+                <li> <span class="glyphicon glyphicon-step-backward" data-toggel="tooltip" title="glyphicon glyphicon-step-backward" aria-hidden="true"></span> </li>
+                <li> <span class="glyphicon glyphicon-fast-backward" data-toggel="tooltip" title="glyphicon glyphicon-fast-backward" aria-hidden="true"></span> </li>
+                <li> <span class="glyphicon glyphicon-backward" data-toggel="tooltip" title="glyphicon glyphicon-backward" aria-hidden="true"></span> </li>
+                <li> <span class="glyphicon glyphicon-play" data-toggel="tooltip" title="glyphicon glyphicon-play" aria-hidden="true"></span> </li>
+                <li> <span class="glyphicon glyphicon-pause" data-toggel="tooltip" title="glyphicon glyphicon-pause" aria-hidden="true"></span> </li>
+                <li> <span class="glyphicon glyphicon-stop" data-toggel="tooltip" title="glyphicon glyphicon-stop" aria-hidden="true"></span> </li>
+                <li> <span class="glyphicon glyphicon-forward" data-toggel="tooltip" title="glyphicon glyphicon-forward" aria-hidden="true"></span> </li>
+                <li> <span class="glyphicon glyphicon-fast-forward" data-toggel="tooltip" title="glyphicon glyphicon-fast-forward" aria-hidden="true"></span> </li>
+                <li> <span class="glyphicon glyphicon-step-forward" data-toggel="tooltip" title="glyphicon glyphicon-step-forward" aria-hidden="true"></span> </li>
+                <li> <span class="glyphicon glyphicon-eject" data-toggel="tooltip" title="glyphicon glyphicon-eject" aria-hidden="true"></span> </li>
+                <li> <span class="glyphicon glyphicon-chevron-left" data-toggel="tooltip" title="glyphicon glyphicon-chevron-left" aria-hidden="true"></span> </li>
+                <li> <span class="glyphicon glyphicon-chevron-right" data-toggel="tooltip" title="glyphicon glyphicon-chevron-right" aria-hidden="true"></span> </li>
+                <li> <span class="glyphicon glyphicon-plus-sign" data-toggel="tooltip" title="glyphicon glyphicon-plus-sign" aria-hidden="true"></span> </li>
+                <li> <span class="glyphicon glyphicon-minus-sign" data-toggel="tooltip" title="glyphicon glyphicon-minus-sign" aria-hidden="true"></span> </li>
+                <li> <span class="glyphicon glyphicon-remove-sign" data-toggel="tooltip" title="glyphicon glyphicon-remove-sign" aria-hidden="true"></span> </li>
+                <li> <span class="glyphicon glyphicon-ok-sign" data-toggel="tooltip" title="glyphicon glyphicon-ok-sign" aria-hidden="true"></span> </li>
+                <li> <span class="glyphicon glyphicon-question-sign" data-toggel="tooltip" title="glyphicon glyphicon-question-sign" aria-hidden="true"></span> </li>
+                <li> <span class="glyphicon glyphicon-info-sign" data-toggel="tooltip" title="glyphicon glyphicon-info-sign" aria-hidden="true"></span> </li>
+                <li> <span class="glyphicon glyphicon-screenshot" data-toggel="tooltip" title="glyphicon glyphicon-screenshot" aria-hidden="true"></span> </li>
+                <li> <span class="glyphicon glyphicon-remove-circle" data-toggel="tooltip" title="glyphicon glyphicon-remove-circle" aria-hidden="true"></span> </li>
+                <li> <span class="glyphicon glyphicon-ok-circle" data-toggel="tooltip" title="glyphicon glyphicon-ok-circle" aria-hidden="true"></span> </li>
+                <li> <span class="glyphicon glyphicon-ban-circle" data-toggel="tooltip" title="glyphicon glyphicon-ban-circle" aria-hidden="true"></span> </li>
+                <li> <span class="glyphicon glyphicon-arrow-left" data-toggel="tooltip" title="glyphicon glyphicon-arrow-left" aria-hidden="true"></span> </li>
+                <li> <span class="glyphicon glyphicon-arrow-right" data-toggel="tooltip" title="glyphicon glyphicon-arrow-right" aria-hidden="true"></span> </li>
+                <li> <span class="glyphicon glyphicon-arrow-up" data-toggel="tooltip" title="glyphicon glyphicon-arrow-up" aria-hidden="true"></span> </li>
+                <li> <span class="glyphicon glyphicon-arrow-down" data-toggel="tooltip" title="glyphicon glyphicon-arrow-down" aria-hidden="true"></span> </li>
+                <li> <span class="glyphicon glyphicon-share-alt" data-toggel="tooltip" title="glyphicon glyphicon-share-alt" aria-hidden="true"></span> </li>
+                <li> <span class="glyphicon glyphicon-resize-full" data-toggel="tooltip" title="glyphicon glyphicon-resize-full" aria-hidden="true"></span> </li>
+                <li> <span class="glyphicon glyphicon-resize-small" data-toggel="tooltip" title="glyphicon glyphicon-resize-small" aria-hidden="true"></span> </li>
+                <li> <span class="glyphicon glyphicon-exclamation-sign" data-toggel="tooltip" title="glyphicon glyphicon-exclamation-sign" aria-hidden="true"></span> </li>
+                <li> <span class="glyphicon glyphicon-gift" data-toggel="tooltip" title="glyphicon glyphicon-gift" aria-hidden="true"></span> </li>
+                <li> <span class="glyphicon glyphicon-leaf" data-toggel="tooltip" title="glyphicon glyphicon-leaf" aria-hidden="true"></span> </li>
+                <li> <span class="glyphicon glyphicon-fire" data-toggel="tooltip" title="glyphicon glyphicon-fire" aria-hidden="true"></span> </li>
+                <li> <span class="glyphicon glyphicon-eye-open" data-toggel="tooltip" title="glyphicon glyphicon-eye-open" aria-hidden="true"></span> </li>
+                <li> <span class="glyphicon glyphicon-eye-close" data-toggel="tooltip" title="glyphicon glyphicon-eye-close" aria-hidden="true"></span> </li>
+                <li> <span class="glyphicon glyphicon-warning-sign" data-toggel="tooltip" title="glyphicon glyphicon-warning-sign" aria-hidden="true"></span> </li>
+                <li> <span class="glyphicon glyphicon-plane" data-toggel="tooltip" title="glyphicon glyphicon-plane" aria-hidden="true"></span> </li>
+                <li> <span class="glyphicon glyphicon-calendar" data-toggel="tooltip" title="glyphicon glyphicon-calendar" aria-hidden="true"></span> </li>
+                <li> <span class="glyphicon glyphicon-random" data-toggel="tooltip" title="glyphicon glyphicon-random" aria-hidden="true"></span> </li>
+                <li> <span class="glyphicon glyphicon-comment" data-toggel="tooltip" title="glyphicon glyphicon-comment" aria-hidden="true"></span> </li>
+                <li> <span class="glyphicon glyphicon-magnet" data-toggel="tooltip" title="glyphicon glyphicon-magnet" aria-hidden="true"></span> </li>
+                <li> <span class="glyphicon glyphicon-chevron-up" data-toggel="tooltip" title="glyphicon glyphicon-chevron-up" aria-hidden="true"></span> </li>
+                <li> <span class="glyphicon glyphicon-chevron-down" data-toggel="tooltip" title="glyphicon glyphicon-chevron-down" aria-hidden="true"></span> </li>
+                <li> <span class="glyphicon glyphicon-retweet" data-toggel="tooltip" title="glyphicon glyphicon-retweet" aria-hidden="true"></span> </li>
+                <li> <span class="glyphicon glyphicon-shopping-cart" data-toggel="tooltip" title="glyphicon glyphicon-shopping-cart" aria-hidden="true"></span> </li>
+                <li> <span class="glyphicon glyphicon-folder-close" data-toggel="tooltip" title="glyphicon glyphicon-folder-close" aria-hidden="true"></span> </li>
+                <li> <span class="glyphicon glyphicon-folder-open" data-toggel="tooltip" title="glyphicon glyphicon-folder-open" aria-hidden="true"></span> </li>
+                <li> <span class="glyphicon glyphicon-resize-vertical" data-toggel="tooltip" title="glyphicon glyphicon-resize-vertical" aria-hidden="true"></span> </li>
+                <li> <span class="glyphicon glyphicon-resize-horizontal" data-toggel="tooltip" title="glyphicon glyphicon-resize-horizontal" aria-hidden="true"></span> </li>
+                <li> <span class="glyphicon glyphicon-hdd" data-toggel="tooltip" title="glyphicon glyphicon-hdd" aria-hidden="true"></span> </li>
+                <li> <span class="glyphicon glyphicon-bullhorn" data-toggel="tooltip" title="glyphicon glyphicon-bullhorn" aria-hidden="true"></span> </li>
+                <li> <span class="glyphicon glyphicon-bell" data-toggel="tooltip" title="glyphicon glyphicon-bell" aria-hidden="true"></span> </li>
+                <li> <span class="glyphicon glyphicon-certificate" data-toggel="tooltip" title="glyphicon glyphicon-certificate" aria-hidden="true"></span> </li>
+                <li> <span class="glyphicon glyphicon-thumbs-up" data-toggel="tooltip" title="glyphicon glyphicon-thumbs-up" aria-hidden="true"></span> </li>
+                <li> <span class="glyphicon glyphicon-thumbs-down" data-toggel="tooltip" title="glyphicon glyphicon-thumbs-down" aria-hidden="true"></span> </li>
+                <li> <span class="glyphicon glyphicon-hand-right" data-toggel="tooltip" title="glyphicon glyphicon-hand-right" aria-hidden="true"></span> </li>
+                <li> <span class="glyphicon glyphicon-hand-left" data-toggel="tooltip" title="glyphicon glyphicon-hand-left" aria-hidden="true"></span> </li>
+                <li> <span class="glyphicon glyphicon-hand-up" data-toggel="tooltip" title="glyphicon glyphicon-hand-up" aria-hidden="true"></span> </li>
+                <li> <span class="glyphicon glyphicon-hand-down" data-toggel="tooltip" title="glyphicon glyphicon-hand-down" aria-hidden="true"></span> </li>
+                <li> <span class="glyphicon glyphicon-circle-arrow-right" data-toggel="tooltip" title="glyphicon glyphicon-circle-arrow-right" aria-hidden="true"></span> </li>
+                <li> <span class="glyphicon glyphicon-circle-arrow-left" data-toggel="tooltip" title="glyphicon glyphicon-circle-arrow-left" aria-hidden="true"></span> </li>
+                <li> <span class="glyphicon glyphicon-circle-arrow-up" data-toggel="tooltip" title="glyphicon glyphicon-circle-arrow-up" aria-hidden="true"></span> </li>
+                <li> <span class="glyphicon glyphicon-circle-arrow-down" data-toggel="tooltip" title="glyphicon glyphicon-circle-arrow-down" aria-hidden="true"></span> </li>
+                <li> <span class="glyphicon glyphicon-globe" data-toggel="tooltip" title="glyphicon glyphicon-globe" aria-hidden="true"></span> </li>
+                <li> <span class="glyphicon glyphicon-wrench" data-toggel="tooltip" title="glyphicon glyphicon-wrench" aria-hidden="true"></span> </li>
+                <li> <span class="glyphicon glyphicon-tasks" data-toggel="tooltip" title="glyphicon glyphicon-tasks" aria-hidden="true"></span> </li>
+                <li> <span class="glyphicon glyphicon-filter" data-toggel="tooltip" title="glyphicon glyphicon-filter" aria-hidden="true"></span> </li>
+                <li> <span class="glyphicon glyphicon-briefcase" data-toggel="tooltip" title="glyphicon glyphicon-briefcase" aria-hidden="true"></span> </li>
+                <li> <span class="glyphicon glyphicon-fullscreen" data-toggel="tooltip" title="glyphicon glyphicon-fullscreen" aria-hidden="true"></span> </li>
+                <li> <span class="glyphicon glyphicon-dashboard" data-toggel="tooltip" title="glyphicon glyphicon-dashboard" aria-hidden="true"></span> </li>
+                <li> <span class="glyphicon glyphicon-paperclip" data-toggel="tooltip" title="glyphicon glyphicon-paperclip" aria-hidden="true"></span> </li>
+                <li> <span class="glyphicon glyphicon-heart-empty" data-toggel="tooltip" title="glyphicon glyphicon-heart-empty" aria-hidden="true"></span> </li>
+                <li> <span class="glyphicon glyphicon-link" data-toggel="tooltip" title="glyphicon glyphicon-link" aria-hidden="true"></span> </li>
+                <li> <span class="glyphicon glyphicon-phone" data-toggel="tooltip" title="glyphicon glyphicon-phone" aria-hidden="true"></span> </li>
+                <li> <span class="glyphicon glyphicon-pushpin" data-toggel="tooltip" title="glyphicon glyphicon-pushpin" aria-hidden="true"></span> </li>
+                <li> <span class="glyphicon glyphicon-usd" data-toggel="tooltip" title="glyphicon glyphicon-usd" aria-hidden="true"></span> </li>
+                <li> <span class="glyphicon glyphicon-gbp" data-toggel="tooltip" title="glyphicon glyphicon-gbp" aria-hidden="true"></span> </li>
+                <li> <span class="glyphicon glyphicon-sort" data-toggel="tooltip" title="glyphicon glyphicon-sort" aria-hidden="true"></span> </li>
+                <li> <span class="glyphicon glyphicon-sort-by-alphabet" data-toggel="tooltip" title="glyphicon glyphicon-sort-by-alphabet" aria-hidden="true"></span> </li>
+                <li> <span class="glyphicon glyphicon-sort-by-alphabet-alt" data-toggel="tooltip" title="glyphicon glyphicon-sort-by-alphabet-alt" aria-hidden="true"></span> </li>
+                <li> <span class="glyphicon glyphicon-sort-by-order" data-toggel="tooltip" title="glyphicon glyphicon-sort-by-order" aria-hidden="true"></span> </li>
+                <li> <span class="glyphicon glyphicon-sort-by-order-alt" data-toggel="tooltip" title="glyphicon glyphicon-sort-by-order-alt" aria-hidden="true"></span> </li>
+                <li> <span class="glyphicon glyphicon-sort-by-attributes" data-toggel="tooltip" title="glyphicon glyphicon-sort-by-attributes" aria-hidden="true"></span> </li>
+                <li> <span class="glyphicon glyphicon-sort-by-attributes-alt" data-toggel="tooltip" title="glyphicon glyphicon-sort-by-attributes-alt" aria-hidden="true"></span> </li>
+                <li> <span class="glyphicon glyphicon-unchecked" data-toggel="tooltip" title="glyphicon glyphicon-unchecked" aria-hidden="true"></span> </li>
+                <li> <span class="glyphicon glyphicon-expand" data-toggel="tooltip" title="glyphicon glyphicon-expand" aria-hidden="true"></span> </li>
+                <li> <span class="glyphicon glyphicon-collapse-down" data-toggel="tooltip" title="glyphicon glyphicon-collapse-down" aria-hidden="true"></span> </li>
+                <li> <span class="glyphicon glyphicon-collapse-up" data-toggel="tooltip" title="glyphicon glyphicon-collapse-up" aria-hidden="true"></span> </li>
+                <li> <span class="glyphicon glyphicon-log-in" data-toggel="tooltip" title="glyphicon glyphicon-log-in" aria-hidden="true"></span> </li>
+                <li> <span class="glyphicon glyphicon-flash" data-toggel="tooltip" title="glyphicon glyphicon-flash" aria-hidden="true"></span> </li>
+                <li> <span class="glyphicon glyphicon-log-out" data-toggel="tooltip" title="glyphicon glyphicon-log-out" aria-hidden="true"></span> </li>
+                <li> <span class="glyphicon glyphicon-new-window" data-toggel="tooltip" title="glyphicon glyphicon-new-window" aria-hidden="true"></span> </li>
+                <li> <span class="glyphicon glyphicon-record" data-toggel="tooltip" title="glyphicon glyphicon-record" aria-hidden="true"></span> </li>
+                <li> <span class="glyphicon glyphicon-save" data-toggel="tooltip" title="glyphicon glyphicon-save" aria-hidden="true"></span> </li>
+                <li> <span class="glyphicon glyphicon-open" data-toggel="tooltip" title="glyphicon glyphicon-open" aria-hidden="true"></span> </li>
+                <li> <span class="glyphicon glyphicon-saved" data-toggel="tooltip" title="glyphicon glyphicon-saved" aria-hidden="true"></span> </li>
+                <li> <span class="glyphicon glyphicon-import" data-toggel="tooltip" title="glyphicon glyphicon-import" aria-hidden="true"></span> </li>
+                <li> <span class="glyphicon glyphicon-export" data-toggel="tooltip" title="glyphicon glyphicon-export" aria-hidden="true"></span> </li>
+                <li> <span class="glyphicon glyphicon-send" data-toggel="tooltip" title="glyphicon glyphicon-send" aria-hidden="true"></span> </li>
+                <li> <span class="glyphicon glyphicon-floppy-disk" data-toggel="tooltip" title="glyphicon glyphicon-floppy-disk" aria-hidden="true"></span> </li>
+                <li> <span class="glyphicon glyphicon-floppy-saved" data-toggel="tooltip" title="glyphicon glyphicon-floppy-saved" aria-hidden="true"></span> </li>
+                <li> <span class="glyphicon glyphicon-floppy-remove" data-toggel="tooltip" title="glyphicon glyphicon-floppy-remove" aria-hidden="true"></span> </li>
+                <li> <span class="glyphicon glyphicon-floppy-save" data-toggel="tooltip" title="glyphicon glyphicon-floppy-save" aria-hidden="true"></span> </li>
+                <li> <span class="glyphicon glyphicon-floppy-open" data-toggel="tooltip" title="glyphicon glyphicon-floppy-open" aria-hidden="true"></span> </li>
+                <li> <span class="glyphicon glyphicon-credit-card" data-toggel="tooltip" title="glyphicon glyphicon-credit-card" aria-hidden="true"></span> </li>
+                <li> <span class="glyphicon glyphicon-transfer" data-toggel="tooltip" title="glyphicon glyphicon-transfer" aria-hidden="true"></span> </li>
+                <li> <span class="glyphicon glyphicon-cutlery" data-toggel="tooltip" title="glyphicon glyphicon-cutlery" aria-hidden="true"></span> </li>
+                <li> <span class="glyphicon glyphicon-header" data-toggel="tooltip" title="glyphicon glyphicon-header" aria-hidden="true"></span> </li>
+                <li> <span class="glyphicon glyphicon-compressed" data-toggel="tooltip" title="glyphicon glyphicon-compressed" aria-hidden="true"></span> </li>
+                <li> <span class="glyphicon glyphicon-earphone" data-toggel="tooltip" title="glyphicon glyphicon-earphone" aria-hidden="true"></span> </li>
+                <li> <span class="glyphicon glyphicon-phone-alt" data-toggel="tooltip" title="glyphicon glyphicon-phone-alt" aria-hidden="true"></span> </li>
+                <li> <span class="glyphicon glyphicon-tower" data-toggel="tooltip" title="glyphicon glyphicon-tower" aria-hidden="true"></span> </li>
+                <li> <span class="glyphicon glyphicon-stats" data-toggel="tooltip" title="glyphicon glyphicon-stats" aria-hidden="true"></span> </li>
+                <li> <span class="glyphicon glyphicon-sd-video" data-toggel="tooltip" title="glyphicon glyphicon-sd-video" aria-hidden="true"></span> </li>
+                <li> <span class="glyphicon glyphicon-hd-video" data-toggel="tooltip" title="glyphicon glyphicon-hd-video" aria-hidden="true"></span> </li>
+                <li> <span class="glyphicon glyphicon-subtitles" data-toggel="tooltip" title="glyphicon glyphicon-subtitles" aria-hidden="true"></span> </li>
+                <li> <span class="glyphicon glyphicon-sound-stereo" data-toggel="tooltip" title="glyphicon glyphicon-sound-stereo" aria-hidden="true"></span> </li>
+                <li> <span class="glyphicon glyphicon-sound-dolby" data-toggel="tooltip" title="glyphicon glyphicon-sound-dolby" aria-hidden="true"></span> </li>
+                <li> <span class="glyphicon glyphicon-sound-5-1" data-toggel="tooltip" title="glyphicon glyphicon-sound-5-1" aria-hidden="true"></span> </li>
+                <li> <span class="glyphicon glyphicon-sound-6-1" data-toggel="tooltip" title="glyphicon glyphicon-sound-6-1" aria-hidden="true"></span> </li>
+                <li> <span class="glyphicon glyphicon-sound-7-1" data-toggel="tooltip" title="glyphicon glyphicon-sound-7-1" aria-hidden="true"></span> </li>
+                <li> <span class="glyphicon glyphicon-copyright-mark" data-toggel="tooltip" title="glyphicon glyphicon-copyright-mark" aria-hidden="true"></span> </li>
+                <li> <span class="glyphicon glyphicon-registration-mark" data-toggel="tooltip" title="glyphicon glyphicon-registration-mark" aria-hidden="true"></span> </li>
+                <li> <span class="glyphicon glyphicon-cloud-download" data-toggel="tooltip" title="glyphicon glyphicon-cloud-download" aria-hidden="true"></span> </li>
+                <li> <span class="glyphicon glyphicon-cloud-upload" data-toggel="tooltip" title="glyphicon glyphicon-cloud-upload" aria-hidden="true"></span> </li>
+                <li> <span class="glyphicon glyphicon-tree-conifer" data-toggel="tooltip" title="glyphicon glyphicon-tree-conifer" aria-hidden="true"></span> </li>
+                <li> <span class="glyphicon glyphicon-tree-deciduous" data-toggel="tooltip" title="glyphicon glyphicon-tree-deciduous" aria-hidden="true"></span> </li>
+                <li> <span class="glyphicon glyphicon-cd" data-toggel="tooltip" title="glyphicon glyphicon-cd" aria-hidden="true"></span> </li>
+                <li> <span class="glyphicon glyphicon-save-file" data-toggel="tooltip" title="glyphicon glyphicon-save-file" aria-hidden="true"></span> </li>
+                <li> <span class="glyphicon glyphicon-open-file" data-toggel="tooltip" title="glyphicon glyphicon-open-file" aria-hidden="true"></span> </li>
+                <li> <span class="glyphicon glyphicon-level-up" data-toggel="tooltip" title="glyphicon glyphicon-level-up" aria-hidden="true"></span> </li>
+                <li> <span class="glyphicon glyphicon-copy" data-toggel="tooltip" title="glyphicon glyphicon-copy" aria-hidden="true"></span> </li>
+                <li> <span class="glyphicon glyphicon-paste" data-toggel="tooltip" title="glyphicon glyphicon-paste" aria-hidden="true"></span> </li>
+                <li> <span class="glyphicon glyphicon-alert" data-toggel="tooltip" title="glyphicon glyphicon-alert" aria-hidden="true"></span> </li>
+                <li> <span class="glyphicon glyphicon-equalizer" data-toggel="tooltip" title="glyphicon glyphicon-equalizer" aria-hidden="true"></span> </li>
+                <li> <span class="glyphicon glyphicon-king" data-toggel="tooltip" title="glyphicon glyphicon-king" aria-hidden="true"></span> </li>
+                <li> <span class="glyphicon glyphicon-queen" data-toggel="tooltip" title="glyphicon glyphicon-queen" aria-hidden="true"></span> </li>
+                <li> <span class="glyphicon glyphicon-pawn" data-toggel="tooltip" title="glyphicon glyphicon-pawn" aria-hidden="true"></span> </li>
+                <li> <span class="glyphicon glyphicon-bishop" data-toggel="tooltip" title="glyphicon glyphicon-bishop" aria-hidden="true"></span> </li>
+                <li> <span class="glyphicon glyphicon-knight" data-toggel="tooltip" title="glyphicon glyphicon-knight" aria-hidden="true"></span> </li>
+                <li> <span class="glyphicon glyphicon-baby-formula" data-toggel="tooltip" title="glyphicon glyphicon-baby-formula" aria-hidden="true"></span> </li>
+                <li> <span class="glyphicon glyphicon-tent" data-toggel="tooltip" title="glyphicon glyphicon-tent" aria-hidden="true"></span> </li>
+                <li> <span class="glyphicon glyphicon-blackboard" data-toggel="tooltip" title="glyphicon glyphicon-blackboard" aria-hidden="true"></span> </li>
+                <li> <span class="glyphicon glyphicon-bed" data-toggel="tooltip" title="glyphicon glyphicon-bed" aria-hidden="true"></span> </li>
+                <li> <span class="glyphicon glyphicon-apple" data-toggel="tooltip" title="glyphicon glyphicon-apple" aria-hidden="true"></span> </li>
+                <li> <span class="glyphicon glyphicon-erase" data-toggel="tooltip" title="glyphicon glyphicon-erase" aria-hidden="true"></span> </li>
+                <li> <span class="glyphicon glyphicon-hourglass" data-toggel="tooltip" title="glyphicon glyphicon-hourglass" aria-hidden="true"></span> </li>
+                <li> <span class="glyphicon glyphicon-lamp" data-toggel="tooltip" title="glyphicon glyphicon-lamp" aria-hidden="true"></span> </li>
+                <li> <span class="glyphicon glyphicon-duplicate" data-toggel="tooltip" title="glyphicon glyphicon-duplicate" aria-hidden="true"></span> </li>
+                <li> <span class="glyphicon glyphicon-piggy-bank" data-toggel="tooltip" title="glyphicon glyphicon-piggy-bank" aria-hidden="true"></span> </li>
+                <li> <span class="glyphicon glyphicon-scissors" data-toggel="tooltip" title="glyphicon glyphicon-scissors" aria-hidden="true"></span> </li>
+                <li> <span class="glyphicon glyphicon-bitcoin" data-toggel="tooltip" title="glyphicon glyphicon-bitcoin" aria-hidden="true"></span> </li>
+                <li> <span class="glyphicon glyphicon-btc" data-toggel="tooltip" title="glyphicon glyphicon-btc" aria-hidden="true"></span> </li>
+                <li> <span class="glyphicon glyphicon-xbt" data-toggel="tooltip" title="glyphicon glyphicon-xbt" aria-hidden="true"></span> </li>
+                <li> <span class="glyphicon glyphicon-yen" data-toggel="tooltip" title="glyphicon glyphicon-yen" aria-hidden="true"></span> </li>
+                <li> <span class="glyphicon glyphicon-jpy" data-toggel="tooltip" title="glyphicon glyphicon-jpy" aria-hidden="true"></span> </li>
+                <li> <span class="glyphicon glyphicon-ruble" data-toggel="tooltip" title="glyphicon glyphicon-ruble" aria-hidden="true"></span> </li>
+                <li> <span class="glyphicon glyphicon-rub" data-toggel="tooltip" title="glyphicon glyphicon-rub" aria-hidden="true"></span> </li>
+                <li> <span class="glyphicon glyphicon-scale" data-toggel="tooltip" title="glyphicon glyphicon-scale" aria-hidden="true"></span> </li>
+                <li> <span class="glyphicon glyphicon-ice-lolly" data-toggel="tooltip" title="glyphicon glyphicon-ice-lolly" aria-hidden="true"></span> </li>
+                <li> <span class="glyphicon glyphicon-ice-lolly-tasted" data-toggel="tooltip" title="glyphicon glyphicon-ice-lolly-tasted" aria-hidden="true"></span> </li>
+                <li> <span class="glyphicon glyphicon-education" data-toggel="tooltip" title="glyphicon glyphicon-education" aria-hidden="true"></span> </li>
+                <li> <span class="glyphicon glyphicon-option-horizontal" data-toggel="tooltip" title="glyphicon glyphicon-option-horizontal" aria-hidden="true"></span> </li>
+                <li> <span class="glyphicon glyphicon-option-vertical" data-toggel="tooltip" title="glyphicon glyphicon-option-vertical" aria-hidden="true"></span> </li>
+                <li> <span class="glyphicon glyphicon-menu-hamburger" data-toggel="tooltip" title="glyphicon glyphicon-menu-hamburger" aria-hidden="true"></span> </li>
+                <li> <span class="glyphicon glyphicon-modal-window" data-toggel="tooltip" title="glyphicon glyphicon-modal-window" aria-hidden="true"></span> </li>
+                <li> <span class="glyphicon glyphicon-oil" data-toggel="tooltip" title="glyphicon glyphicon-oil" aria-hidden="true"></span> </li>
+                <li> <span class="glyphicon glyphicon-grain" data-toggel="tooltip" title="glyphicon glyphicon-grain" aria-hidden="true"></span> </li>
+                <li> <span class="glyphicon glyphicon-sunglasses" data-toggel="tooltip" title="glyphicon glyphicon-sunglasses" aria-hidden="true"></span> </li>
+                <li> <span class="glyphicon glyphicon-text-size" data-toggel="tooltip" title="glyphicon glyphicon-text-size" aria-hidden="true"></span> </li>
+                <li> <span class="glyphicon glyphicon-text-color" data-toggel="tooltip" title="glyphicon glyphicon-text-color" aria-hidden="true"></span> </li>
+                <li> <span class="glyphicon glyphicon-text-background" data-toggel="tooltip" title="glyphicon glyphicon-text-background" aria-hidden="true"></span> </li>
+                <li> <span class="glyphicon glyphicon-object-align-top" data-toggel="tooltip" title="glyphicon glyphicon-object-align-top" aria-hidden="true"></span> </li>
+                <li> <span class="glyphicon glyphicon-object-align-bottom" data-toggel="tooltip" title="glyphicon glyphicon-object-align-bottom" aria-hidden="true"></span> </li>
+                <li> <span class="glyphicon glyphicon-object-align-horizontal" data-toggel="tooltip" title="glyphicon glyphicon-object-align-horizontal" aria-hidden="true"></span> </li>
+                <li> <span class="glyphicon glyphicon-object-align-left" data-toggel="tooltip" title="glyphicon glyphicon-object-align-left" aria-hidden="true"></span> </li>
+                <li> <span class="glyphicon glyphicon-object-align-vertical" data-toggel="tooltip" title="glyphicon glyphicon-object-align-vertical" aria-hidden="true"></span> </li>
+                <li> <span class="glyphicon glyphicon-object-align-right" data-toggel="tooltip" title="glyphicon glyphicon-object-align-right" aria-hidden="true"></span> </li>
+                <li> <span class="glyphicon glyphicon-triangle-right" data-toggel="tooltip" title="glyphicon glyphicon-triangle-right" aria-hidden="true"></span> </li>
+                <li> <span class="glyphicon glyphicon-triangle-left" data-toggel="tooltip" title="glyphicon glyphicon-triangle-left" aria-hidden="true"></span> </li>
+                <li> <span class="glyphicon glyphicon-triangle-bottom" data-toggel="tooltip" title="glyphicon glyphicon-triangle-bottom" aria-hidden="true"></span> </li>
+                <li> <span class="glyphicon glyphicon-triangle-top" data-toggel="tooltip" title="glyphicon glyphicon-triangle-top" aria-hidden="true"></span> </li>
+                <li> <span class="glyphicon glyphicon-console" data-toggel="tooltip" title="glyphicon glyphicon-console" aria-hidden="true"></span> </li>
+                <li> <span class="glyphicon glyphicon-superscript" data-toggel="tooltip" title="glyphicon glyphicon-superscript" aria-hidden="true"></span> </li>
+                <li> <span class="glyphicon glyphicon-subscript" data-toggel="tooltip" title="glyphicon glyphicon-subscript" aria-hidden="true"></span> </li>
+                <li> <span class="glyphicon glyphicon-menu-left" data-toggel="tooltip" title="glyphicon glyphicon-menu-left" aria-hidden="true"></span> </li>
+                <li> <span class="glyphicon glyphicon-menu-right" data-toggel="tooltip" title="glyphicon glyphicon-menu-right" aria-hidden="true"></span> </li>
+                <li> <span class="glyphicon glyphicon-menu-down" data-toggel="tooltip" title="glyphicon glyphicon-menu-down" aria-hidden="true"></span> </li>
+                <li> <span class="glyphicon glyphicon-menu-up" data-toggel="tooltip" title="glyphicon glyphicon-menu-up" aria-hidden="true"></span> </li>
+            </ul>
+        </div>
+    </div>
+
+    <div class="container">
+        <div class="row typo">
+            <div class="col-xs-4 col-md-4">
+                <h4>GlyphIcons in Bottuns and Alerts</h4>
+                <button type="button" class="btn btn-default" aria-label="Left Align">
+                  <span class="glyphicon glyphicon-align-left" aria-hidden="true"></span>
+                </button>
+
+                <button type="button" class="btn btn-default btn-lg">
+                  <span class="glyphicon glyphicon-star" aria-hidden="true"></span> Star
+                </button>
+                <div class="alert alert-danger" role="alert">
+                    <span class="glyphicon glyphicon-exclamation-sign" aria-hidden="true"></span>
+                    <span class="sr-only">Error:</span> Enter a valid email address
+                </div>
+                <div class="btn-toolbar" role="toolbar" aria-label="btntoolbar">
+                    <div class="btn-group" role="group" aria-label="btntoolbar">
+                        <button class="btn btn-default">1</button>
+                        <button class="btn btn-default">2</button>
+                        <button class="btn btn-default">3</button>
+                    </div>
+                    <div class="btn-group" role="group" aria-label="btntoolbar">
+                        <button class="btn btn-default">4</button>
+                        <button class="btn btn-default">5</button>
+                    </div>
+                    <div class="btn-group" role="group" aria-label="btntoolbar">
+                        <button class="btn btn-default">6</button>
+                        <button class="btn btn-default">7</button>
+                        <button class="btn btn-default">8</button>
+                    </div>
+                    <div class="btn-group" role="group" aria-label="btntoolbar">
+                        <button class="btn btn-default">9</button>
+                    </div>
+                </div>
+            </div>
+            <div class="col-xs-4 col-md-4">
+                <h4>DropDown</h4>
+                <div class="dropdown">
+                    <button class="btn btn-default dropdown-toggle" type="button" id="dropdownMenu1" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
+                        Dropdown
+                        <span class="caret"></span>
+                      </button>
+                    <ul class="dropdown-menu" aria-labelledby="dropdownMenu1">
+                        <li class="dropdown-header">dropdown header</li>
+                        <li><a href="#">Action</a></li>
+                        <li><a href="#">Another action</a></li>
+                        <li class="disabled"><a href="#">Disabled link</a></li>
+                        <li><a href="#">Something else here</a></li>
+                        <li role="separator" class="divider"></li>
+                        <li><a href="#">Separated link</a></li>
+                    </ul>
+                </div>
+                <h4>DropUp</h4>
+                <div class="dropup">
+                    <button class="btn btn-default dropdown-toggle" type="button" id="dropdownMenu2" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        Dropup
+                        <span class="caret"></span>
+                      </button>
+                    <ul class="dropdown-menu" aria-labelledby="dropdownMenu2">
+                        <li class="dropdown-header">dropdown header</li>
+                        <li><a href="#">Action</a></li>
+                        <li><a href="#">Another action</a></li>
+                        <li class="disabled"><a href="#">Disabled link</a></li>
+                        <li><a href="#">Something else here</a></li>
+                        <li role="separator" class="divider"></li>
+                        <li><a href="#">Separated link</a></li>
+                    </ul>
+                    <h4>ButtonGroup</h4>
+                    <div class="btn-group" role="group" aria-label="...">
+                        <button type="button" class="btn btn-default">Left</button>
+                        <button type="button" class="btn btn-default">Middle</button>
+                        <button type="button" class="btn btn-default">Right</button>
+                    </div>
+                </div>
+            </div>
+            <div class="col-xs-4 col-md-4">
+                <div class="btn-group" role="group" aria-label="...">
+                    <button type="button" class="btn btn-default">1</button>
+                    <button type="button" class="btn btn-default">2</button>
+                    <div class="btn-group" role="group">
+                        <button type="button" class="btn btn-default dropdown-toggle" id="dropdowngroup1" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                           DropDown
+                           <span class="caret"></span>
+                       </button>
+                        <ul class="dropdown-menu" aria-labelledby="dropdowngroup1">
+                            <li class="dropdown-header">dropdown header</li>
+                            <li><a href="#">Action</a></li>
+                            <li><a href="#">Another action</a></li>
+                            <li class="disabled"><a href="#">Disabled link</a></li>
+                            <li><a href="#">Something else here</a></li>
+                            <li role="separator" class="divider"></li>
+                            <li><a href="#">Separated link</a></li>
+                        </ul>
+                    </div>
+                </div><br/>
+
+                <div class="btn-group-vertical" role="group" aria-label="...">
+
+                    <button type="button" class="btn btn-default">1</button>
+                    <button type="button" class="btn btn-default">2</button>
+
+                    <div class="btn-group" role="group">
+                        <button type="button" class="btn btn-default dropdown-toggle" id="dropdowngroup1" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                           DropDown
+                           <span class="caret"></span>
+                       </button>
+                        <ul class="dropdown-menu" aria-labelledby="dropdowngroup1">
+                            <li class="dropdown-header">dropdown header</li>
+                            <li><a href="#">Action</a></li>
+                            <li><a href="#">Another action</a></li>
+                            <li class="disabled"><a href="#">Disabled link</a></li>
+                            <li><a href="#">Something else here</a></li>
+                            <li role="separator" class="divider"></li>
+                            <li><a href="#">Separated link</a></li>
+                        </ul>
+                    </div>
+
+                    <button type="button" class="btn btn-default">3</button>
+                    <button type="button" class="btn btn-default">4</button>
+
+                    <div class="btn-group dropup" role="group">
+                        <button type="button" class="btn btn-default dropdown-toggle" id="dropdowngroup1" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                           DropUp
+                           <span class="caret"></span>
+                       </button>
+                        <ul class="dropdown-menu" aria-labelledby="dropdowngroup1">
+                            <li class="dropdown-header">dropdown header</li>
+                            <li><a href="#">Action</a></li>
+                            <li><a href="#">Another action</a></li>
+                            <li class="disabled"><a href="#">Disabled link</a></li>
+                            <li><a href="#">Something else here</a></li>
+                            <li role="separator" class="divider"></li>
+                            <li><a href="#">Separated link</a></li>
+                        </ul>
+                    </div>
+
+                    <button type="button" class="btn btn-default">5</button>
+                </div>
+            </div>
+        </div>
+        <div class="row typo">
+            <div class="col-xs-4 col-md-4">
+                <h4>Justified Buttons with <code>&lt;a&gt;</code> tag</h4>
+                <div class="btn-group btn-group-justified" role="group" aria-label="...">
+                    <a href="#" role="button" class="btn btn-default">Left</a>
+                    <a href="#" role="button" class="btn btn-default">Middle</a>
+                    <a href="#" role="button" class="btn btn-default">Right</a>
+                </div>
+                <h4>Justified Buttons with <code>&lt;button&gt;</code> tag</h4>
+
+                <div class="btn-group btn-group-justified" role="group" aria-label="...">
+                    <div class="btn-group" role="group">
+                        <button type="button" class="btn btn-default">Left</button>
+                    </div>
+                    <div class="btn-group" role="group">
+                        <button type="button" class="btn btn-default">Middle</button>
+                    </div>
+                    <div class="btn-group" role="group">
+                        <button type="button" class="btn btn-default">Right</button>
+                    </div>
+                </div>
+                <div class="btn-group btn-group-justified" role="group" aria-label="...">
+                    <div class="btn-group" role="group">
+                        <button type="button" class="btn btn-default dropdown-toggle" id="dropdown" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">Default
+                            <span class="caret"></span>
+                        </button>
+                        <ul class="dropdown-menu" aria-labelledby="dropdown">
+                            <li class="dropdown-header">dropdown header</li>
+                            <li><a href="#">Action</a></li>
+                            <li><a href="#">Another action</a></li>
+                            <li class="disabled"><a href="#">Disabled link</a></li>
+                            <li><a href="#">Something else here</a></li>
+                            <li role="separator" class="divider"></li>
+                            <li><a href="#">Separated link</a></li>
+                        </ul>
+                    </div>
+                    <div class="btn-group" role="group">
+                        <button type="button" class="btn btn-success dropdown-toggle" id="dropdown" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">Success
+                            <span class="caret"></span>
+                        </button>
+                        <ul class="dropdown-menu" aria-labelledby="dropdown">
+                            <li class="dropdown-header">dropdown header</li>
+                            <li><a href="#">Action</a></li>
+                            <li><a href="#">Another action</a></li>
+                            <li class="disabled"><a href="#">Disabled link</a></li>
+                            <li><a href="#">Something else here</a></li>
+                            <li role="separator" class="divider"></li>
+                            <li><a href="#">Separated link</a></li>
+                        </ul>
+                    </div>
+                    <div class="btn-group" role="group">
+                        <button type="button" class="btn btn-danger dropdown-toggle" id="dropdown" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">Danger
+                            <span class="caret"></span>
+                        </button>
+                        <ul class="dropdown-menu" aria-labelledby="dropdown">
+                            <li class="dropdown-header">dropdown header</li>
+                            <li><a href="#">Action</a></li>
+                            <li><a href="#">Another action</a></li>
+                            <li class="disabled"><a href="#">Disabled link</a></li>
+                            <li><a href="#">Something else here</a></li>
+                            <li role="separator" class="divider"></li>
+                            <li><a href="#">Separated link</a></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="btn-group btn-group-justified" role="group" aria-label="...">
+                    <div class="btn-group" role="group">
+                        <button type="button" class="btn btn-info dropdown-toggle" id="dropdown" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">Info
+                            <span class="caret"></span>
+                        </button>
+                        <ul class="dropdown-menu" aria-labelledby="dropdown">
+                            <li class="dropdown-header">dropdown header</li>
+                            <li><a href="#">Action</a></li>
+                            <li><a href="#">Another action</a></li>
+                            <li class="disabled"><a href="#">Disabled link</a></li>
+                            <li><a href="#">Something else here</a></li>
+                            <li role="separator" class="divider"></li>
+                            <li><a href="#">Separated link</a></li>
+                        </ul>
+                    </div>
+                    <div class="btn-group" role="group">
+                        <button type="button" class="btn btn-warning dropdown-toggle" id="dropdown" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">Warning
+                            <span class="caret"></span>
+                        </button>
+                        <ul class="dropdown-menu" aria-labelledby="dropdown">
+                            <li class="dropdown-header">dropdown header</li>
+                            <li><a href="#">Action</a></li>
+                            <li><a href="#">Another action</a></li>
+                            <li class="disabled"><a href="#">Disabled link</a></li>
+                            <li><a href="#">Something else here</a></li>
+                            <li role="separator" class="divider"></li>
+                            <li><a href="#">Separated link</a></li>
+                        </ul>
+                    </div>
+                    <div class="btn-group" role="group">
+                        <button type="button" class="btn btn-primary dropdown-toggle" id="dropdown" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">Primary
+                            <span class="caret"></span>
+                        </button>
+                        <ul class="dropdown-menu" aria-labelledby="dropdown">
+                            <li class="dropdown-header">dropdown header</li>
+                            <li><a href="#">Action</a></li>
+                            <li><a href="#">Another action</a></li>
+                            <li class="disabled"><a href="#">Disabled link</a></li>
+                            <li><a href="#">Something else here</a></li>
+                            <li role="separator" class="divider"></li>
+                            <li><a href="#">Separated link</a></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="btn-group " role="group" aria-label="...">
+
+                    <div class="btn-group" role="group">
+                        <button type="button" class="btn btn-default">Default</button>
+                        <button type="button" class="btn btn-default dropdown-toggle" id="dropdown" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            <span class="caret"></span>
+                            <span class="sr-only">Toggle Dropdown</span>
+                        </button>
+                        <ul class="dropdown-menu" aria-labelledby="dropdown">
+                            <li class="dropdown-header">dropdown header</li>
+                            <li><a href="#">Action</a></li>
+                            <li><a href="#">Another action</a></li>
+                            <li class="disabled"><a href="#">Disabled link</a></li>
+                            <li><a href="#">Something else here</a></li>
+                            <li role="separator" class="divider"></li>
+                            <li><a href="#">Separated link</a></li>
+                        </ul>
+                    </div>
+                    <div class="btn-group" role="group">
+                        <button type="button" class="btn btn-success">Success</button>
+                        <button type="button" class="btn btn-success dropdown-toggle" id="dropdown" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
+                            <span class="caret"></span>
+                            <span class="sr-only">Toggle Dropdown</span>
+                        </button>
+                        <ul class="dropdown-menu" aria-labelledby="dropdown">
+                            <li class="dropdown-header">dropdown header</li>
+                            <li><a href="#">Action</a></li>
+                            <li><a href="#">Another action</a></li>
+                            <li class="disabled"><a href="#">Disabled link</a></li>
+                            <li><a href="#">Something else here</a></li>
+                            <li role="separator" class="divider"></li>
+                            <li><a href="#">Separated link</a></li>
+                        </ul>
+                    </div>
+                    <div class="btn-group" role="group">
+                        <button type="button" class="btn btn-danger">Danger</button>
+                        <button type="button" class="btn btn-danger dropdown-toggle" id="dropdown" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
+                            <span class="caret"></span>
+                            <span class="sr-only">Toggle Dropdown</span>
+                        </button>
+                        <ul class="dropdown-menu" aria-labelledby="dropdown">
+                            <li class="dropdown-header">dropdown header</li>
+                            <li><a href="#">Action</a></li>
+                            <li><a href="#">Another action</a></li>
+                            <li class="disabled"><a href="#">Disabled link</a></li>
+                            <li><a href="#">Something else here</a></li>
+                            <li role="separator" class="divider"></li>
+                            <li><a href="#">Separated link</a></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="btn-group " role="group" aria-label="...">
+                    <div class="btn-group" role="group">
+                        <button type="button" class="btn btn-info">Info</button>
+                        <button type="button" class="btn btn-info dropdown-toggle" id="dropdown" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
+                            <span class="caret"></span>
+                            <span class="sr-only">Toggle Dropdown</span>
+                        </button>
+                        <ul class="dropdown-menu" aria-labelledby="dropdown">
+                            <li class="dropdown-header">dropdown header</li>
+                            <li><a href="#">Action</a></li>
+                            <li><a href="#">Another action</a></li>
+                            <li class="disabled"><a href="#">Disabled link</a></li>
+                            <li><a href="#">Something else here</a></li>
+                            <li role="separator" class="divider"></li>
+                            <li><a href="#">Separated link</a></li>
+                        </ul>
+                    </div>
+                    <div class="btn-group" role="group">
+                        <button type="button" class="btn btn-warning">Warning</button>
+                        <button type="button" class="btn btn-warning dropdown-toggle" id="dropdown" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
+                            <span class="caret"></span>
+                            <span class="sr-only">Toggle Dropdown</span>
+                        </button>
+                        <ul class="dropdown-menu" aria-labelledby="dropdown">
+                            <li class="dropdown-header">dropdown header</li>
+                            <li><a href="#">Action</a></li>
+                            <li><a href="#">Another action</a></li>
+                            <li class="disabled"><a href="#">Disabled link</a></li>
+                            <li><a href="#">Something else here</a></li>
+                            <li role="separator" class="divider"></li>
+                            <li><a href="#">Separated link</a></li>
+                        </ul>
+                    </div>
+                    <div class="btn-group" role="group">
+                        <button type="button" class="btn btn-primary">Primary</button>
+                        <button type="button" class="btn btn-primary dropdown-toggle" id="dropdown" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
+                            <span class="caret"></span>
+                            <span class="sr-only">Toggle Dropdown</span>
+                        </button>
+                        <ul class="dropdown-menu" aria-labelledby="dropdown">
+                            <li class="dropdown-header">dropdown header</li>
+                            <li><a href="#">Action</a></li>
+                            <li><a href="#">Another action</a></li>
+                            <li class="disabled"><a href="#">Disabled link</a></li>
+                            <li><a href="#">Something else here</a></li>
+                            <li role="separator" class="divider"></li>
+                            <li><a href="#">Separated link</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="col-xs-4 col-md-4">
+                <div class="input-group">
+                    <span class="input-group-addon" id="basicaddon1">@</span>
+                    <input type="text" class="form-control" placeholder="Username" aria-describedby="basicaddon1">
+                </div>
+                <div class="input-group">
+                    <input type="text" class="form-control" placeholder="My Username" aria-describedby="basicaddon2">
+                    <span class="input-group-addon" id="basicaddon2">@example.com</span>
+                </div>
+                <div class="input-group">
+                    <span class="input-group-addon">$</span>
+                    <input class="form-control" type="text" aria-label="Dollor to nearest amount">
+                    <span class="input-group-addon">.00</span>
+                </div>
+                <label for="basicurl">Your URL</label>
+                <div class="input-group">
+                    <span class="input-group-addon" id="basicaddon3">https://example.com/users/</span>
+                    <input type="text" class="form-control" aria-describedby="basicaddon3" id="basicurl">
+                </div>
+                <div class="input-group input-group-lg">
+                    <span class="input-group-addon" id="sizing-addon1">@</span>
+                    <input type="text" class="form-control" placeholder="Username" aria-describedby="sizing-addon1">
+                </div>
+
+                <div class="input-group">
+                    <span class="input-group-addon" id="sizing-addon2">@</span>
+                    <input type="text" class="form-control" placeholder="Username" aria-describedby="sizing-addon2">
+                </div>
+
+                <div class="input-group input-group-sm">
+                    <span class="input-group-addon" id="sizing-addon3">@</span>
+                    <input type="text" class="form-control" placeholder="Username" aria-describedby="sizing-addon3">
+                </div>
+            </div>
+            <div class="col-xs-4 col-md-4">
+                <div class="col-md-6">
+                    <div class="input-group">
+                        <span class="input-group-addon" id="chkbox1">
+                            <input type="checkbox" aria-label="...">
+                        </span>
+                        <input type="text" class="form-control" aria-label="...">
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <div class="input-group">
+                        <span class="input-group-addon" id="rdbox1">
+                            <input type="radio" aria-label="...">
+                        </span>
+                        <input type="text" class="form-control" aria-label="...">
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-6">
+                        <div class="input-group">
+                            <span class="input-group-btn">
+                            <button type="button" class="btn btn-default">Go!</button>
+                        </span>
+                            <input type="text" class="form-control" placeholder="Search for...">
+                        </div>
+                    </div>
+                    <div class="col-md-6">
+                        <div class="input-group">
+                            <div class="input-group-btn">
+                                <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Action <span class="caret"></span></button>
+                                <ul class="dropdown-menu">
+                                    <li><a href="#">Action</a></li>
+                                    <li><a href="#">Another action</a></li>
+                                    <li><a href="#">Something else here</a></li>
+                                    <li role="separator" class="divider"></li>
+                                    <li><a href="#">Separated link</a></li>
+                                </ul>
+                            </div>
+                            <!-- /btn-group -->
+                            <input type="text" class="form-control" aria-label="...">
+                        </div>
+                        <!-- /input-group -->
+                    </div>
+                </div>
+                <ul class="nav nav-tabs">
+                    <li role="presentation" class="active"><a href="#" aria-controls="home" data-toggle="tab" role="tab">Home</a></li>
+                    <li role="presentation"><a href="#" aria-controls="Components" data-toggle="tab" role="tab">CMP</a></li>
+                    <li role="presentation"><a href="#" aria-controls="CSS" data-toggle="tab" role="tab">CSS</a></li>
+                    <li role="presentation"><a href="#" aria-controls="JavaScript" data-toggle="tab" role="tab">JS</a></li>
+                </ul>
+                <ul class="nav nav-pills">
+                    <li role="presentation" class="active"><a href="#">Home</a></li>
+                    <li role="presentation"><a href="#">Profile</a></li>
+                    <li role="presentation"><a href="#">Messages</a></li>
+                </ul>
+                <ul class="nav nav-tabs">
+                    <li role="presentation" class="active"><a href="#">Home</a></li>
+                    <li role="presentation"><a href="#">Profile</a></li>
+                    <li class="dropdown active" role="presentation">
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">DropDown<span class="caret"></span></a>
+                        <ul class="dropdown-menu">
+                            <li><a href="#">Action</a></li>
+                            <li><a href="#">Another action</a></li>
+                            <li><a href="#">Something else here</a></li>
+                            <li role="separator" class="divider"></li>
+                            <li><a href="#">Separated link</a></li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <div class="row typo">
+            <div class="col-xs-4 col-md-4">
+
+                <p>you can use <code>nav-justified</code> class for having the tabs or pills take the whole width of their parent</p>
+                <p>you can use<code>nav-stacked</code> class to have tabs or pills stack on eachother</p>
+                <p>you can add <code>disabled</code> class to <code>&lt;li&gt;</code> tag to disable the tab or pill</p>
+                <p>you can use <code>nabvar-form</code> class to use form in navbar</p>
+                <p>you can use <code>navbar-btn</code> class to use button in navbar</p>
+                <p>you can use <code>nabvar-text</code> class to use text in navbar</p>
+                <p>you can use <code>nabvar-left</code> class to make navbar apear in the left or use <code>pull-left</code> as mixin</p>
+                <p>you can use <code>nabvar-right</code> class to make navbar apear in the right or use <code>pull-right</code> as mixin</p>
+                <p>you can use <code>navbar-fixed-top</code> or <code>navbar-fixed-bottom</code> to fix navbar in the position you like</p>
+                <p>if you want that your navbar scrolls away with page use <code>navbar-static-top</code> class</p>
+                <p>use <code>navbar-inverse</code> class to make your navbar black</p>
+            </div>
+            <div class="col-xs-4 col-md-4">
+                <ol class="breadcrumb">
+                    <li><a href="#">Home</a></li>
+                    <li><a href="#">CSS</a></li>
+                    <li class="active">CMP</li>
+                    <li><a href="#">JS</a></li>
+                </ol>
+                <nav aria-label="Pagination">
+                    <ul class="pagination">
+                        <li>
+                            <a href="#" aria-label="previous">
+                                <span aria-hidden="true">&laquo;</span>
+                            </a>
+                        </li>
+                        <li><a href="#">1</a></li>
+                        <li><a href="#">2</a></li>
+                        <li><a href="#">3</a></li>
+                        <li><a href="#">4</a></li>
+                        <li><a href="#">5</a></li>
+                        <li>
+                            <a href="#" aria-label="next">
+                                <span aria-hidden="true">&raquo;</span>
+                            </a>
+                        </li>
+                    </ul>
+                </nav>
+                <p>use class <code>disabled</code> on <code>&lt;li&gt;</code> to disable the pagination.</p>pagination-sm
+                <p>use class <code>pagination-sm</code> or <code>pagination-lg</code> on <code>&lt;ul&gt;</code> to control the size of pagionation section.</p>
+            </div>
+            <div class="col-xs-4 col-md-4">
+                <h3>Quick pager</h3>
+                <nav aria-label="...">
+                    <ul class="pager">
+                        <li class="previous"><a href="#"><span aria-hidden="true">&larr;</span> Older</a></li>
+                        <li class="next"><a href="#">Newer <span aria-hidden="true">&rarr;</span></a></li>
+                    </ul>
+
+                </nav>
+                <nav aria-label="...">
+                    <ul class="pager">
+                        <li><a href="#">Previous</a></li>
+                        <li><a href="#">Next</a></li>
+                    </ul>
+                </nav>
+                <h1>H1 <span class="label label-default">New</span></h1>
+                <h2>H2 <span class="label label-default">New</span></h2>
+                <h3>H3 <span class="label label-default">New</span></h3>
+                <h4>H4 <span class="label label-default">New</span></h4>
+                <h5>H5 <span class="label label-default">New</span></h5>
+                <h6>H6 <span class="label label-default">New</span></h6>
+            </div>
+        </div>
+        <div class="row typo">
+            <div class="col-xs-4 col-md-4">
+                <h3>Labels & Badges</h3>
+                <span class="label label-default">Default</span>
+                <span class="label label-primary">Primary</span>
+                <span class="label label-success">Success</span>
+                <span class="label label-info">Info</span>
+                <span class="label label-warning">Warning</span>
+                <span class="label label-danger">Danger</span>
+                <a href="#">Inbox <span class="badge">42</span></a>
+
+                <button class="btn btn-primary" type="button">
+                  Messages <span class="badge">4</span>
+                </button>
+                <ul class="nav nav-pills" role="tablist">
+                    <li role="presentation" class="active"><a href="#">Home <span class="badge">42</span></a></li>
+                    <li role="presentation"><a href="#">Profile</a></li>
+                    <li role="presentation"><a href="#">Messages <span class="badge">3</span></a></li>
+                </ul>
+                <div class="page-header">
+                    <h1>Example page header <small>Subtext for header</small></h1>
+                </div>
+            </div>
+            <div class="col-xs-4 col-md-4">
+                <div class="jumbotron">
+                    <p>This is a simple jumbotron-style component for calling extra attention to featured content or information.</p>
+                    <a class="btn btn-primary btn-lg" role="button" href="#">Learn More</a>
+                </div>
+            </div>
+            <div class="col-xs-4 col-md-4"></div>
+        </div>
+
+        <div class="row">
+            <div class="col-xs-4 col-md-2">
+                <a href="#" class="thumbnail">
+                    <img src="image/1.jpg" alt="img1">
+                </a>
+            </div>
+            <div class="col-xs-4 col-md-2">
+                <a href="#" class="thumbnail">
+                    <img src="image/2.png" alt="img2">
+                </a>
+            </div>
+            <div class="col-xs-4 col-md-2">
+                <a href="#" class="thumbnail">
+                    <img src="image/3.jpg" alt="img3">
+                </a>
+            </div>
+            <div class="col-xs-4 col-md-2">
+                <a href="#" class="thumbnail">
+                    <img src="image/4.jpg" alt="img4">
+                </a>
+            </div>
+            <div class="col-xs-4 col-md-2">
+                <a href="#" class="thumbnail">
+                    <img src="image/5.jpg" alt="img5">
+                </a>
+            </div>
+            <div class="col-xs-4 col-md-2">
+                <a href="#" class="thumbnail">
+                    <img src="image/6.jpg" alt="img6">
+                </a>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class=" col-xs-6 col-md-4 col-sm-4">
+                <div class="thumbnail">
+                    <img src="image/4.jpg" alt="black">
+                    <div class="caption">
+                        <h3>Black</h3>
+                        <p>Cras justo odio, dapibus ac facilisis in, egestas eget quam. Donec id elit non mi porta gravida at eget metus. Nullam id dolor id nibh ultricies vehicula ut id elit.</p>
+                        <p><a href="#" class="btn btn-primary" role="button">Button</a><a href="#" class="btn btn-success" role="button">Button</a></p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-xs-6 col-md-4 col-sm-4">
+                <div class="thumbnail">
+                    <img src="image/2.png" alt="red">
+                    <div class="caption">
+                        <h3>Red</h3>
+                        <p>Cras justo odio, dapibus ac facilisis in, egestas eget quam. Donec id elit non mi porta gravida at eget metus. Nullam id dolor id nibh ultricies vehicula ut id elit.</p>
+                        <p><a href="#" class="btn btn-primary" role="button">Button</a><a href="#" class="btn btn-success" role="button">Button</a></p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-xs-6 col-md-4 col-sm-4">
+                <div class="thumbnail">
+                    <img src="image/6.jpg" alt="skeleton">
+                    <div class="caption">
+                        <h3>Skeleton</h3>
+                        <p>Cras justo odio, dapibus ac facilisis in, egestas eget quam. Donec id elit non mi porta gravida at eget metus. Nullam id dolor id nibh ultricies vehicula ut id elit.</p>
+                        <p><a href="#" class="btn btn-primary" role="button">Button</a><a href="#" class="btn btn-success" role="button">Button</a></p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="row typo">
+            <div class="col-xs-4 col-md-4">
+                <div class="alert alert-success" role="alert"><strong>Well done! </strong>You successfully read this important alert message.</div>
+                <div class="alert alert-info" role="alert"><strong>Heads up! </strong>This alert needs your attention, but it's not super important.</div>
+                <div class="alert alert-warning" role="alert"><strong>Warning! </strong>Better check yourself, you're not looking too good.</div>
+                <div class="alert alert-danger" role="alert"><strong>Oh snap! </strong>Change a few things up and try submitting again..</div>
+            </div>
+            <div class="col-xs-4 col-md-4">
+                <div class="alert alert-warning alret-dismissible" role="alert">
+                    <button class="close" type="button" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                    <strong>Warning!</strong> Better check yourself, you're not looking too good.
+                </div>
+                <div class="alert alert-success alert-dismissible" role="alert">
+                    <button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                    <strong>Well done! </strong>You successfully read this important alert message.
+                </div>
+                <div class="alert alert-info alert-dismissible" role="alert">
+                    <button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                    <strong>Heads up! </strong>This alert needs your attention, but it's not super important.
+                </div>
+                <div class="alert alert-warning alert-dismissible" role="alert">
+                    <button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                    <strong>Warning! </strong>Better check yourself, you're not looking too good.
+                </div>
+                <div class="alert alert-danger alert-dismissible" role="alert">
+                    <button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                    <strong>Oh snap! </strong>Change a few things up and try submitting again..
+                </div>
+            </div>
+            <div class="col-xs-4 col-md-4">
+                <div class="alert alert-success">
+                    <strong>Well done! </strong>You successfully read <a href="#" class="alert-link">this important alert message.</a>
+                </div>
+                <div class="alert alert-info" role="alert"><strong>Heads up! </strong>This alert <a href="#" class="alert-link">needs your attention</a>, but it's not super important.</div>
+                <div class="alert alert-warning" role="alert"><strong>Warning! </strong>Better check yourself, <a href="#" class="alert-link">you're not looking too good.</a></div>
+                <div class="alert alert-danger" role="alert"><strong>Oh snap! </strong>Change <a href="#" class="alert-link">a few things</a> up and try submitting again.</div>
+            </div>
+        </div>
+        <div class="row typo">
+            <div class="col-xs-4 col-md-4">
+                <br/>
+                <div class="progress">
+                    <div class="progress-bar" role="progressbar" aria-valuemin="0" aria-valuemax="100" aria-valuenow="60" style="width:60%">
+                        60%<span class="sr-only">60 % Complete</span>
+                    </div>
+                </div>
+                <div class="progress">
+                    <div class="progress-bar" role="progressbar" aria-valuenow="0" aria-valuemin="0" aria-valuemax="100" style="min-width: 2em;">
+                        0%
+                    </div>
+                </div>
+                <div class="progress">
+                    <div class="progress-bar" role="progressbar" aria-valuenow="2" aria-valuemin="0" aria-valuemax="100" style="min-width: 2em; width: 2%;">
+                        2%
+                    </div>
+                </div>
+                <p>use <code>min-width</code> to ensure that the lable remain visible in low widths.</p>
+                <div class="progress">
+                    <div class="progress-bar progress-bar-success" role="progressbar" aria-valuenow="40" aria-valuemin="0" aria-valuemax="100" style="width: 40%">
+                        <span class="sr-only">40% Complete (success)</span>
+                    </div>
+                </div>
+                <div class="progress">
+                    <div class="progress-bar progress-bar-info" role="progressbar" aria-valuenow="20" aria-valuemin="0" aria-valuemax="100" style="width: 20%">
+                        <span class="sr-only">20% Complete</span>
+                    </div>
+                </div>
+                <div class="progress">
+                    <div class="progress-bar progress-bar-warning" role="progressbar" aria-valuenow="60" aria-valuemin="0" aria-valuemax="100" style="width: 60%">
+                        <span class="sr-only">60% Complete (warning)</span>
+                    </div>
+                </div>
+                <div class="progress">
+                    <div class="progress-bar progress-bar-danger" role="progressbar" aria-valuenow="80" aria-valuemin="0" aria-valuemax="100" style="width: 80%">
+                        <span class="sr-only">80% Complete (danger)</span>
+                    </div>
+                </div>
+            </div>
+            <div class="col-xs-4 col-md-4">
+                <h4>Striped Progressbar</h4>
+                <div class="progress">
+                    <div class="progress-bar progress-bar-success progress-bar-striped" role="progressbar" aria-valuenow="40" aria-valuemin="0" aria-valuemax="100" style="width: 40%">
+                        <span class="sr-only">40% Complete (success)</span>
+                    </div>
+                </div>
+                <div class="progress">
+                    <div class="progress-bar progress-bar-info progress-bar-striped" role="progressbar" aria-valuenow="20" aria-valuemin="0" aria-valuemax="100" style="width: 20%">
+                        <span class="sr-only">20% Complete</span>
+                    </div>
+                </div>
+                <div class="progress">
+                    <div class="progress-bar progress-bar-danger progress-bar-striped" role="progressbar" aria-valuenow="80" aria-valuemin="0" aria-valuemax="100" style="width: 80%">
+                        <span class="sr-only">80% Complete (danger)</span>
+                    </div>
+                </div>
+                <h4>Animated Progressbar</h4>
+                <div class="progress">
+                    <div class="progress-bar progress-bar-striped active" role="progressbar" aria-valuenow="45" aria-valuemin="0" aria-valuemax="100" style="width: 45%">
+                        <span class="sr-only">45% Complete</span>
+                    </div>
+                </div>
+                <h4>Stacked Progressbar</h4>
+                <div class="progress">
+                    <div class="progress-bar progress-bar-success" style="width: 35%">
+                        <span class="sr-only">35% Complete (success)</span>
+                    </div>
+                    <div class="progress-bar progress-bar-warning progress-bar-striped" style="width: 20%">
+                        <span class="sr-only">20% Complete (warning)</span>
+                    </div>
+                    <div class="progress-bar progress-bar-danger" style="width: 10%">
+                        <span class="sr-only">10% Complete (danger)</span>
+                    </div>
+                </div>
+            </div>
+            <div class="col-xs-4 col-md-4">
+                <ul class="list-group">
+                    <li class="list-group-item">Cras justo odio</li>
+                    <li class="list-group-item">Dapibus ac facilisis in</li>
+                    <li class="list-group-item">Morbi leo risus</li>
+                    <li class="list-group-item">Porta ac consectetur ac</li>
+                    <li class="list-group-item">Vestibulum at eros</li>
+                </ul>
+            </div>
+        </div>
+        <div class="media">
+            <div class="media-left">
+                <a href="#">
+                    <img src="image/6.jpg">
+                </a>
+            </div>
+            <div class="media-body">
+                <h4>First Media</h4>
+                <p> Cras sit amet nibh libero, in gravida nulla. Nulla vel metus scelerisque ante sollicitudin commodo. Cras purus odio, vestibulum in vulputate at, tempus viverra turpis. Fusce condimentum nunc ac nisi vulputate fringilla. Donec lacinia congue felis in faucibus. </p>
+            </div>
+        </div>
+        <div class="media">
+            <div class="media-left">
+                <a href="#">
+                    <img src="image/6.jpg">
+                </a>
+            </div>
+            <div class="media-body">
+                <h4>First Media</h4>
+                <p> Cras sit amet nibh libero, in gravida nulla. Nulla vel metus scelerisque ante sollicitudin commodo. Cras purus odio, vestibulum in vulputate at, tempus viverra turpis. Fusce condimentum nunc ac nisi vulputate fringilla. Donec lacinia congue felis in faucibus. </p>
+                <div class="media">
+                    <div class="media-left">
+                        <a href="#">
+                            <img src="image/6.jpg">
+                        </a>
+                    </div>
+                    <div class="media-body">
+                        <h4>Nested First Media</h4>
+                        <p> Cras sit amet nibh libero, in gravida nulla. Nulla vel metus scelerisque ante sollicitudin commodo. Cras purus odio, vestibulum in vulputate at, tempus viverra turpis. Fusce condimentum nunc ac nisi vulputate fringilla. Donec lacinia congue felis in faucibus. </p>
+                        <div class="media">
+                            <div class="media-left">
+                                <a href="#">
+                                    <img src="image/6.jpg">
+                                </a>
+                            </div>
+                            <div class="media-body">
+                                <h4>Nested Second Media</h4>
+                                <p> Cras sit amet nibh libero, in gravida nulla. Nulla vel metus scelerisque ante sollicitudin commodo. Cras purus odio, vestibulum in vulputate at, tempus viverra turpis. Fusce condimentum nunc ac nisi vulputate fringilla. Donec lacinia congue felis in faucibus. </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="media">
+            <div class="media-left media-middle">
+                <a href="#">
+                    <img src="image/6.jpg">
+                </a>
+            </div>
+            <div class="media-body">
+                <h4>Media Middle</h4>
+                <p> Cras sit amet nibh libero, in gravida nulla. Nulla vel metus scelerisque ante sollicitudin commodo. Cras purus odio, vestibulum in vulputate at, tempus viverra turpis. Fusce condimentum nunc ac nisi vulputate fringilla. Donec lacinia congue felis in faucibus. </p>
+            </div>
+        </div>
+        <div class="media">
+            <div class="media-left media-bottom">
+                <a href="#">
+                    <img src="image/6.jpg">
+                </a>
+            </div>
+            <div class="media-body">
+                <h4>Media Bottom</h4>
+                <p> Cras sit amet nibh libero, in gravida nulla. Nulla vel metus scelerisque ante sollicitudin commodo. Cras purus odio, vestibulum in vulputate at, tempus viverra turpis. Fusce condimentum nunc ac nisi vulputate fringilla. Donec lacinia congue felis in faucibus. </p>
+            </div>
+        </div>
+        <div class="media">
+
+            <div class="media-body">
+                <h4>Media Right</h4>
+                <p> Cras sit amet nibh libero, in gravida nulla. Nulla vel metus scelerisque ante sollicitudin commodo. Cras purus odio, vestibulum in vulputate at, tempus viverra turpis. Fusce condimentum nunc ac nisi vulputate fringilla. Donec lacinia congue felis in faucibus. </p>
+            </div>
+            <div class="media-right">
+                <a href="#">
+                    <img src="image/6.jpg">
+                </a>
+            </div>
+        </div>
+        <div class="row typo">
+            <div class="col-xs-4 col-md-4">
+                <h4>List Group</h4>
+                <ul class="list-group">
+                    <li class="list-group-item"><span class="badge">14</span>Cras justo odio</li>
+                    <li class="list-group-item disabled"><span class="badge">13</span>Dapibus ac facilisis in</li>
+                    <li class="list-group-item"><span class="badge">12</span>Morbi leo risus</li>
+                </ul>
+                <h4>List group with Link</h4>
+                <div class="list-group">
+                    <a href="#" class="list-group-item" active>Cras justo odio</a>
+                    <a href="#" class="list-group-item" active>Dapibus ac facilisis in</a>
+                </div>
+                <h4>List Group with Buttons</h4>
+                <div class="list-group">
+                    <button type="button" class="list-group-item">Cras justo odio</button>
+                    <button type="button" class="list-group-item">Dapibus ac facilisis in</button>
+                </div>
+            </div>
+            <div class="col-xs-4 col-md-4">
+                <ul class="list-group">
+                    <li class="list-group-item list-group-item-success">Dapibus ac facilisis in</li>
+                    <li class="list-group-item list-group-item-info">Cras sit amet nibh libero</li>
+                    <li class="list-group-item list-group-item-warning">Porta ac consectetur ac</li>
+                    <li class="list-group-item list-group-item-danger">Vestibulum at eros</li>
+                </ul>
+                <div class="list-group">
+                    <a href="#" class="list-group-item list-group-item-success">Dapibus ac facilisis in</a>
+                    <a href="#" class="list-group-item list-group-item-info">Cras sit amet nibh libero</a>
+                    <a href="#" class="list-group-item list-group-item-warning">Porta ac consectetur ac</a>
+                    <a href="#" class="list-group-item list-group-item-danger">Vestibulum at eros</a>
+                </div>
+            </div>
+            <div class="col-xs-4 col-md-4">
+
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="panel panel-default">
+                <div class="panel-body">
+                    Basic panel example
+                </div>
+            </div>
+            <div class="panel panel-default">
+                <div class="panel-heading">Panel heading without title</div>
+                <div class="panel-body">
+                    Panel content
+                </div>
+            </div>
+
+            <div class="panel panel-default">
+                <div class="panel-heading">
+                    <h3 class="panel-title">Panel title</h3>
+                </div>
+                <div class="panel-body">
+                    Panel content
+                </div>
+            </div>
+            <div class="panel panel-default">
+                <div class="panel-body">
+                    Panel content
+                </div>
+                <div class="panel-footer">Panel footer</div>
+            </div>
+            <div class="panel panel-primary">
+                <div class="panel-heading">
+                    <h3 class="panel-title">Panel Title</h3>
+                </div>
+                <div class="panel-body">
+                    Panel Content
+                </div>
+            </div>
+            <div class="panel panel-success">
+                <div class="panel-heading">
+                    <h3 class="panel-title">Panel Title</h3>
+                </div>
+                <div class="panel-body">
+                    Panel Content
+                </div>
+            </div>
+            <div class="panel panel-danger">
+                <div class="panel-heading">
+                    <h3 class="panel-title">Panel Title</h3>
+                </div>
+                <div class="panel-body">
+                    Panel Content
+                </div>
+            </div>
+            <div class="panel panel-info">
+                <div class="panel-heading">
+                    <h3 class="panel-title">Panel Title</h3>
+                </div>
+                <div class="panel-body">
+                    Panel Content
+                </div>
+            </div>
+            <div class="panel panel-warning">
+                <div class="panel-heading">
+                    <h3 class="panel-title">Panel Title</h3>
+                </div>
+                <div class="panel-body">
+                    Panel Content
+                </div>
+            </div>
+            <div class="panel panel-default">
+                <!-- Default panel contents -->
+                <div class="panel-heading">Panel heading</div>
+                <div class="panel-body">
+                    <p>...</p>
+                </div>
+
+                <!-- List group -->
+                <ul class="list-group">
+                    <li class="list-group-item">Cras justo odio</li>
+                    <li class="list-group-item">Dapibus ac facilisis in</li>
+                    <li class="list-group-item">Morbi leo risus</li>
+                    <li class="list-group-item">Porta ac consectetur ac</li>
+                    <li class="list-group-item">Vestibulum at eros</li>
+                </ul>
+            </div>
+            <div class="panel panel-default">
+                <!-- Default panel contents -->
+                <div class="panel-heading">Panel heading</div>
+                <p>Cras justo odio Dapibus ac facilisis Morbi leo risus Porta ac consectetur Vestibulum at eros</p>
+                <!-- Table -->
+                <table class="table">
+                    <caption>Regular Table</caption>
+                    <thead>
+                        <tr>
+                            <th>#</th>
+                            <th>First Name</th>
+                            <th>Last Name</th>
+                            <th>Username</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <th scope="row">1</th>
+                            <td>Mark</td>
+                            <td>Otto</td>
+                            <td>@mdo</td>
+                        </tr>
+                        <tr>
+                            <th scope="row">2</th>
+                            <td>Jacob</td>
+                            <td>Thornton</td>
+                            <td>@fat</td>
+                        </tr>
+                        <tr>
+                            <th scope="row">3</th>
+                            <td>Larry</td>
+                            <td>the Bird</td>
+                            <td>@twitter</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+            <div class="well">
+                <h3>This is a Well</h3>
+                <p>
+                    Cras justo odio Dapibus ac facilisis Morbi leo risus
+                </p>
+            </div>
+            <div class="well well -lg">
+                <h3>This is a Large Well</h3>
+                <p>
+                    Cras justo odio Dapibus ac facilisis Morbi leo risus
+                </p>
+            </div>
+            <div class="well well-sm">
+                <h3>This is a Small Well</h3>
+                <p>
+                    Cras justo odio Dapibus ac facilisis Morbi leo risus
+                </p>
+            </div>
+        </div>
+        <div class="row typo">
+            <div class="col-xs-4 col-md-4">
+
+            </div>
+            <div class="col-xs-4 col-md-4">
+
+            </div>
+            <div class="col-xs-4 col-md-4">
+
+            </div>
+        </div>
+    </div>
+
+</body>
+
+</html>
