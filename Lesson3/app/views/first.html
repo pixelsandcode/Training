@@ -1,0 +1,25 @@
+<!--    AngularJS Application-->
+<div class="container">
+    <div class="row">
+        <div class="col-xs-8 col-xs-offset-2 ">
+            <div class="panel panel-{{myStyle}}">
+                <div class="panel-heading">
+                    <h4>
+                        Third Angular Code!!
+                    </h4>
+                </div>
+                <div class="panel-body">
+                    <div class="input-group">
+                        <span class="input-group-addon" id="basic-addon1">Type some text:</span>
+                        <input type="text" class="form-control" placeholder="blah blah..." aria-describedby="basic-addon1" ng-model="inputText" autofocus required>
+                    </div>
+                    <a ng-click="transfer()" class="btn btn-{{myStyle}} btn-block">Click</a>
+                    <!--ui-sref="secondView({ secondText: inputText, secondStyle: myStyle})"-->
+                    <div class="alert alert-warning " role="alert" ng-hide="isHidden">
+                        <strong>Warning!</strong> You must type something!!
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

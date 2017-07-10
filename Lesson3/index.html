@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Lesson 3 - Angular</title>
+    <link href="../components/bootstrap/dist/css/bootstrap.css" rel="stylesheet">
+    <script src="../components/jquery/dist/jquery.js"></script>
+    <script src="../components/bootstrap/dist/js/bootstrap.js"></script>
+    <script src="../components/angular/angular.js"></script>
+    <script src="../components/angular-ui-router/release/angular-ui-router.js"></script>
+    <script src="app/app.js"></script>
+    <script src="app/controllers/firstController.js"></script>
+    <script src="app/controllers/secondController.js"></script>
+
+</head>
+<!---->
+
+<body ng-app="myApp" ng-init="isHidden='true';myStyle='primary'">
+    <nav class="navbar navbar-default">
+        <div class="container-fluid">
+            <div class="navbar-header">
+                <a class="navbar-brand" ui-sref="#">Lesson 3</a>
+            </div>
+        </div>
+    </nav>
+    <div ui-view></div>
+</body>
+
+</html>
