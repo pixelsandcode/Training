@@ -457,7 +457,9 @@ const me = (request, reply) => {
 
 const getPostAccessible = (request, reply) => {
   if (request.auth.isAuthenticated) {
-    Post.get(encodeURIComponent(request.params.post_key)).then(
+    var post_key = encodeURIComponent(request.params.postkey)
+    console.log(`post_key: ${post_key}`)
+    Post.get(post_key).then(
       (o) => {
         console.log(o)
         reply(o)
