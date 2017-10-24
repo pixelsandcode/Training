@@ -1,0 +1,22 @@
+{
+  "name": "lesson1",
+  "version": "1.0.0",
+  "description": "Lesson 1 of 16",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/amin4193/lesson1.git"
+  },
+  "keywords": [
+    "lessons"
+  ],
+  "author": "AAH",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/amin4193/lesson1/issues"
+  },
+  "homepage": "https://github.com/amin4193/lesson1#readme"
+}
