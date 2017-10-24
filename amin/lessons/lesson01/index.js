@@ -7,12 +7,16 @@ server.connection({
   port: 3000
 })
 
+function sayhi(name) {
+  return 'Hello ' + name + '! :-D'
+}
+
 // Add the route
 server.route({
   method: 'GET',
   path: '/hello/{name}',
   handler: function (request, reply) {
-    reply('Hello ' + request.params.name + '! :-D')
+    reply(sayhi(request.params.name))
   }
 })
 
