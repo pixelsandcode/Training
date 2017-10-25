@@ -18,5 +18,12 @@
   "bugs": {
     "url": "https://github.com/amin4193/lesson1/issues"
   },
-  "homepage": "https://github.com/amin4193/lesson1#readme"
+  "homepage": "https://github.com/amin4193/lesson1#readme",
+  "dependencies": {
+    "hapi": "^16.6.2",
+    "inert": "^4.2.1",
+    "lout": "^10.0.3",
+    "vision": "^4.1.1"
+  },
+  "devDependencies": {}
 }
