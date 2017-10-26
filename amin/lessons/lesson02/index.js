@@ -3,6 +3,8 @@ const couchbase = require('couchbase')
 const cluster = new couchbase.Cluster('couchbase://127.0.0.1')
 const bucket = cluster.openBucket('default')
 
+console.log(bucket)
+
 const argv = require('yargs')
   .alias('n', 'name')
   .alias('a', 'age')
@@ -13,6 +15,7 @@ const argv = require('yargs')
     function (argv) {
       bucket.upsert('u:3', {name: argv.name, age: argv.age}, function (err, result) {
         if (err) throw err
+        console.log('upsert success')
       })
     })
   .command(
