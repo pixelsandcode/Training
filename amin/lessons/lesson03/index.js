@@ -1,10 +1,5 @@
-const db = new require('puffer')({
-  host: 'localhost',
-  name: 'default'
-})
-const Base = require('odme').CB({
-  source: db
-})
+const db = new require('puffer')({host: 'localhost', name: 'default'})
+const Base = require('odme').CB({source: db})
 const Joi = require('joi')
 const argv = require('yargs')
 
@@ -22,17 +17,14 @@ class User extends Base {
     }
   }
 }
+
 argv
-
-  .usage("$0 save --name=[name] --age=[age]" + '\n' +
-    "$0 get --name=[Document-ID]")
-
+  .usage('$0 save --name=[name] --age=[age] \n $0 get --name=[Document-ID]')
   .alias('n', 'name')
   .alias('a', 'age')
-
   .command({
     command: 'save',
-    builder: (argv) => argv.demandOption(['name', 'age']),
+    builder: {},
     desc: 'This command saves the Document to bucket.',
     handler: (argv) => {
       let user = new User({
@@ -46,10 +38,9 @@ argv
       })
     }
   })
-
   .command({
     command: 'get',
-    builder: (argv) => argv.demandOption('name'),
+    builder: {},
     desc: 'This command load the Document from bucket.',
     handler: (argv) => {
       User.get(argv.name).then((result, err) => {
@@ -59,6 +50,4 @@ argv
       })
     }
   })
-
-  .help()
   .argv
