@@ -1,0 +1,16 @@
+{
+  "name": "say-hi-npm",
+  "version": "1.0.0",
+  "description": "Say hi npm for lesson04",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "lessons",
+    "npm",
+    "package"
+  ],
+  "author": "AAH",
+  "license": "ISC"
+}

@@ -1,0 +1,23 @@
+{
+  "name": "lesson04",
+  "version": "1.0.0",
+  "description": "",
+  "main": "test.js",
+  "dependencies": {
+    "hapi": "^16.6.2",
+    "inert": "^4.2.1",
+    "lesson04-npm": "^1.0.0",
+    "lout": "^10.0.3",
+    "say-hi-npm": "file:say-hi-npm",
+    "vision": "^4.1.1"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "lessons"
+  ],
+  "author": "AAH",
+  "license": "ISC"
+}
