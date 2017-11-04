@@ -1,7 +1,6 @@
 const db = new require('puffer')({host: 'localhost', name: 'default'})
 const Base = require('odme').CB({source: db})
 const Joi = require('joi')
-const argv = require('yargs')
 
 class User extends Base {
   props() {
@@ -18,7 +17,7 @@ class User extends Base {
   }
 }
 
-argv
+const argv = require('yargs')
   .usage('$0 save --name=[name] --age=[age] \n $0 get --name=[Document-ID]')
   .alias('n', 'name')
   .alias('a', 'age')

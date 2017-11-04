@@ -1,0 +1,21 @@
+{
+  "name": "lesson06",
+  "version": "1.0.0",
+  "description": "working on elasticsearch queries",
+  "main": "index.js",
+  "dependencies": {
+    "bluebird": "^3.5.1",
+    "elasticsearch": "^13.3.1",
+    "yargs": "^10.0.3"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "lessons",
+    "elasticsearch"
+  ],
+  "author": "AAH",
+  "license": "ISC"
+}
