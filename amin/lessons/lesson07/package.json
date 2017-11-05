@@ -1,0 +1,24 @@
+{
+  "name": "lesson07",
+  "version": "1.0.0",
+  "description": "Working with couchbase and elasticsearch",
+  "main": "index.js",
+  "dependencies": {
+    "elasticsearch": "^13.3.1",
+    "joi": "^13.0.1",
+    "odme": "^2.0.4",
+    "puffer": "^1.1.1",
+    "yargs": "^10.0.3"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "lessons",
+    "couchbase",
+    "elasticsearch"
+  ],
+  "author": "AAH",
+  "license": "ISC"
+}
