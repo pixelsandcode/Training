@@ -17,20 +17,10 @@
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
       <file leaf-file-name="index.js" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/amin/lessons/lesson09/index.js">
+        <entry file="file://$PROJECT_DIR$/amin/lessons/lesson10/index.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="393">
-              <caret line="186" column="25" lean-forward="false" selection-start-line="186" selection-start-column="25" selection-end-line="186" selection-end-column="25" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="elastic.js" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/amin/lessons/lesson09/elastic.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="432">
-              <caret line="24" column="9" lean-forward="false" selection-start-line="24" selection-start-column="9" selection-end-line="24" selection-end-column="9" />
+            <state relative-caret-position="357">
+              <caret line="200" column="2" lean-forward="true" selection-start-line="200" selection-start-column="2" selection-end-line="200" selection-end-column="2" />
               <folding />
             </state>
           </provider>
@@ -56,6 +46,8 @@
       <find>body:</find>
       <find>id</find>
       <find>fullname</find>
+      <find>;</find>
+      <find>amin</find>
     </findStrings>
     <replaceStrings>
       <replace>'</replace>
@@ -64,6 +56,7 @@
       <replace>id</replace>
       <replace>_id</replace>
       <replace>name</replace>
+      <replace>admin</replace>
     </replaceStrings>
   </component>
   <component name="Git.Settings">
@@ -97,6 +90,8 @@
         <option value="$PROJECT_DIR$/amin/lessons/lesson09/package.json" />
         <option value="$PROJECT_DIR$/amin/lessons/lesson09/elastic.js" />
         <option value="$PROJECT_DIR$/amin/lessons/lesson09/index.js" />
+        <option value="$PROJECT_DIR$/amin/lessons/lesson10/package.json" />
+        <option value="$PROJECT_DIR$/amin/lessons/lesson10/index.js" />
       </list>
     </option>
   </component>
@@ -123,6 +118,7 @@
     <handled-path value="$PROJECT_DIR$/amin/lessons/lesson07/node_modules" />
     <handled-path value="$PROJECT_DIR$/amin/lessons/lesson08/node_modules" />
     <handled-path value="$PROJECT_DIR$/amin/lessons/lesson09/node_modules" />
+    <handled-path value="$PROJECT_DIR$/amin/lessons/lesson10/node_modules" />
   </component>
   <component name="ProjectFrameBounds" extendedState="6">
     <option name="x" value="45" />
@@ -172,7 +168,7 @@
               <item name="Training" type="462c0819:PsiDirectoryNode" />
               <item name="amin" type="462c0819:PsiDirectoryNode" />
               <item name="lessons" type="462c0819:PsiDirectoryNode" />
-              <item name="lesson09" type="462c0819:PsiDirectoryNode" />
+              <item name="lesson10" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
@@ -235,12 +231,12 @@
       <workItem from="1509778712059" duration="16157000" />
       <workItem from="1509862466024" duration="11844000" />
       <workItem from="1509887085740" duration="3667000" />
-      <workItem from="1509959016035" duration="33988000" />
+      <workItem from="1509959016035" duration="43089000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="149995000" />
+    <option name="totallyTimeSpent" value="159096000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="45" y="0" width="1323" height="780" extended-state="6" />
@@ -272,31 +268,11 @@
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
-      <option name="time" value="14" />
+      <option name="time" value="17" />
     </breakpoint-manager>
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/amin/lessons/lesson06/t.js" />
-    <entry file="file://$PROJECT_DIR$/amin/lessons/lesson06/index.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="4248">
-          <caret line="236" column="1" lean-forward="true" selection-start-line="236" selection-start-column="1" selection-end-line="236" selection-end-column="1" />
-          <folding>
-            <element signature="e#125#1630#0" expanded="false" />
-            <element signature="e#2103#3029#0" expanded="false" />
-            <element signature="e#3043#4425#0" expanded="false" />
-            <element signature="e#4439#4901#0" expanded="false" />
-            <element signature="e#4915#5399#0" expanded="false" />
-            <element signature="e#5413#6086#0" expanded="false" />
-            <element signature="e#6100#6844#0" expanded="false" />
-            <element signature="e#6858#7636#0" expanded="false" />
-            <element signature="e#7650#8727#0" expanded="false" />
-            <element signature="e#8741#9417#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/amin/lessons/lesson06/users.json">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="1692">
@@ -605,14 +581,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/amin/lessons/lesson09/package.json">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="378">
-          <caret line="21" column="22" lean-forward="false" selection-start-line="21" selection-start-column="22" selection-end-line="21" selection-end-column="22" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/amin/lessons/lesson03/index.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="346">
@@ -639,8 +607,34 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/amin/lessons/lesson09/index.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="393">
-          <caret line="186" column="25" lean-forward="false" selection-start-line="186" selection-start-column="25" selection-end-line="186" selection-end-column="25" />
+        <state relative-caret-position="321">
+          <caret line="53" column="0" lean-forward="false" selection-start-line="53" selection-start-column="0" selection-end-line="207" selection-end-column="2" />
+          <folding>
+            <element signature="e#1074#4685#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/amin/lessons/lesson09/package.json">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="180">
+          <caret line="10" column="10" lean-forward="true" selection-start-line="10" selection-start-column="10" selection-end-line="10" selection-end-column="10" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/amin/lessons/lesson10/package.json">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="375">
+          <caret line="21" column="22" lean-forward="false" selection-start-line="21" selection-start-column="22" selection-end-line="21" selection-end-column="22" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/amin/lessons/lesson10/index.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="357">
+          <caret line="200" column="2" lean-forward="true" selection-start-line="200" selection-start-column="2" selection-end-line="200" selection-end-column="2" />
           <folding />
         </state>
       </provider>
