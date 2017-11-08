@@ -1,0 +1,31 @@
+{
+  "name": "lesson09",
+  "version": "1.0.0",
+  "description": "Creating a complete API",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "lessons",
+    "API",
+    "Postman"
+  ],
+  "author": "AAH",
+  "license": "ISC",
+  "dependencies": {
+    "elasticsearch": "^13.3.1",
+    "hapi": "^16.6.2",
+    "inert": "^4.2.1",
+    "joi": "^13.0.1",
+    "joi-date-extensions": "^1.1.0",
+    "lout": "^10.0.3",
+    "nodemon": "^1.12.1",
+    "odme": "^2.0.4",
+    "puffer": "^1.1.1",
+    "vision": "^4.1.1"
+  },
+  "devDependencies": {
+    "nodemon": "^1.12.1"
+  }
+}
