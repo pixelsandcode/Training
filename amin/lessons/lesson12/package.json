@@ -1,0 +1,33 @@
+{
+  "name": "lesson12",
+  "version": "1.0.0",
+  "description": "Use Authentication in a blog",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "lessons",
+    "authentication",
+    "blog"
+  ],
+  "author": "AAH",
+  "license": "ISC",
+  "dependencies": {
+    "bluebird": "^3.5.1",
+    "elasticsearch": "^13.3.1",
+    "hapi": "^16.6.2",
+    "hapi-auth-jwt2": "^7.3.0",
+    "hapi-pagination": "^1.22.0",
+    "inert": "^4.2.1",
+    "joi": "^13.0.1",
+    "jsonwebtoken": "^8.1.0",
+    "lout": "^10.0.3",
+    "odme": "^2.0.4",
+    "puffer": "^1.1.1",
+    "vision": "^4.1.1"
+  },
+  "devDependencies": {
+    "nodemon": "^1.12.1"
+  }
+}
