@@ -3,8 +3,8 @@ const cluster = new couchbase.Cluster('couchbase://127.0.0.1')
 const bucket = cluster.openBucket('default')
 
 const argv = require('yargs')
-  .usage('$0 save [name] [age]' +
-         '$0 get [name] ')
+  .usage('$0 save --name=[name] --age=[age]' +
+         '$0 get --name=[docID]')
   .alias('n', 'name')
   .alias('a', 'age')
   .command({
