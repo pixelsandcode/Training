@@ -91,6 +91,7 @@ const argv = require('yargs')
   .alias('n', 'name')
   .alias('f', 'dateFrom')
   .alias('t', 'dateTo')
+
   .command({
     command: 'delete-indices',
     aliases: 'di',
@@ -102,9 +103,9 @@ const argv = require('yargs')
           index: 'books'
         }, (err, res) => {
           if (err) {
-            console.log(`\n---------ERROR IN DELETE:\n${JSON.stringify(err, null, 2)}`)
+            console.log(`\nERROR IN DELETE:\n${JSON.stringify(err, null, 2)}`)
           } else {
-            console.log(`\n---------DELETE BOOKS INDEX:\n${JSON.stringify(res, null, 2)}`)
+            console.log(`\nDELETE BOOKS INDEX:\n${JSON.stringify(res, null, 2)}`)
           }
         })
       }
@@ -114,9 +115,9 @@ const argv = require('yargs')
           index: 'users'
         }, (err, res) => {
           if (err) {
-            console.log(`\n---------ERROR IN DELETE:\n${JSON.stringify(err, null, 2)}`)
+            console.log(`\nERROR IN DELETE:\n${JSON.stringify(err, null, 2)}`)
           } else {
-            console.log(`\n---------DELETE USER INDEX:\n${JSON.stringify(res, null, 2)}`)
+            console.log(`\nDELETE USER INDEX:\n${JSON.stringify(res, null, 2)}`)
           }
         })
       }
@@ -133,7 +134,7 @@ const argv = require('yargs')
         index: 'users',
         // body: {
         //   mappings: {
-        //     users: {
+        //     user: {
         //       properties: {
         //         name: {
         //           type: 'string'
@@ -147,9 +148,9 @@ const argv = require('yargs')
         // }
       }, (err, res) => {
         if (err) {
-          console.log(`\n---------ERROR IN CREATE INDICES:\n${JSON.stringify(err, null, 2)}`)
+          console.log(`\nERROR IN CREATE INDICES:\n${JSON.stringify(err, null, 2)}`)
         } else {
-          console.log(`\n---------SUCCESS IN CREATE INDICES:\n${JSON.stringify(res, null, 2)}`)
+          console.log(`\nSUCCESS IN CREATE INDICES:\n${JSON.stringify(res, null, 2)}`)
         }
       })
 
@@ -157,7 +158,7 @@ const argv = require('yargs')
         index: 'books',
         body: {
           mappings: {
-            books: {
+            book: {
               properties: {
                 name: {
                   type: 'string',
@@ -169,9 +170,9 @@ const argv = require('yargs')
         }
       }, (err, res) => {
         if (err) {
-          console.log(`\n---------ERROR IN CREATE INDICES:\n${JSON.stringify(err, null, 2)}`)
+          console.log(`\nERROR IN CREATE INDICES:\n${JSON.stringify(err, null, 2)}`)
         } else {
-          console.log(`\n---------SUCCESS IN CREATE INDICES:\n${JSON.stringify(res, null, 2)}`)
+          console.log(`\nSUCCESS IN CREATE INDICES:\n${JSON.stringify(res, null, 2)}`)
         }
       })
     }
@@ -187,9 +188,9 @@ const argv = require('yargs')
         body: body
       }, (err, res) => {
         if (err) {
-          console.log(`\n---------ERROR IN DOCS:\n${JSON.stringify(err, null, 2)}`)
+          console.log(`\nERROR IN DOCS:\n${JSON.stringify(err, null, 2)}`)
         } else {
-          console.log(`\n---------SUCCESS IN CREATE ALL DOCS:\n${JSON.stringify(res, null, 2)}`)
+          console.log(`\nSUCCESS IN CREATE ALL DOCS:\n${JSON.stringify(res, null, 2)}`)
         }
       })
     }
@@ -199,7 +200,7 @@ const argv = require('yargs')
     command: 'search-all-user',
     aliases: 'sau',
     builder: {},
-    desc: 'Returns all users from index.',
+    desc: 'Shows all users from index.',
     handler: () => {
       client.search({
         index: 'users',
@@ -208,9 +209,9 @@ const argv = require('yargs')
         }
       }, (err, res) => {
         if (err) {
-          console.log(`\n---------ERROR IN DOCS:\n${JSON.stringify(err, null, 2)}`)
+          console.log(`\nERROR IN DOCS:\n${JSON.stringify(err, null, 2)}`)
         } else {
-          console.log(`\n---------ALL USERS:\n${JSON.stringify(res, null, 2)}`)
+          console.log(`\nALL USERS:\n${JSON.stringify(res, null, 2)}`)
         }
       })
     }
@@ -220,7 +221,7 @@ const argv = require('yargs')
     command: 'search-user-name',
     aliases: 'sun',
     builder: (argv) => argv.demandOption('n'),
-    desc: 'Returns users with specified name from "users".',
+    desc: 'Shows users with specified name from "users".',
     handler: (argv) => {
       client.search({
         index: 'users',
@@ -234,10 +235,9 @@ const argv = require('yargs')
         }
       }, (err, res) => {
         if (err) {
-          console.log(`\n---------ERROR IN SEARCH:\n${JSON.stringify(err, null, 2)}`)
+          console.log(`\nERROR IN SEARCH:\n${JSON.stringify(err, null, 2)}`)
         } else {
-          console.log(`\n---------LIST OF USERS WITH NAME='${argv.name}':\n
-          ${JSON.stringify(res, null, 2)}`)
+          console.log(`\nUSERS WITH NAME='${argv.name}':\n${JSON.stringify(res, null, 2)}`)
         }
       })
     }
@@ -247,7 +247,7 @@ const argv = require('yargs')
     command: 'search-user-name-fuzzy',
     aliases: 'sunf',
     builder: (argv) => argv.demandOption('n'),
-    desc: 'Returns users with specified name from "users" using "fuzzy".',
+    desc: 'Shows users with specified name from "users" using "fuzzy".',
     handler: (argv) => {
       client.search({
         index: 'users',
@@ -263,10 +263,9 @@ const argv = require('yargs')
         }
       }, (err, res) => {
         if (err) {
-          console.log(`\n---------ERROR IN SEARCH:\n${JSON.stringify(err, null, 2)}`)
+          console.log(`\nERROR IN SEARCH:\n${JSON.stringify(err, null, 2)}`)
         } else {
-          console.log(`\n---------LIST OF FUZZY 'USERS' WITH NAME='${argv.name}':\n
-          ${JSON.stringify(res, null, 2)}`)
+          console.log(`\nFUZZY 'USERS' WITH NAME='${argv.name}':\n${JSON.stringify(res, null, 2)}`)
         }
       })
     }
@@ -276,7 +275,7 @@ const argv = require('yargs')
     command: 'search-user-date',
     aliases: 'sud',
     builder: (argv) => argv.demandOption(['f', 't']),
-    desc: 'Returns users with specified date-of-birth range.',
+    desc: 'Shows users with specified date-of-birth range.',
     handler: (argv) => {
       client.search({
         index: 'users',
@@ -293,10 +292,10 @@ const argv = require('yargs')
         }
       }, (err, res) => {
         if (err) {
-          console.log(`\n---------ERROR IN SEARCH:\n${JSON.stringify(err, null, 2)}`)
+          console.log(`\nERROR IN SEARCH:\n${JSON.stringify(err, null, 2)}`)
         } else {
-          console.log(`\n---------LIST OF 'USERS' WITH BIRTHDAY RANGE:
-          [${argv.dateFrom}, ${argv.dateTo}]:\n${JSON.stringify(res, null, 2)}`)
+          console.log('\nUSERS WITH BIRTHDAY RANGE:' +
+            `[${argv.dateFrom}, ${argv.dateTo}]:\n${JSON.stringify(res, null, 2)}`)
         }
       })
     }
@@ -306,7 +305,7 @@ const argv = require('yargs')
     command: 'search-user-date-fuzzy',
     aliases: 'sudf',
     builder: (argv) => argv.demandOption(['n', 'f', 't']),
-    desc: 'Returns users with specified date-of-birth range using "fuzzy".',
+    desc: 'Shows users with specified date-of-birth range using "fuzzy".',
     handler: (argv) => {
       client.search({
         index: 'users',
@@ -334,10 +333,10 @@ const argv = require('yargs')
         }
       }, (err, res) => {
         if (err) {
-          console.log(`\n---------ERROR IN SEARCH:\n${JSON.stringify(err, null, 2)}`)
+          console.log(`\nERROR IN SEARCH:\n${JSON.stringify(err, null, 2)}`)
         } else {
-          console.log(`\n---------LIST OF 'USERS' WITH BIRTHDAY RANGE (FUZZY):
-          [${argv.dateFrom}, ${argv.dateTo}]:\n${JSON.stringify(res, null, 2)}`)
+          console.log('\nUSERS WITH BIRTHDAY RANGE (FUZZY):' +
+            `[${argv.dateFrom}, ${argv.dateTo}]:\n${JSON.stringify(res, null, 2)}`)
         }
       })
     }
@@ -347,11 +346,11 @@ const argv = require('yargs')
     command: 'search-book-name',
     aliases: 'sbn',
     builder: (argv) => argv.demandOption('n'),
-    desc: 'Returns books with exact name from "books" index.',
+    desc: 'Shows books with exact name from "books" index.',
     handler: (argv) => {
       client.search({
         index: 'books',
-        //type: 'book',
+        type: 'book',
         body: {
           filter: {
             term: {
@@ -361,13 +360,12 @@ const argv = require('yargs')
         }
       }, (err, res) => {
         if (err) {
-          console.log(`\n---------ERROR IN SEARCH:\n${JSON.stringify(err, null, 2)}`)
+          console.log(`\nERROR IN SEARCH:\n${JSON.stringify(err, null, 2)}`)
         } else {
-          console.log(`\n---------LIST OF 'BOOKS' WITH NAME='${argv.name}':\n
-          ${JSON.stringify(res, null, 2)}`)
+          console.log(`\nBOOKS WITH NAME='${argv.name}':\n${JSON.stringify(res, null, 2)}`)
         }
       })
     }
   })
-  .help()
+  .help('h')
   .argv
