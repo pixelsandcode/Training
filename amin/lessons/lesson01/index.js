@@ -8,13 +8,27 @@ server.connection({
 })
 
 // Handler function of route 'GET'
-const say_hi = function (request, reply) {
+const sayhi = function (request, reply) {
   reply(`Hello ${request.params.name}! :-D`)
 }
+
+// Server method for sayhi function
+server.method({
+  name: 'sayhi',
+  method: sayhi,
+})
 
 server.register([require('vision'), require('inert'), {register: require('lout')}], function (err) {
   if (err)
     console.log(err)
+})
+
+// Server views to add and access index.html
+server.views({
+  engines: {
+    html: require('handlebars')
+  },
+  path: 'hi-path'
 })
 
 // Add routes
@@ -46,11 +60,26 @@ server.route([
   {
     method: 'GET',
     path: '/hello/{name}',
-    handler: say_hi,
+    handler: server.methods.sayhi,
     config: {
       description: 'This is a hello page.',
-      notes: 'This page gets {name} and says: "Hello {name}"',
-      tags: ['get', 'home', 'hello']
+      notes: 'This page gets "/hello/{name}" and says: "Hello {name}"',
+      tags: ['get', 'home', 'hello', 'methods']
+    }
+  },
+  {
+    method: 'GET',
+    path: '/{name}',
+    handler: (request, reply) => {
+      reply.view('index', {
+        title: 'Hello',
+        message: `Hello ${request.params.name}!`
+      })
+    },
+    config: {
+      description: 'Loads a page which says "Hello {name}" in html.',
+      notes: 'This page gets {name} and says: "Hello {name}" in new index.html page',
+      tags: ['get', 'home', 'hello', 'html']
     }
   }
 ])
