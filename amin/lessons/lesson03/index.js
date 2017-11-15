@@ -1,8 +1,14 @@
 const db = new require('puffer')({host: 'localhost', name: 'default'})
-const Base = require('odme').CB({source: db})
+const Model = require('odme').CB({source: db})
 const Joi = require('joi')
 
-class User extends Base {
+// Create a model for our doc in couchbase
+class User extends Model {
+
+  PREFIX() {
+    return 'u'
+  }
+
   props() {
     return {
       name: {
@@ -18,35 +24,34 @@ class User extends Base {
 }
 
 const argv = require('yargs')
-  .usage('$0 save --name=[name] --age=[age] \n $0 get --name=[Document-ID]')
+  .usage('$0 save --name=[name] --age=[age] \n $0 get --name=[docID]')
   .alias('n', 'name')
   .alias('a', 'age')
   .command({
     command: 'save',
-    builder: {},
-    desc: 'This command saves the Document to bucket.',
+    aliases: 's',
+    builder: (argv) => argv.demandOption(['n', 'a']),
+    desc: 'This command saves the Document into bucket.',
     handler: (argv) => {
       let user = new User({
         name: argv.name,
         age: argv.age
       })
-      user.create(true).then((result, err) => {
-        if (!err) {
-          console.log(result)
-        }
+      user.create(true).then((res) => {
+        console.log(res)
       })
     }
   })
   .command({
     command: 'get',
-    builder: {},
+    aliases: 'g',
+    builder: (argv) => argv.demandOption('n'),
     desc: 'This command load the Document from bucket.',
     handler: (argv) => {
-      User.get(argv.name).then((result, err) => {
-        if (!err) {
-          console.log(result)
-        }
+      User.get(argv.name).then((res) => {
+        console.log(res.doc)
       })
     }
   })
+  .help('h')
   .argv
