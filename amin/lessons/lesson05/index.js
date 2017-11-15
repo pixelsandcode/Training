@@ -9,7 +9,17 @@ server.connection({
   port: 3000
 })
 
-server.register(require('./say-bye-plugin'))
+server.register(
+  [
+    require('./say-bye-plugin'),
+    require('vision'),
+    require('inert'),
+    require('lout')
+  ],
+  (err) => {
+    if (err)
+      console.log(err)
+  })
 
 server.method({
   name: 'sayHi',
@@ -19,10 +29,15 @@ server.method({
 server.route({
   method: 'GET',
   path: '/hello/{name}',
-  handler: function (request, reply) {
+  handler: (request, reply) => {
     request.params.name === undefined ?
       reply('Hello Stranger!') :
       reply(server.methods.sayHi(request.params.name))
+  },
+  config: {
+    description: 'This is a hello page.',
+    notes: 'This page says: "Hello NAME!" with a given ${name}.',
+    tags: ['get', 'home', 'hello', 'plugin']
   }
 })
 

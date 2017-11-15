@@ -12,6 +12,9 @@
   "author": "AAH",
   "license": "ISC",
   "dependencies": {
-    "hapi": "^16.6.2"
+    "hapi": "^16.6.2",
+    "vision": "^4.1.1",
+    "lout": "^10.0.3",
+    "inert": "^4.2.1"
   }
 }
