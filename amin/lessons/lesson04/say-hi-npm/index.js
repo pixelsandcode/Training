@@ -1,3 +1,3 @@
-exports.sayHi = function (name) {
-  return ('Hello ' + name + '! :-D')
+exports.sayHi = (name) => {
+  return (`Hello ${name}! :-D`)
 }
