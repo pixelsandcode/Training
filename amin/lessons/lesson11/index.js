@@ -93,16 +93,7 @@ const signup = (request, reply) => {
           weight: request.payload.weight,
           height: request.payload.height
         })
-        var docs = [user.create(true)]
-        //console.log(user)
-        // Promise.all(docs).then((err, res) => {
-        //     if (err) {
-        //       reply('There was a problem in promise:\n\n', err)
-        //     } else {
-        //       reply('Signed up successfully:\n\n', res)
-        //     }
-        //   }
-        // )
+        let docs = [user.create(true)]
         Promise.all(docs).then((res) => {
             reply(res)
           }
@@ -137,13 +128,7 @@ const login = (request, reply) => {
     }
   }, (err, response) => {
     if (err) {
-      reply(`There was a problem. Please try again later:\n
-      ${err}\n\n
-      typeof(request.payload.email):
-      ${typeof(request.payload.email)}, ${request.payload.email}\n\n
-      typeof(request.payload.password): 
-      ${typeof(request.payload.password)}, ${request.payload.password}`)
-
+      reply(`There was a problem. Please try again later:\n${err}`)
     } else {
       //console.log(response.hits.total)
       if (response.hits.total == 0) {
@@ -160,7 +145,6 @@ const login = (request, reply) => {
             text: 'You logged in!',
             jwtTonken: token
           }).header('Authorization', token)
-          //reply(`\ntoken: ${token}`)
         }
       }
     }
@@ -185,7 +169,7 @@ const me = (request, reply) => {
       if (err) {
         reply('There was problem. Please try again later.\n', err)
       } else {
-        reply('<<Home Page>>\n\nHello, ', res.hits.hits[0]._source.doc)
+        reply(`---Home Page---\n\nHello, ${res.hits.hits[0]._source.doc.fullname}!`)
       }
     })
   } else {
@@ -195,7 +179,6 @@ const me = (request, reply) => {
 
 const feed = (request, reply) => {
   if (request.auth.isAuthenticated) {
-    //var decodedToken = request.auth.credentials
     client.search({
       index: 'users_jwt',
       type: 'user',
@@ -208,26 +191,24 @@ const feed = (request, reply) => {
       }
     }, (err, res) => {
       if (err) {
-        console.error(err)
-        reply('there was problem try again later.')
+        //console.error(err)
+        reply('there was problem try again later.\n', err)
       } else {
-        console.log(res)
-        //var current_users_name = response.hits.hits[0]._source.doc.fullname
-        console.log(res.hits.hits[0]._source.doc.fullname)
-        reply(
-          `[ { card: ‘menu’ }, { card: ‘profile’, name: 
-          ${res.hits.hits[0]._source.doc.fullname} } ]`
+        //console.log(res)
+        //console.log(res.hits.hits[0]._source.doc.fullname)
+        const full_name = res.hits.hits[0]._source.doc.fullname
+        reply(`[ {card: ‘menu’}, {card: ‘profile’, name: ‘${full_name}‘} ]`
         )
       }
     })
   } else {
-    reply(`[{card: ‘menu’}, {card: ‘login’}]`)
+    reply(`[ {card: ‘menu’}, {card: ‘login’} ]`)
   }
 }
 
 const logout = (request, reply) => {
   if (request.auth.isAuthenticated) {
-    console.log(`request.auth.token: ${request.auth.token}`)
+    //console.log(`request.auth.token: ${request.auth.token}`)
     //var token = request.auth.token
     const blockthis = new blockedTokens({
       token: request.auth.token
@@ -270,9 +251,9 @@ const validate = (decoded, request, callback) => {
   }, (err, response) => {
     if (err) {
       console.error(err)
-      console.log('request.auth.token: ', request.auth.token)
+      //console.log('request.auth.token: ', request.auth.token)
     } else {
-      console.log('request.auth.token: ', request.auth.token)
+      //console.log('request.auth.token: ', request.auth.token)
       if (response.hits.total == 0) {
         client.search({
           index: 'users_jwt',
@@ -373,10 +354,6 @@ server.route([
     handler: signup,
     config: {
       auth: false, // don't require people to be logged in to see the sign-up page! (duh!)
-      // auth: {
-      //   strategy: 'jwt',
-      //   mode: 'try'
-      // },
       description: 'Sign-up page',
       notes: 'Needs email, password, name, height and weight.',
       tags: ['authentication', 'post', 'signup', 'jwt']
@@ -387,6 +364,6 @@ server.route([
 // Start the server
 server.start((err) => {
   if (err)
-    console.error(err.message)
+    console.error(err)
   console.log('Server started at ', server.info.uri)
 })

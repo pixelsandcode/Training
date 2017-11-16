@@ -2,7 +2,7 @@
 
 const ES = require('elasticsearch')
 const client = new ES.Client({host: 'localhost:9200'})
-//client.indices.putMapping({})
+
 client.indices.create({
   index: 'users_jwt',
   body: {
@@ -57,8 +57,8 @@ client.indices.create({
   }
 }, (err, res) => {
   if (err) {
-    console.error(`\n---------ERROR IN CREATE INDICES:\n${JSON.stringify(err, null, 2)}`)
+    console.error(`\nERROR IN CREATE INDEX:\n${JSON.stringify(err, null, 2)}`)
   } else {
-    console.log(`\n---------SUCCESS IN CREATE INDICES:\n${JSON.stringify(res, null, 2)}`)
+    console.log(`\nSUCCESS IN CREATE INDEX:\n${JSON.stringify(res, null, 2)}`)
   }
 })
