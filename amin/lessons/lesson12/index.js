@@ -108,10 +108,7 @@ const register = (request, reply) => {
           password: request.payload.password,
           fullname: request.payload.fullname
         })
-        // const docs = [user.create(true)]
-        // Promise.all(docs).then((res) => {
-        //   reply(`Register is complete.\n${res}\n${docs}`)
-        // })
+
         user.create(true).then((res) => {
           reply(res)
         })
@@ -214,17 +211,9 @@ const post = (request, reply) => {
   }
   else {
     console.log(request.params.post_key)
-    Post.get(request.params.post_key).then((res, err) => {
-      if (err) {
-        reply(err)
-      } else {
-        const Title = res.doc.title
-        const Body = res.doc.body
-        const Author = res.doc.author_name
-        //console.log(res)
-        //reply(JSON.stringify(res, null, 2))
-        reply(`Title: ${Title}\nBody: ${Body}\nAuthor: ${Author}`)
-      }
+    Post.get(request.params.post_key).then((res) => {
+      const t = res.doc.title, b = res.doc.body, a = res.doc.author_name
+      reply(`Title: ${t}\nBody: ${b}\nAuthor: ${a}`)
     })
   }
 }
@@ -400,7 +389,6 @@ const post_create = (request, reply) => {
 }
 
 const post_remove = (request, reply) => {
-  //console.log('------Remove:')
   if (request.auth.isAuthenticated) {
 
     if (request.params.post_key == undefined) {
@@ -428,7 +416,7 @@ const post_remove = (request, reply) => {
             reply('The post does not exists.')
           } else {
 
-            if (hits[0]._source.doc.author_email === request.auth.credentials.email) {
+            if (hits[0]._source.doc.author_email == request.auth.credentials.email) {
 
               Post.remove(request.params.post_key).then((res) => {
                 reply(res)
@@ -451,7 +439,6 @@ const post_remove = (request, reply) => {
 }
 
 const post_update = (request, reply) => {
-  //console.log('------Update:')
   if (request.auth.isAuthenticated) {
 
     if (request.params.post_key == undefined) {
@@ -479,7 +466,7 @@ const post_update = (request, reply) => {
             reply('There is no post exist with this key.')
           } else {
 
-            if (hits[0]._source.doc.author_email === request.auth.credentials.email) {
+            if (hits[0]._source.doc.author_email == request.auth.credentials.email) {
 
               const p = new Post({
                   title: request.payload.title,

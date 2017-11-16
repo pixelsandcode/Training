@@ -2,8 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="da52845d-55f7-4ee9-904b-524d885cdc2b" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/amin/lessons/lesson11/elastic.js" afterPath="$PROJECT_DIR$/amin/lessons/lesson11/elastic.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/amin/lessons/lesson11/index.js" afterPath="$PROJECT_DIR$/amin/lessons/lesson11/index.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/amin/lessons/lesson12/elastic.js" afterPath="$PROJECT_DIR$/amin/lessons/lesson12/elastic.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/amin/lessons/lesson12/index.js" afterPath="$PROJECT_DIR$/amin/lessons/lesson12/index.js" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
@@ -17,48 +17,37 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="index.js" pinned="false" current-in-tab="false">
+      <file leaf-file-name="index.js" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/amin/lessons/lesson12/index.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="19">
-              <caret line="19" column="25" lean-forward="false" selection-start-line="19" selection-start-column="25" selection-end-line="19" selection-end-column="25" />
-              <folding>
-                <element signature="n#User#0" expanded="false" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="elastic.js" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/amin/lessons/lesson11/elastic.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="72">
-              <caret line="4" column="0" lean-forward="true" selection-start-line="4" selection-start-column="0" selection-end-line="4" selection-end-column="0" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="index.js" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/amin/lessons/lesson11/index.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="468">
-              <caret line="366" column="21" lean-forward="false" selection-start-line="366" selection-start-column="21" selection-end-line="366" selection-end-column="21" />
+            <state relative-caret-position="339">
+              <caret line="713" column="3" lean-forward="false" selection-start-line="713" selection-start-column="3" selection-end-line="713" selection-end-column="3" />
               <folding>
                 <element signature="n#User#0" expanded="false" />
                 <element signature="n#blockedTokens#0" expanded="false" />
-                <element signature="e#1274#2195#0" expanded="false" />
-                <element signature="e#2231#3325#0" expanded="false" />
-                <element signature="e#3358#3962#0" expanded="false" />
-                <element signature="e#3997#4700#0" expanded="false" />
-                <element signature="e#4737#5147#0" expanded="false" />
-                <element signature="e#5414#6598#0" expanded="false" />
-                <element signature="e#7001#8497#0" expanded="false" />
-                <element signature="e#7072#7284#0" expanded="false" />
-                <element signature="e#7363#7565#0" expanded="false" />
-                <element signature="e#7647#7879#0" expanded="false" />
-                <element signature="e#7963#8154#0" expanded="false" />
-                <element signature="e#8238#8491#0" expanded="false" />
+                <element signature="n#Post#0" expanded="false" />
+                <element signature="e#1462#2210#0" expanded="false" />
+                <element signature="e#2246#3291#0" expanded="false" />
+                <element signature="e#3328#3643#0" expanded="false" />
+                <element signature="e#3676#4276#0" expanded="false" />
+                <element signature="e#4311#4658#0" expanded="false" />
+                <element signature="e#4697#6436#0" expanded="false" />
+                <element signature="e#6474#8476#0" expanded="false" />
+                <element signature="e#8518#8884#0" expanded="false" />
+                <element signature="e#8926#9967#0" expanded="false" />
+                <element signature="e#10009#11360#0" expanded="false" />
+                <element signature="e#11627#12832#0" expanded="false" />
+                <element signature="e#13304#13505#0" expanded="false" />
+                <element signature="e#13580#13812#0" expanded="false" />
+                <element signature="e#13896#14172#0" expanded="false" />
+                <element signature="e#14263#14474#0" expanded="false" />
+                <element signature="e#14560#14802#0" expanded="false" />
+                <element signature="e#14884#15099#0" expanded="false" />
+                <element signature="e#15183#15375#0" expanded="false" />
+                <element signature="e#15463#15692#0" expanded="false" />
+                <element signature="e#15780#16041#0" expanded="false" />
+                <element signature="e#16142#16391#0" expanded="false" />
+                <element signature="e#16489#16753#0" expanded="false" />
               </folding>
             </state>
           </provider>
@@ -124,8 +113,6 @@
         <option value="$PROJECT_DIR$/amin/lessons/lesson11/es.txt" />
         <option value="$PROJECT_DIR$/amin/lessons/lesson11/mapping.json" />
         <option value="$PROJECT_DIR$/amin/lessons/lesson12/package.json" />
-        <option value="$PROJECT_DIR$/amin/lessons/lesson12/elastic.js" />
-        <option value="$PROJECT_DIR$/amin/lessons/lesson12/index.js" />
         <option value="$PROJECT_DIR$/amin/lessons/lesson01/index.html" />
         <option value="$PROJECT_DIR$/amin/lessons/lesson01/index.js" />
         <option value="$PROJECT_DIR$/amin/lessons/lesson01/hi-path/index.html" />
@@ -145,6 +132,8 @@
         <option value="$PROJECT_DIR$/amin/lessons/lesson10/index.js" />
         <option value="$PROJECT_DIR$/amin/lessons/lesson11/elastic.js" />
         <option value="$PROJECT_DIR$/amin/lessons/lesson11/index.js" />
+        <option value="$PROJECT_DIR$/amin/lessons/lesson12/elastic.js" />
+        <option value="$PROJECT_DIR$/amin/lessons/lesson12/index.js" />
       </list>
     </option>
   </component>
@@ -215,20 +204,6 @@
               <item name="Training" type="462c0819:PsiDirectoryNode" />
               <item name="amin" type="462c0819:PsiDirectoryNode" />
               <item name="lessons" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="Training" type="b2602c69:ProjectViewProjectNode" />
-              <item name="Training" type="462c0819:PsiDirectoryNode" />
-              <item name="amin" type="462c0819:PsiDirectoryNode" />
-              <item name="lessons" type="462c0819:PsiDirectoryNode" />
-              <item name="lesson11" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="Training" type="b2602c69:ProjectViewProjectNode" />
-              <item name="Training" type="462c0819:PsiDirectoryNode" />
-              <item name="amin" type="462c0819:PsiDirectoryNode" />
-              <item name="lessons" type="462c0819:PsiDirectoryNode" />
-              <item name="lesson12" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
@@ -302,18 +277,17 @@
       <workItem from="1510402677373" duration="1995000" />
       <workItem from="1510405858640" duration="28050000" />
       <workItem from="1510501951850" duration="30209000" />
-      <workItem from="1510815803326" duration="7826000" />
+      <workItem from="1510815803326" duration="8372000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="248752000" />
+    <option name="totallyTimeSpent" value="249298000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="45" y="0" width="1323" height="780" extended-state="6" />
-    <editor active="true" />
     <layout>
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.18798152" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.18798152" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
@@ -619,14 +593,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/amin/lessons/lesson12/elastic.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="270">
-          <caret line="15" column="37" lean-forward="true" selection-start-line="15" selection-start-column="16" selection-end-line="15" selection-end-column="37" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/amin/lessons/lesson09/elastic.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="216">
@@ -678,27 +644,9 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/amin/lessons/lesson12/index.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="19">
-          <caret line="19" column="25" lean-forward="false" selection-start-line="19" selection-start-column="25" selection-end-line="19" selection-end-column="25" />
-          <folding>
-            <element signature="n#User#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/amin/lessons/lesson11/elastic.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="72">
-          <caret line="4" column="0" lean-forward="true" selection-start-line="4" selection-start-column="0" selection-end-line="4" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/amin/lessons/lesson11/index.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="468">
+        <state relative-caret-position="1116">
           <caret line="366" column="21" lean-forward="false" selection-start-line="366" selection-start-column="21" selection-end-line="366" selection-end-column="21" />
           <folding>
             <element signature="n#User#0" expanded="false" />
@@ -715,6 +663,56 @@
             <element signature="e#7647#7879#0" expanded="false" />
             <element signature="e#7963#8154#0" expanded="false" />
             <element signature="e#8238#8491#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/amin/lessons/lesson11/elastic.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="72">
+          <caret line="4" column="0" lean-forward="true" selection-start-line="4" selection-start-column="0" selection-end-line="4" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/amin/lessons/lesson12/elastic.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1332">
+          <caret line="74" column="42" lean-forward="false" selection-start-line="74" selection-start-column="42" selection-end-line="74" selection-end-column="42" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/amin/lessons/lesson12/index.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="339">
+          <caret line="713" column="3" lean-forward="false" selection-start-line="713" selection-start-column="3" selection-end-line="713" selection-end-column="3" />
+          <folding>
+            <element signature="n#User#0" expanded="false" />
+            <element signature="n#blockedTokens#0" expanded="false" />
+            <element signature="n#Post#0" expanded="false" />
+            <element signature="e#1462#2210#0" expanded="false" />
+            <element signature="e#2246#3291#0" expanded="false" />
+            <element signature="e#3328#3643#0" expanded="false" />
+            <element signature="e#3676#4276#0" expanded="false" />
+            <element signature="e#4311#4658#0" expanded="false" />
+            <element signature="e#4697#6436#0" expanded="false" />
+            <element signature="e#6474#8476#0" expanded="false" />
+            <element signature="e#8518#8884#0" expanded="false" />
+            <element signature="e#8926#9967#0" expanded="false" />
+            <element signature="e#10009#11360#0" expanded="false" />
+            <element signature="e#11627#12832#0" expanded="false" />
+            <element signature="e#13304#13505#0" expanded="false" />
+            <element signature="e#13580#13812#0" expanded="false" />
+            <element signature="e#13896#14172#0" expanded="false" />
+            <element signature="e#14263#14474#0" expanded="false" />
+            <element signature="e#14560#14802#0" expanded="false" />
+            <element signature="e#14884#15099#0" expanded="false" />
+            <element signature="e#15183#15375#0" expanded="false" />
+            <element signature="e#15463#15692#0" expanded="false" />
+            <element signature="e#15780#16041#0" expanded="false" />
+            <element signature="e#16142#16391#0" expanded="false" />
+            <element signature="e#16489#16753#0" expanded="false" />
           </folding>
         </state>
       </provider>
