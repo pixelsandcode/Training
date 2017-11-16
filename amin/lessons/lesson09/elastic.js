@@ -8,6 +8,9 @@ client.indices.create({
   body: {
     mappings: {
       post: {
+        _source: {
+          includes:['doc.title','doc.docKey','doc.docType']
+        },
         properties: {
           doc: {
             properties: {
@@ -28,8 +31,8 @@ client.indices.create({
   }
 }, (err, res) => {
   if (err) {
-    console.error(`\n---------ERROR IN CREATE INDICES:\n${JSON.stringify(err, null, 2)}`)
+    console.error(`\nERROR IN CREATE INDEX:\n${JSON.stringify(err, null, 2)}`)
   } else {
-    console.log(`\n---------SUCCESS IN CREATE INDICES:\n${JSON.stringify(res, null, 2)}`)
+    console.log(`\nSUCCESS IN CREATE INDEX:\n${JSON.stringify(res, null, 2)}`)
   }
 })
