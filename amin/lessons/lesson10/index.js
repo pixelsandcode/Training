@@ -4,7 +4,13 @@ const Hapi = require('hapi')
 const server = new Hapi.Server()
 server.connection({host: 'localhost', port: 3000})
 
-server.register([require('hapi-auth-cookie'), require('lout'), require('inert'), require('vision')],
+server.register(
+  [
+    require('hapi-auth-cookie'),
+    require('lout'),
+    require('inert'),
+    require('vision')
+  ],
   (err) => {
     if (err)
       console.log(err)
@@ -18,8 +24,9 @@ const cache = server.cache({
 
 server.app.cache = cache
 
+//Strategy to use cookies for authentication
 server.auth.strategy('session', 'cookie', true, {
-  password: 'password-should-be-32-characters',
+  password: 'RHN4541682C8A6952791RHNF3DC270E9',  //password-should-be-32-characters
   cookie: 'sid-example',
   isSecure: false,
   validateFunc: (request, session, callback) => {
@@ -53,9 +60,9 @@ server.route([
     path: '/',
     handler: (request, reply) => {
       if (request.auth.isAuthenticated) {
-        reply(`Home Page\n\nHello ${users.admin.fullname}! :-D`)
+        reply(`--Home Page--\n\nGreetings ${users.admin.fullname}! :-D`)
       } else {
-        reply('Home Page\n\nHello stranger!\n\nYou should login!')
+        reply('--Home Page--\n\nGreetings stranger!\n\nYou should login!')
       }
     },
     config: {
@@ -74,12 +81,36 @@ server.route([
   },
   {
     method: 'GET',
+    path: '/hello',
+    handler: (request, reply) => {
+      if (request.auth.isAuthenticated) {
+        reply(`HELLO Page\n\nHello ${users.admin.fullname}! :-D`)
+      } else {
+        reply('HELLO Page\n\nHello stranger!\n\nYou should login!')
+      }
+    },
+    config: {
+      auth: {
+        mode: 'try'
+      },
+      plugins: {
+        'hapi-auth-cookie': {
+          redirectTo: false
+        }
+      },
+      description: 'This is a hello page.',
+      notes: 'Logging in is necessary!',
+      tags: ['authentication', 'get', 'hello', 'cookies']
+    }
+  },
+  {
+    method: 'GET',
     path: '/hello/{name}',
     handler: (request, reply) => {
       if (request.auth.isAuthenticated) {
         reply(`Hello ${request.params.name}! :-D`)
       } else {
-        reply('You must login!')
+        reply('Access denied! You must login!')
       }
     },
     config: {
@@ -136,14 +167,14 @@ server.route([
       } else {
         account = () => {
           for (let i = 0; i < users.length; i++) {
-            if (users[i].username === request.payload.username) {
+            if (users[i].username == request.payload.username) {
               return users[i]
             }
           }
         }
         //console.log(account)
         account = users[request.payload.username]
-        if (!account || (account.password !== request.payload.password)) {
+        if (!account || (account.password != request.payload.password)) {
           message = 'Invalid username and/or password!'
         }
       }
