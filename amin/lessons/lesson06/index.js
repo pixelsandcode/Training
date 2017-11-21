@@ -5,78 +5,7 @@ const client = new require('elasticsearch').Client({
   log: 'error'
 })
 
-const body = [
-  {index: {_index: 'users', _type: 'user', _id: 1}},
-  {
-    name: 'Reza Gholamzadeh',
-    dob: '1987/05/13',
-    type: 'user'
-  },
-  {index: {_index: 'users', _type: 'user', _id: 2}},
-  {
-    name: 'Ali Alizadeh',
-    dob: '1980/12/17',
-    type: 'user'
-  },
-  {index: {_index: 'users', _type: 'user', _id: 3}},
-  {
-    name: 'Mahmoud Rajabi',
-    dob: '1984/01/21',
-    type: 'user'
-  },
-  {index: {_index: 'users', _type: 'user', _id: 4}},
-  {
-    name: 'Mehrnoosh Ramezanpoor',
-    dob: '1992/06/16',
-    type: 'user'
-  },
-  {index: {_index: 'users', _type: 'user', _id: 5}},
-  {
-    name: 'Nima Abbasi',
-    dob: '1988/08/13',
-    type: 'user'
-  },
-  {index: {_index: 'users', _type: 'user', _id: 6}},
-  {
-    name: 'Amin Forouzandeh',
-    dob: '1987/03/02',
-    type: 'user'
-  },
-  {index: {_index: 'users', _type: 'user', _id: 7}},
-  {
-    name: 'Sara Abbasi',
-    dob: '1990/09/11',
-    type: 'user'
-  },
-  {index: {_index: 'users', _type: 'user', _id: 8}},
-  {
-    name: 'Amin Abbasi',
-    dob: '1987/04/24',
-    type: 'user'
-  },
-  {index: {_index: 'users', _type: 'user', _id: 9}},
-  {
-    name: 'Fereshteh Rahbari',
-    dob: '1988/08/15',
-    type: 'user'
-  },
-  {index: {_index: 'users', _type: 'user', _id: 10}},
-  {
-    name: 'Ramin Mohammadi',
-    dob: '1989/11/05',
-    type: 'user'
-  },
-  {index: {_index: 'books', _type: 'book', _id: 1}},
-  {
-    name: 'wolf',
-    type: 'book'
-  },
-  {index: {_index: 'books', _type: 'book', _id: 2}},
-  {
-    name: 'old wolf',
-    type: 'book'
-  }
-]
+const handlers = require('./handlers')(client)
 
 const argv = require('yargs')
   .usage(`$0 delete-indices
@@ -91,281 +20,68 @@ const argv = require('yargs')
   .alias('n', 'name')
   .alias('f', 'dateFrom')
   .alias('t', 'dateTo')
-
   .command({
     command: 'delete-indices',
     aliases: 'di',
     builder: {},
     desc: 'Deletes all indices form elasticsearch.',
-    handler: () => {
-      if (client.indices.exists({index: 'books'})) {
-        client.indices.delete({
-          index: 'books'
-        }, (err, res) => {
-          if (err) {
-            console.log(`\nERROR IN DELETE:\n${JSON.stringify(err, null, 2)}`)
-          } else {
-            console.log(`\nDELETE BOOKS INDEX:\n${JSON.stringify(res, null, 2)}`)
-          }
-        })
-      }
-
-      if (client.indices.exists({index: 'users'})) {
-        client.indices.delete({
-          index: 'users'
-        }, (err, res) => {
-          if (err) {
-            console.log(`\nERROR IN DELETE:\n${JSON.stringify(err, null, 2)}`)
-          } else {
-            console.log(`\nDELETE USER INDEX:\n${JSON.stringify(res, null, 2)}`)
-          }
-        })
-      }
-    }
+    handler: handlers.delete_indices
   })
-
   .command({
     command: 'create-indices',
     aliases: 'ci',
     builder: {},
     desc: 'Creates "users" & "books" indices.',
-    handler: () => {
-      client.indices.create({
-        index: 'users',
-        // body: {
-        //   mappings: {
-        //     user: {
-        //       properties: {
-        //         name: {
-        //           type: 'string'
-        //         },
-        //         dob: {
-        //           type: 'string'
-        //         }
-        //       }
-        //     }
-        //   }
-        // }
-      }, (err, res) => {
-        if (err) {
-          console.log(`\nERROR IN CREATE INDICES:\n${JSON.stringify(err, null, 2)}`)
-        } else {
-          console.log(`\nSUCCESS IN CREATE INDICES:\n${JSON.stringify(res, null, 2)}`)
-        }
-      })
-
-      client.indices.create({
-        index: 'books',
-        body: {
-          mappings: {
-            book: {
-              properties: {
-                name: {
-                  type: 'string',
-                  index: 'not_analyzed'
-                }
-              }
-            }
-          }
-        }
-      }, (err, res) => {
-        if (err) {
-          console.log(`\nERROR IN CREATE INDICES:\n${JSON.stringify(err, null, 2)}`)
-        } else {
-          console.log(`\nSUCCESS IN CREATE INDICES:\n${JSON.stringify(res, null, 2)}`)
-        }
-      })
-    }
+    handler: handlers.create_indices
   })
-
   .command({
     command: 'create-docs',
     aliases: 'cd',
     builder: {},
     desc: 'Creates 10 docs in "users" & 2 docs "books" indices.',
-    handler: () => {
-      client.bulk({
-        body: body
-      }, (err, res) => {
-        if (err) {
-          console.log(`\nERROR IN DOCS:\n${JSON.stringify(err, null, 2)}`)
-        } else {
-          console.log(`\nSUCCESS IN CREATE ALL DOCS:\n${JSON.stringify(res, null, 2)}`)
-        }
-      })
-    }
+    handler: handlers.create_docs
   })
-
   .command({
     command: 'search-all-user',
     aliases: 'sau',
     builder: {},
     desc: 'Shows all users from index.',
-    handler: () => {
-      client.search({
-        index: 'users',
-        query: {
-          type: 'user'
-        }
-      }, (err, res) => {
-        if (err) {
-          console.log(`\nERROR IN DOCS:\n${JSON.stringify(err, null, 2)}`)
-        } else {
-          console.log(`\nALL USERS:\n${JSON.stringify(res, null, 2)}`)
-        }
-      })
-    }
+    handler: handlers.search_all
   })
-
   .command({
     command: 'search-user-name',
     aliases: 'sun',
     builder: (argv) => argv.demandOption('n'),
     desc: 'Shows users with specified name from "users".',
-    handler: (argv) => {
-      client.search({
-        index: 'users',
-        type: 'user',
-        body: {
-          query: {
-            match: {
-              name: argv.name
-            }
-          }
-        }
-      }, (err, res) => {
-        if (err) {
-          console.log(`\nERROR IN SEARCH:\n${JSON.stringify(err, null, 2)}`)
-        } else {
-          console.log(`\nUSERS WITH NAME='${argv.name}':\n${JSON.stringify(res, null, 2)}`)
-        }
-      })
-    }
+    handler: handlers.search_user
   })
-
   .command({
     command: 'search-user-name-fuzzy',
     aliases: 'sunf',
     builder: (argv) => argv.demandOption('n'),
     desc: 'Shows users with specified name from "users" using "fuzzy".',
-    handler: (argv) => {
-      client.search({
-        index: 'users',
-        type: 'user',
-        body: {
-          query: {
-            fuzzy: {
-              name: {
-                value: argv.name,
-              }
-            }
-          }
-        }
-      }, (err, res) => {
-        if (err) {
-          console.log(`\nERROR IN SEARCH:\n${JSON.stringify(err, null, 2)}`)
-        } else {
-          console.log(`\nFUZZY 'USERS' WITH NAME='${argv.name}':\n${JSON.stringify(res, null, 2)}`)
-        }
-      })
-    }
+    handler: handlers.search_user_fuzzy
   })
-
   .command({
     command: 'search-user-date',
     aliases: 'sud',
     builder: (argv) => argv.demandOption(['f', 't']),
     desc: 'Shows users with specified date-of-birth range.',
-    handler: (argv) => {
-      client.search({
-        index: 'users',
-        type: 'user',
-        body: {
-          query: {
-            range: {
-              dob: {
-                gte: argv.f,
-                lte: argv.t
-              }
-            }
-          }
-        }
-      }, (err, res) => {
-        if (err) {
-          console.log(`\nERROR IN SEARCH:\n${JSON.stringify(err, null, 2)}`)
-        } else {
-          console.log('\nUSERS WITH BIRTHDAY RANGE:' +
-            `[${argv.dateFrom}, ${argv.dateTo}]:\n${JSON.stringify(res, null, 2)}`)
-        }
-      })
-    }
+    handler: handlers.search_user_date
   })
-
   .command({
     command: 'search-user-date-fuzzy',
     aliases: 'sudf',
     builder: (argv) => argv.demandOption(['n', 'f', 't']),
     desc: 'Shows users with specified date-of-birth range using "fuzzy".',
-    handler: (argv) => {
-      client.search({
-        index: 'users',
-        type: 'user',
-        body: {
-          query: {
-            filtered: {
-              query: {
-                fuzzy: {
-                  name: {
-                    value: argv.n
-                  }
-                }
-              },
-              filter: {
-                range: {
-                  dob: {
-                    gte: argv.f,
-                    lte: argv.t
-                  }
-                }
-              }
-            }
-          }
-        }
-      }, (err, res) => {
-        if (err) {
-          console.log(`\nERROR IN SEARCH:\n${JSON.stringify(err, null, 2)}`)
-        } else {
-          console.log('\nUSERS WITH BIRTHDAY RANGE (FUZZY):' +
-            `[${argv.dateFrom}, ${argv.dateTo}]:\n${JSON.stringify(res, null, 2)}`)
-        }
-      })
-    }
+    handler: handlers.search_user_date_fuzzy
   })
-
   .command({
     command: 'search-book-name',
     aliases: 'sbn',
     builder: (argv) => argv.demandOption('n'),
     desc: 'Shows books with exact name from "books" index.',
-    handler: (argv) => {
-      client.search({
-        index: 'books',
-        type: 'book',
-        body: {
-          filter: {
-            term: {
-              name: argv.n
-            }
-          }
-        }
-      }, (err, res) => {
-        if (err) {
-          console.log(`\nERROR IN SEARCH:\n${JSON.stringify(err, null, 2)}`)
-        } else {
-          console.log(`\nBOOKS WITH NAME='${argv.name}':\n${JSON.stringify(res, null, 2)}`)
-        }
-      })
-    }
+    handler: handlers.search_book
   })
   .help('h')
   .argv
