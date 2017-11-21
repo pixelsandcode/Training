@@ -5,8 +5,6 @@ const nodemon = require('gulp-nodemon')
 
 gulp.task('build', () => {
   gulp.src('src/*.js')
-    //.pipe(jade())
-    //.pipe(minify())
     .pipe(gulp.dest('build'))
 })
 

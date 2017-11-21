@@ -10,7 +10,6 @@ server.connection({
 
 server.register(require('./say-hi-plugin'))
 
-// Start the server
 server.start((err) => {
   if (err)
     console.error(err.message)
