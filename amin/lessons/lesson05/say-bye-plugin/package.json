@@ -1,15 +1,15 @@
 {
-  "name": "say-hi-npm",
+  "name": "say-bye-plugin",
   "version": "1.0.0",
-  "description": "Say hi npm for lesson04",
-  "main": "index.js",
+  "description": "say bye in a form of plugin",
+  "main": "say-bye-plugin.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "keywords": [
-    "lessons",
+    "bye",
     "npm",
-    "package"
+    "plugin"
   ],
   "author": "AAH",
   "license": "ISC"

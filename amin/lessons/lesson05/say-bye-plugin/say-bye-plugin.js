@@ -2,14 +2,13 @@
 const sayByePlugin =
   {
     register: (server, options, next) => {
+      const handlers = require('./handlers')()
       server.route([
         {
           method: 'GET',
           path: '/',
-          handler: (request, reply) => {
-            reply('Greetings To Universe!!')
-          },
-          config: { // Config for lout to have a good documentation!
+          config: {
+            handler: handlers.home,
             description: 'This is a home page.',
             notes: 'This a global page.',
             tags: ['get', 'home', 'plugin']
@@ -18,10 +17,8 @@ const sayByePlugin =
         {
           method: 'GET',
           path: '/hello',
-          handler: (request, reply) => {
-            reply('Hello World!')
-          },
           config: {
+            handler: handlers.hello,
             description: 'This is a hello page.',
             notes: 'This page says: "Hello World!"',
             tags: ['get', 'home', 'hello', 'plugin']
@@ -30,10 +27,8 @@ const sayByePlugin =
         {
           method: 'GET',
           path: '/bye',
-          handler: (request, reply) => {
-            reply('Bye World!')
-          },
           config: {
+            handler: handlers.bye,
             description: 'This is a bye page.',
             notes: 'This page says: "Bye World!"',
             tags: ['get', 'home', 'bye', 'plugin']
@@ -42,19 +37,14 @@ const sayByePlugin =
         {
           method: 'GET',
           path: '/bye/{name}',
-          handler: (request, reply) => {
-            request.params.name === undefined ?
-              reply('Bye Stranger!') :
-              reply(`Bye ${request.params.name}! :-D`)
-          },
           config: {
+            handler: handlers.sayBye,
             description: 'This is a bye page.',
             notes: 'This page says: "Bye NAME!" with a given ${name}.',
             tags: ['get', 'home', 'bye', 'plugin']
           }
         }
       ])
-
       next()
     }
   }

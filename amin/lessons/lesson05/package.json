@@ -13,8 +13,9 @@
   "license": "ISC",
   "dependencies": {
     "hapi": "^16.6.2",
-    "vision": "^4.1.1",
+    "inert": "^4.2.1",
     "lout": "^10.0.3",
-    "inert": "^4.2.1"
+    "say-hi-npm": "^1.0.1",
+    "vision": "^4.1.1"
   }
 }
