@@ -2,13 +2,7 @@ const db = new require('puffer')({host: 'localhost', name: 'default'})
 const Model = require('odme').CB({source: db})
 const Joi = require('joi')
 
-// Create a model for our doc in couchbase
 class User extends Model {
-
-  PREFIX() {
-    return 'u'
-  }
-
   props() {
     return {
       name: {
@@ -53,5 +47,5 @@ const argv = require('yargs')
       })
     }
   })
-  .help('h')
+  .help()
   .argv
