@@ -8,3 +8,7 @@ npm-debug.log*
 *.swp
 # txt files
 *.txt
+# IDE files
+**/.idea
+# package-lock.json file
+package-lock.json*
