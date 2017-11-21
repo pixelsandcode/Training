@@ -8,19 +8,10 @@ client.indices.create({
   body: {
     mappings: {
       post: {
-        _source: {
-          includes:['doc.title','doc.docKey','doc.docType']
-        },
         properties: {
           doc: {
             properties: {
               title: {
-                type: 'string'
-              },
-              docKey: {
-                type: 'string'
-              },
-              docType: {
                 type: 'string'
               }
             }
