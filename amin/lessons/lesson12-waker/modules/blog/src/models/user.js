@@ -22,7 +22,5 @@ module.exports = (server, options) => {
         }
       }
     }
-
-
   }
 }

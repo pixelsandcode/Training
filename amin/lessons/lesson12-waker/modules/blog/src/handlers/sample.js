@@ -1,6 +1,6 @@
 "use strict"
 
-module.exports = (server, options, client, secret_key, jwt) => {
+module.exports = (server, options) => {
 
   const User = require('../models/user')(server, options),
     Post = require('../models/post')(server, options),
@@ -13,9 +13,7 @@ module.exports = (server, options, client, secret_key, jwt) => {
     // }
 
     register: (request, reply) => {
-      client.search({
-        index: 'blog',
-        type: 'user',
+      const query = {
         body: {
           query: {
             match: {
@@ -23,11 +21,12 @@ module.exports = (server, options, client, secret_key, jwt) => {
             }
           }
         }
-      }, (err, response) => {
+      }
+      User.search('b_user', query).then((res, err) => {
         if (err) {
           reply('There was a problem in finding email:\n\n', err)
         } else {
-          if (response.hits.total == 0) {
+          if (res.hits.total == 0) {
             const user = new User({
               email: request.payload.email,
               password: request.payload.password,
@@ -43,9 +42,7 @@ module.exports = (server, options, client, secret_key, jwt) => {
       })
     },
     login: (request, reply) => {
-      client.search({
-        index: 'blog',
-        type: 'user',
+      const query = {
         body: {
           query: {
             bool: {
@@ -63,7 +60,8 @@ module.exports = (server, options, client, secret_key, jwt) => {
             }
           }
         }
-      }, (err, res) => {
+      }
+      User.search('b_user', query).then((res, err) => {
         if (err) {
           reply(err)
         } else {
@@ -75,7 +73,7 @@ module.exports = (server, options, client, secret_key, jwt) => {
                 .header('Authorization', request.auth.authorization)
             } else {
               const obj = {email: request.payload.email}
-              const token = jwt.sign(obj, secret_key)
+              const token = server.methods.jwt.sign(obj)
               reply({
                 text: `Dear ${res.hits.hits[0]._source.doc.fullname}, You successfully logged in!`,
                 jwtTonken: token

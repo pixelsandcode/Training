@@ -1,4 +1,4 @@
-module.exports = (server, options, client, secret_key, jwt) => {
+module.exports = (server, options) => {
 
   // const Blog = require('../handlers/sample')(server, options)
   // const BlogValidator = require('../validators/sampleValidator')(options)
@@ -15,7 +15,7 @@ module.exports = (server, options, client, secret_key, jwt) => {
   //   }
   // ]
 
-  const handlers = require('../handlers/sample')(server, options, client, secret_key, jwt)
+  const handlers = require('../handlers/sample')(server, options)
   return [
     {
       method: 'GET',
