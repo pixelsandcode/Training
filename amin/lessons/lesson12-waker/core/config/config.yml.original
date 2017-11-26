@@ -1,0 +1,27 @@
+default:
+  app: lesson12-blog
+  url: localhost
+  server:
+    sampling: 3000
+    host: http://localhost
+    port: 3000
+    timeout: 3000
+  databases:
+    application:
+      host: 127.0.0.1
+      name: blog
+      mock: false
+  searchengine:
+    application:
+      host: localhost
+      port: 9200
+      name: blog
+      log: debug # error, warning, info, debug, trace
+  cache:
+    host: 0.0.0.0
+    port: 6379
+development:
+functionaltest:
+unittest:
+production:
+staging:

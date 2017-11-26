@@ -1,0 +1,34 @@
+{
+  "name": "lesson12-blog.blog",
+  "description": "lesson12-blog Blog Module",
+  "version": "0.1.0",
+  "main": "init",
+  "engines": {
+    "node": "6.9.*"
+  },
+  "author": "AAH",
+  "dependencies": {
+    "bluebird": "^3.4.7",
+    "boom": "^4.2.0",
+    "joi": "^10.2.2",
+    "lodash": "^4.17.4",
+    "moment": "^2.17.1",
+    "moment-timezone": "^0.5.11",
+    "yml": "^1.0.0"
+  },
+  "devDependencies": {
+    "chai": "^3.5.0",
+    "chai-http": "^3.0.0",
+    "coveralls": "^2.11.16",
+    "gulp": "^3.9.1",
+    "gulp-newer": "^1.3.0",
+    "gulp-util": "^3.0.8",
+    "mocha": "^3.2.0",
+    "mocha-lcov-reporter": "^1.2.0",
+    "sinon": "^1.17.7"
+  },
+  "scripts": {
+    "functionaltest": "",
+    "unittest": ""
+  }
+}

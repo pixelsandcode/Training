@@ -1,0 +1,4 @@
+couchbase.typeSelector: org.elasticsearch.transport.couchbase.capi.RegexTypeSelector
+couchbase.typeSelector.documentTypesRegex.b_user: ^b_u_.+$
+couchbase.typeSelector.documentTypesRegex.b_post: ^b_p_.+$
+couchbase.typeSelector.documentTypesRegex.b_jwt: ^b_jwt_.+$

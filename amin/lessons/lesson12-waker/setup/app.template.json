@@ -1,0 +1,67 @@
+{
+  "order": 0,
+  "template": "lesson12-blog*",
+  "settings": {},
+  "mappings": {
+    "b_user": {
+      "properties": {
+        "doc": {
+          "properties": {
+            "email": {
+              "type": "string",
+              "index": "not_analyzed"
+            },
+            "password": {
+              "type": "string",
+              "index": "not_analyzed"
+            },
+            "fullname": {
+              "type": "string"
+            },
+            "docKey": {
+              "type": "string"
+            },
+            "docType": {
+              "type": "string"
+            }
+          }
+        }
+      }
+    },
+    "b_jwt": {
+      "properties": {
+        "doc": {
+          "properties": {
+            "token": {
+              "type": "string",
+              "index": "not_analyzed"
+            }
+          }
+        }
+      }
+    },
+    "b_post": {
+      "properties": {
+        "doc": {
+          "properties": {
+            "author_name": {
+              "type": "string",
+              "index": "not_analyzed"
+            },
+            "author_email": {
+              "type": "string",
+              "index": "not_analyzed"
+            },
+            "title": {
+              "type": "string"
+            },
+            "body": {
+              "type": "string"
+            }
+          }
+        }
+      }
+    }
+  },
+  "aliases": {}
+}
