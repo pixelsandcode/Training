@@ -3,6 +3,6 @@ default:
   key: O]Qh*E3MY{GtT,LJ!GS(tj{R7(BM7R(5E
   expiration: 600
   cache_prefix: 'token:'
-  allow_renew: false
-  renew_threshold: 60
+  allow_renew: true
+  renew_threshold: 360
   algorithm: HS384

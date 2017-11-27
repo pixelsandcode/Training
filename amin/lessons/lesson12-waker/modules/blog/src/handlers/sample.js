@@ -1,39 +1,47 @@
 "use strict"
+const Bodybuilder = require('bodybuilder')
 
 module.exports = (server, options) => {
 
-  const User = require('../models/user')(server, options),
-    Post = require('../models/post')(server, options),
-    blockedTokens = require('../models/blocked-tokens')(server, options)
+  const User = require('../models/user')(server, options)
+  const Post = require('../models/post')(server, options)
+  const BlockedTokens = require('../models/blocked-tokens')(server, options)
 
   return {
-    // list(request, reply) {
-    //   let blog = new Blog()
-    //   reply.nice(blog.list())
-    // }
-
     register: (request, reply) => {
-      const query = {
-        body: {
-          query: {
-            match: {
-              "doc.email": request.payload.email
-            }
-          }
-        }
-      }
-      User.search('b_user', query).then((res, err) => {
-        if (err) {
-          reply('There was a problem in finding email:\n\n', err)
+      // const query = {
+      //   body: {
+      //     query: {
+      //       match: {
+      //         "doc.email": request.payload.email
+      //       }
+      //     }
+      //   }
+      // }
+      const body = Bodybuilder().query('match', 'doc.email', request.payload.email)
+      // console.log(body)
+      const query = {body: body.build()}
+      // console.log(JSON.stringify(query, null, 2))
+      User.search('b_user', query).then((res) => {
+        if (res instanceof Error) {
+          reply('There was a problem in finding email.')
         } else {
-          if (res.hits.total == 0) {
+          // res.total == undefined ? console.log('tohi') : console.log(res)
+          // console.log(res.length)
+          // if (res.hits.total == 0) {
+          if ((res.length == undefined) || (res.length == 0)) {
             const user = new User({
               email: request.payload.email,
               password: request.payload.password,
               fullname: request.payload.fullname
             })
+            console.log(user)
             user.create(true).then((res) => {
-              reply(res)
+              if (res instanceof Error) {
+                reply('There was a problem in creating email.')
+              } else {
+                reply(res)
+              }
             })
           } else {
             reply('This email is already exists. Please use another email to register.')
@@ -42,30 +50,36 @@ module.exports = (server, options) => {
       })
     },
     login: (request, reply) => {
-      const query = {
-        body: {
-          query: {
-            bool: {
-              must: [
-                {
-                  match: {
-                    "doc.email": request.payload.email
-                  }
-                },
-                {
-                  match: {
-                    "doc.password": request.payload.password
-                  }
-                }]
-            }
-          }
-        }
-      }
-      User.search('b_user', query).then((res, err) => {
-        if (err) {
-          reply(err)
+      // const query = {
+      //   body: {
+      //     query: {
+      //       bool: {
+      //         must: [
+      //           {
+      //             match: {
+      //               "doc.email": request.payload.email
+      //             }
+      //           },
+      //           {
+      //             match: {
+      //               "doc.password": request.payload.password
+      //             }
+      //           }]
+      //       }
+      //     }
+      //   }
+      // }
+      const body = Bodybuilder()
+        .query('match', 'doc.email', request.payload.email)
+        .query('match', 'doc.password', request.payload.password)
+      const query = {body: body.build()}
+      // console.log(JSON.stringify(query, null, 2))
+      User.search('b_user', query).then((res) => {
+        if (res instanceof Error) {
+          reply('There was a problem in finding user.')
         } else {
-          if (res.hits.total == 0) {
+          // console.log(res.length)
+          if ((res.length == undefined) || (res.length == 0)) {
             reply('Invalid username and/or password.')
           } else {
             if (request.auth.isAuthenticated) {
@@ -73,9 +87,10 @@ module.exports = (server, options) => {
                 .header('Authorization', request.auth.authorization)
             } else {
               const obj = {email: request.payload.email}
-              const token = server.methods.jwt.sign(obj)
+              const token = server.methods.jwt.create(obj)
+              // console.log(JSON.stringify(token, null, 2))
               reply({
-                text: `Dear ${res.hits.hits[0]._source.doc.fullname}, You successfully logged in!`,
+                text: `Dear ${res[0].fullname}, You successfully logged in!`,
                 jwtTonken: token
               }).header('Authorization', token)
             }
@@ -85,10 +100,10 @@ module.exports = (server, options) => {
     },
     logout: (request, reply) => {
       if (request.auth.isAuthenticated) {
-        const blockthis = new blockedTokens({
+        const blockedToken = new BlockedTokens({
           token: request.auth.token
         })
-        blockthis.create(true).then((res) => {
+        blockedToken.create(true).then((res) => {
             reply(`You logged out successfully!\n\n${res}`)
           }
         )
@@ -98,66 +113,62 @@ module.exports = (server, options) => {
     },
     me: (request, reply) => {
       if (request.auth.isAuthenticated) {
-        client.search({
-          index: 'blog',
-          type: 'user',
-          body: {
-            query: {
-              match: {
-                "doc.email": request.auth.credentials.email
-              }
-            }
-          }
-        }, (err, res) => {
-          if (err) {
-            reply(err)
-          } else {
-            const n = res.hits.hits[0]._source.doc.fullname,
-              e = res.hits.hits[0]._source.doc.email
-            reply(`"Home Page"\n\n\nHello ${n},\n\nYour Email: ${e}`)
-          }
+        // const query = {
+        //   body: {
+        //     query: {
+        //       match: {
+        //         "doc.email": request.auth.credentials.email
+        //       }
+        //     }
+        //   }
+        // }
+        const body = Bodybuilder().query('match', 'doc.email', request.auth.credentials.email)
+        const query = {body: body.build()}
+        User.search('b_user', query).then((res) => {
+          const name = res[0].fullname
+          reply(`"Home Page"\n\n\nWelcome, ${name}! :-D\n\nYou can create/edit your post now!`)
         })
       } else {
-        reply('"Home Page"\n\n\nHello Stranger!\n\nYou can to login to edit your posts!')
+        reply('"Home Page"\n\n\nHello Stranger!\n\nYou can login to edit your posts!')
       }
     },
     post: (request, reply) => {
+      const key = request.params.post_key
+      // console.log('1:', request.params.post_key)
+
       if (request.params.post_key == undefined) {
         reply('There is no "post_key" to search from!')
       }
       else {
-        console.log(request.params.post_key)
-        Post.get(request.params.post_key).then((res) => {
-          const t = res.doc.title, b = res.doc.body, a = res.doc.author_name
-          reply(`Title: ${t}\nBody: ${b}\nAuthor: ${a}`)
+        // console.log('2:', key)
+        Post.get(key).then((res) => {
+          // const t = res.doc.title, b = res.doc.body, a = res.doc.author_name
+          // reply(`Title: ${t}\nBody: ${b}\nAuthor: ${a}`)
+          if (res instanceof Error) {
+            console.log('2:', key)
+            reply(`There was a problem in finding the post: ${key}`)
+          } else {
+            reply(res)
+          }
         })
       }
     },
-    post_all: (request, reply) => {
+    postAll: (request, reply) => {
       if (request.query.page == undefined) {
-        client.search({
-          index: 'blog',
-          type: 'post',
-          body: {
-            from: 0,
-            size: 5,
-            query: {
-              match_all: {}
-            }
-          }
-        }, (err, res) => {
-          if (err) {
-            reply(err)
+        const body = Bodybuilder().query('match_all').from(0).size(5)
+        const query = {body: body.build()}
+        User.search('b_post', query).then((res) => {
+          if (res instanceof Error) {
+            reply('There was a problem in finding posts.')
           } else {
-            const hits = res.hits.hits
-            if (hits.length == 0) {
+            if ((res.length == undefined) || (res.length == 0)) {
               reply('There are no posts to show!')
             } else {
               let text = '', t, b, a
-              for (let i = 0; i < hits.length; i++) {
-                t = hits[i]._source.doc.title
-                b = hits[i]._source.doc.body
-                a = hits[i]._source.doc.author_name
+              for (let i = 0; i < res.length; i++) {
+                t = res[i].title
+                b = res[i].body
+                a = res[i].author_name
                 text += (`${(i + 1)}- Title: ${t}\nBody: ${b}\nAuthor: ${a}\n\n\n`)
               }
               reply(text)
@@ -166,29 +177,20 @@ module.exports = (server, options) => {
         })
       } else {
         const page = request.query.page
-        client.search({
-          index: 'blog',
-          type: 'post',
-          body: {
-            from: page * 5,
-            size: 5,
-            query: {
-              match_all: {}
-            }
-          }
-        }, (err, res) => {
-          if (err) {
-            reply(err)
+        const body = Bodybuilder().query('match_all').from(page * 5).size(5)
+        const query = {body: body.build()}
+        User.search('b_post', query).then((res) => {
+          if (res instanceof Error) {
+            reply('There was a problem in finding posts.')
           } else {
-            const hits = res.hits.hits
-            if (hits.length == 0) {
+            if ((res.length == undefined) || (res.length == 0)) {
               reply(`There are no posts to show in page ${page}!`)
             } else {
               let text = '', t, b, a
-              for (let i = 0; i < hits.length; i++) {
-                t = hits[i]._source.doc.title
-                b = hits[i]._source.doc.body
-                a = hits[i]._source.doc.author_name
+              for (let i = 0; i < res.length; i++) {
+                t = res[i].title
+                b = res[i].body
+                a = res[i].author_name
                 text += (`${(page * 5 + (i + 1))}- Title: ${t}\nBody: ${b}\nAuthor: ${a}\n\n\n`)
               }
               reply(text)
@@ -197,34 +199,37 @@ module.exports = (server, options) => {
         })
       }
     },
-    post_me: (request, reply) => {
+    postMe: (request, reply) => {
       if (request.auth.isAuthenticated) {
         if (!request.query.page) {
-          client.search({
-            index: 'blog',
-            type: 'post',
-            body: {
-              from: 0,
-              size: 5,
-              query: {
-                match: {
-                  "doc.author_email": request.auth.credentials.email
-                }
-              }
-            }
-          }, (err, res) => {
-            if (err) {
-              reply(err)
+          // const query = {
+          //   body: {
+          //     from: 0,
+          //     size: 5,
+          //     query: {
+          //       match: {
+          //         "doc.author_email": request.auth.credentials.email
+          //       }
+          //     }
+          //   }
+          // }
+          const body = Bodybuilder()
+            .query('match', 'doc.author_email', request.auth.credentials.email)
+            .from(0)
+            .size(5)
+          const query = {body: body.build()}
+          User.search('b_post', query).then((res) => {
+            if (res instanceof Error) {
+              reply('There was a problem in finding posts.')
             } else {
-              const hits = res.hits.hits
-              if (hits.length == 0) {
+              if ((res.length == undefined) || (res.length == 0)) {
                 reply('There are no posts to show!')
               } else {
                 let text = '', t, b, a
-                for (let i = 0; i < hits.length; i++) {
-                  t = hits[i]._source.doc.title
-                  b = hits[i]._source.doc.body
-                  a = hits[i]._source.doc.author_name
+                for (let i = 0; i < res.length; i++) {
+                  t = res[i].title
+                  b = res[i].body
+                  a = res[i].author_name
                   text += (`${(i + 1)}- Title: ${t}\nBody: ${b}\nAuthor: ${a}\n\n\n`)
                 }
                 reply(text)
@@ -233,31 +238,34 @@ module.exports = (server, options) => {
           })
         } else {
           const page = request.query.page
-          client.search({
-            index: 'blog',
-            type: 'post',
-            body: {
-              from: page * 5,
-              size: 5,
-              query: {
-                match: {
-                  "doc.author_email": request.auth.credentials.email
-                }
-              }
-            }
-          }, (err, res) => {
-            if (err) {
-              reply(err)
+          // const query = {
+          //   body: {
+          //     from: page * 5,
+          //     size: 5,
+          //     query: {
+          //       match: {
+          //         "doc.author_email": request.auth.credentials.email
+          //       }
+          //     }
+          //   }
+          // }
+          const body = Bodybuilder()
+            .query('match', 'doc.author_email', request.auth.credentials.email)
+            .from(page * 5)
+            .size(5)
+          const query = {body: body.build()}
+          User.search('b_post', query).then((res) => {
+            if (res instanceof Error) {
+              reply('There was a problem in finding posts.')
             } else {
-              const hits = res.hits.hits
-              if (hits.length == 0) {
+              if ((res.length == undefined) || (res.length == 0)) {
                 reply(`There are no posts to show in page ${page}!`)
               } else {
                 let text = '', t, b, a
-                for (let i = 0; i < hits.length; i++) {
-                  t = hits[i]._source.doc.title
-                  b = hits[i]._source.doc.body
-                  a = hits[i]._source.doc.author_name
+                for (let i = 0; i < res.length; i++) {
+                  t = res[i].title
+                  b = res[i].body
+                  a = res[i].author_name
                   text += (`${(page * 5 + (i + 1))}- Title: ${t}\nBody: ${b}\nAuthor: ${a}\n\n\n`)
                 }
                 reply(text)
@@ -269,7 +277,7 @@ module.exports = (server, options) => {
         reply('You need to login first!')
       }
     },
-    post_create: (request, reply) => {
+    postCreate: (request, reply) => {
       if (request.auth.isAuthenticated) {
         const post = new Post({
           author_name: request.auth.credentials.fullname,
@@ -278,38 +286,37 @@ module.exports = (server, options) => {
           body: request.payload.body
         })
         post.create(true).then((res) => {
-          reply(res)
+          if (res instanceof Error) {
+            reply('There was a problem in creating post.')
+          } else {
+            reply(res)
+          }
         })
       } else {
         reply('You need to login first!')
       }
     },
-    post_remove: (request, reply) => {
+    postRemove: (request, reply) => {
       if (request.auth.isAuthenticated) {
         if (request.params.post_key == undefined) {
           reply('There is no post_key to delete from!!')
         } else {
-          client.search({
-            index: 'blog',
-            type: 'post',
-            body: {
-              query: {
-                match: {
-                  "doc.docKey": request.params.post_key
-                }
-              }
-            }
-          }, (err, res) => {
-            if (err) {
-              reply(err)
+          const body = Bodybuilder().query('match', 'doc.docKey', request.params.post_key)
+          const query = {body: body.build()}
+          User.search('b_post', query).then((res) => {
+            if (res instanceof Error) {
+              reply('There was a problem in finding post.')
             } else {
-              const hits = res.hits.hits
-              if (hits.total == 0) {
+              if ((res.length == undefined) || (res.length == 0)) {
                 reply('The post does not exists.')
               } else {
-                if (hits[0]._source.doc.author_email == request.auth.credentials.email) {
+                if (res[0].author_email == request.auth.credentials.email) {
                   Post.remove(request.params.post_key).then((res) => {
-                    reply(res)
+                    if (res instanceof Error) {
+                      reply('There was a problem in removing post.')
+                    } else {
+                      reply(res)
+                    }
                   })
                 } else {
                   reply('You can not delete this post. This post is not belong to current user.')
@@ -322,42 +329,37 @@ module.exports = (server, options) => {
         reply('You need to login first!')
       }
     },
-    post_update: (request, reply) => {
+    postUpdate: (request, reply) => {
       if (request.auth.isAuthenticated) {
         if (request.params.post_key == undefined) {
           reply('There is no post_key to update from!!')
         } else {
-          client.search({
-            index: 'blog',
-            type: 'post',
-            body: {
-              query: {
-                match: {
-                  "doc.docKey": request.params.post_key
-                }
-              }
-            }
-          }, (err, res) => {
-            if (err) {
-              reply(err)
+          const body = Bodybuilder().query('match', 'doc.docKey', request.params.post_key)
+          const query = {body: body.build()}
+          User.search('b_post', query).then((res) => {
+            if (res instanceof Error) {
+              reply('There was a problem in finding post.')
             } else {
-              const hits = res.hits.hits
-              if (hits.total == 0) {
+              if ((res.length == undefined) || (res.length == 0)) {
                 reply('There is no post exist with this key.')
               } else {
-                if (hits[0]._source.doc.author_email == request.auth.credentials.email) {
-                  const p = new Post({
+                if (res[0].author_email != request.auth.credentials.email) {
+                  reply('You can not delete this post. This post is not belong to you.')
+                } else {
+                  const post = new Post({
                       title: request.payload.title,
                       body: request.payload.body,
                       author_name: request.auth.credentials.fullname,
                       author_email: request.auth.credentials.email
                     },
                     request.params.post_key)
-                  p.update(true).then((res) => {
-                    reply(res)
+                  post.update(true).then((res) => {
+                    if (res instanceof Error) {
+                      reply('There was a problem in updating post.')
+                    } else {
+                      reply(res)
+                    }
                   })
-                } else {
-                  reply('You can not delete this post. This post is not belong to current user.')
                 }
               }
             }

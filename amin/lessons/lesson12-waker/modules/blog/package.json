@@ -9,11 +9,13 @@
   "author": "AAH",
   "dependencies": {
     "bluebird": "^3.4.7",
+    "bodybuilder": "^2.2.6",
     "boom": "^4.2.0",
     "joi": "^10.2.2",
     "lodash": "^4.17.4",
     "moment": "^2.17.1",
     "moment-timezone": "^0.5.11",
+    "nodemon": "^1.12.1",
     "yml": "^1.0.0"
   },
   "devDependencies": {

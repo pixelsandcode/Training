@@ -46,7 +46,7 @@ module.exports = (server, options) => {
       method: 'GET',
       path: '/posts',
       config: {
-        handler: handlers.post_all,
+        handler: handlers.postAll,
         auth: false,
         description: 'Brings all posts within the post object. ' +
         'There should be the author (which is a user object) and it has pagination.',
@@ -69,7 +69,7 @@ module.exports = (server, options) => {
       method: 'GET',
       path: '/me/posts',
       config: {
-        handler: handlers.post_me,
+        handler: handlers.postMe,
         auth: {
           strategy: 'jwt',
           mode: 'try'
@@ -119,7 +119,7 @@ module.exports = (server, options) => {
       method: 'POST',
       path: '/posts',
       config: {
-        handler: handlers.post_create,
+        handler: handlers.postCreate,
         auth: {
           strategy: 'jwt',
           mode: 'try'
@@ -133,7 +133,7 @@ module.exports = (server, options) => {
       method: 'DELETE',
       path: '/posts/{post_key}',
       config: {
-        handler: handlers.post_remove,
+        handler: handlers.postRemove,
         auth: {
           strategy: 'jwt',
           mode: 'try'
@@ -147,7 +147,7 @@ module.exports = (server, options) => {
       method: 'PUT',
       path: '/posts/{post_key}',
       config: {
-        handler: handlers.post_update,
+        handler: handlers.postUpdate,
         auth: {
           strategy: 'jwt',
           mode: 'try'
